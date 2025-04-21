@@ -65,7 +65,8 @@ jobs:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
-          ref: ${{ github.ref_name }}
+          ref: 'main'
+          # ref: 'stg'
           repository: 'Greatify/ExamX-V2-Frontend'
           token: ${{ secrets.REPO_DISPATCH_TOKEN }}
           unprotect_reviews: true
