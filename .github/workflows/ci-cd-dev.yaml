@@ -16,7 +16,7 @@ jobs:
         with:
           repository: 'Greatify/ExamX-V2-Frontend'
           fetch-depth: 0
-          ref: ${{ github.ref_name }}
+          ref: dev
           token: ${{ secrets.REPO_DISPATCH_TOKEN }}
 
       - name: Configure AWS credentials for ECR
