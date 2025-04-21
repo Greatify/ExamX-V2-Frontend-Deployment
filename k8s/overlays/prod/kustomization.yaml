@@ -1,0 +1,427 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: examxv2-production
+# Reference the base kustomization
+resources:
+  - ../../base
+# Patches
+patches:
+  - patch: |-
+      apiVersion: apps/v1
+      kind: Deployment
+      metadata:
+        name: examxv2-frontend
+        labels:
+          app: examxv2-frontend
+      spec:
+        replicas: 1
+        selector:
+          matchLabels:
+            app: examxv2-frontend
+        template:
+          metadata:
+            labels:
+              app: examxv2-frontend
+          spec:
+            containers:
+              - name: examxv2-frontend
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:Prod-20250408-085957"
+                imagePullPolicy: Always
+                resources:
+                  requests:
+                    cpu: 1
+                    memory: 1Gi
+                  limits:
+                    cpu: 2
+                    memory: 2Gi
+                ports:
+                  - containerPort: 80
+    target:
+      kind: Deployment
+      name: examxv2-frontend
+  - patch: |-
+      apiVersion: v1
+      kind: ConfigMap
+      metadata:
+        name: frontend-ngnix-config
+      data:
+        ngnix.conf: |
+          worker_processes auto;
+          worker_cpu_affinity auto;
+          worker_rlimit_nofile 100000;
+          error_log /var/log/nginx/error.log warn;
+          pid /var/run/nginx.pid;
+
+          events {
+              worker_connections 65535;
+              multi_accept on;
+              use epoll;
+          }
+
+          http {
+              include /etc/nginx/mime.types;
+              default_type application/octet-stream;
+
+              # Hide nginx version and server information
+              server_tokens off;
+
+              # Enhanced logging for security analysis
+              log_format security '$remote_addr - $remote_user [$time_local] "$request" '
+                                '$status $body_bytes_sent "$http_referer" '
+                                '"$http_user_agent" "$http_x_forwarded_for" '
+                                '$request_time $upstream_response_time '
+                                '$http_x_real_ip $http_x_forwarded_proto';
+
+              access_log /var/log/nginx/access.log security buffer=64k flush=1m;
+              error_log /var/log/nginx/error.log warn;
+
+              # Optimized security settings
+              sendfile on;
+              tcp_nopush on;
+              tcp_nodelay on;
+              keepalive_timeout 65;
+              keepalive_requests 1000;
+              types_hash_max_size 2048;
+              types_hash_bucket_size 64;
+
+              # Optimized timeouts
+              client_body_timeout 12;
+              client_header_timeout 12;
+              send_timeout 10;
+              reset_timedout_connection on;
+
+              # Optimized buffer sizes
+              client_body_buffer_size 16k;
+              client_header_buffer_size 4k;
+              client_max_body_size 10m;
+              large_client_header_buffers 4 8k;
+              output_buffers 4 32k;
+              postpone_output 1460;
+
+              # Optimized rate limiting
+              limit_req_zone $binary_remote_addr zone=one:10m rate=10r/s;
+              limit_conn_zone $binary_remote_addr zone=addr:10m;
+              limit_conn addr 1000;
+
+              # Security headers
+              add_header Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" always;
+              add_header X-Content-Type-Options "nosniff" always;
+              add_header X-Frame-Options "SAMEORIGIN" always;
+              add_header X-XSS-Protection "1; mode=block" always;
+              add_header Referrer-Policy "strict-origin-when-cross-origin" always;
+              add_header Permissions-Policy "geolocation=(), microphone=(), camera=(), fullscreen=(self)" always;
+              add_header X-Powered-By "" always;
+              add_header Server "" always;
+              add_header X-Runtime "" always;
+              add_header X-Version "" always;
+              add_header X-Application-Version "" always;
+
+              # Cache control
+              add_header Cache-Control "public, max-age=31536000" always;
+              add_header Pragma "public" always;
+              add_header Expires "31536000" always;
+
+              # Content Security Policy
+              add_header Content-Security-Policy "
+                  default-src 'self' data: blob:;
+                  script-src 'self' 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval'
+                      https://accounts.google.com 
+                      https://*.posthog.com 
+                      https://*.i.posthog.com 
+                      https://fpnpmcdn.net 
+                      https://*.examx.ai 
+                      https://examx.ai 
+                      https://cdn.jsdelivr.net 
+                      https://cdn.jsdelivr.net/npm/monaco-editor@0.52.2/ 
+                      blob:;
+                  style-src 'self' 'unsafe-inline'
+                      https://fonts.googleapis.com 
+                      https://accounts.google.com 
+                      https://cdnjs.cloudflare.com 
+                      https://*.examx.ai 
+                      https://examx.ai 
+                      https://cdn.jsdelivr.net 
+                      https://cdn.jsdelivr.net/npm/monaco-editor@0.52.2/ 
+                      https://greatify.work;
+                  font-src 'self'
+                      https://fonts.gstatic.com 
+                      https://cdnjs.cloudflare.com 
+                      data: 
+                      https://*.examx.ai 
+                      https://examx.ai 
+                      https://cdn.jsdelivr.net 
+                      https://cdn.jsdelivr.net/npm/monaco-editor@0.52.2/ 
+                      https://greatify.work;
+                  img-src 'self' 
+                      data: 
+                      blob: 
+                      https://cdn.jsdelivr.net 
+                      https://*.s3.amazonaws.com 
+                      https://*.amazonaws.com 
+                      https://*.examx.ai 
+                      https://examx.ai 
+                      https://cdn.jsdelivr.net 
+                      https://cdn.jsdelivr.net/npm/monaco-editor@0.52.2/ 
+                      https://greatify.work;
+                  object-src 'self' 
+                      https://*.s3.amazonaws.com 
+                      https://*.amazonaws.com 
+                      https://greatify.work;
+                  connect-src 'self' 
+                      https://examx.ai 
+                      https://*.examx.ai 
+                      https://*.posthog.com 
+                      https://*.i.posthog.com 
+                      https://www.wiris.net 
+                      https://ap.api.fpjs.io 
+                      https://venkatmcajj.github.io/* 
+                      https://cdn.jsdelivr.net 
+                      data: 
+                      blob: 
+                      wss://*.examx.ai 
+                      wss://examx.ai 
+                      https://greatify.work 
+                      wss://greatify.work;
+                  frame-src 'self' 
+                      https://accounts.google.com 
+                      https://*.s3.amazonaws.com 
+                      https://*.amazonaws.com 
+                      https://greatify.work;
+                  worker-src 'self' 
+                      blob: 
+                      data: 
+                      https://cdn.jsdelivr.net/npm/monaco-editor@0.52.2/;
+                  child-src 'self' 
+                      blob:;
+                  frame-ancestors 'self';
+              " always;
+
+              # Optimized compression settings
+              gzip on;
+              gzip_comp_level 5;
+              gzip_min_length 256;
+              gzip_proxied any;
+              gzip_vary on;
+              gzip_types
+                  application/atom+xml
+                  application/javascript
+                  application/json
+                  application/ld+json
+                  application/manifest+json
+                  application/rss+xml
+                  application/vnd.geo+json
+                  application/vnd.ms-fontobject
+                  application/x-font-ttf
+                  application/x-web-app-manifest+json
+                  application/xhtml+xml
+                  application/xml
+                  font/opentype
+                  image/bmp
+                  image/svg+xml
+                  image/x-icon
+                  text/cache-manifest
+                  text/css
+                  text/plain
+                  text/vcard
+                  text/vnd.rim.location.xloc
+                  text/vtt
+                  text/x-component
+                  text/x-cross-domain-policy;
+
+              # Map for subdomains
+              map $http_host $subdomain {
+                  default "";
+                  "~^(?<sub>.+)\.examx\.ai$" $sub;
+              }
+
+              # Open file cache
+              open_file_cache max=1000 inactive=20s;
+              open_file_cache_valid 30s;
+              open_file_cache_min_uses 2;
+              open_file_cache_errors on;
+
+              server {
+                  listen 80;
+                  http2 on;
+                  server_name examx.ai *.examx.ai;
+
+                  # Hide server version
+                  server_tokens off;
+
+                  root /usr/share/nginx/html;
+                  index index.html;
+
+                  # Security headers for this specific server
+                  add_header Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" always;
+                  add_header X-Content-Type-Options "nosniff" always;
+                  add_header X-Frame-Options "SAMEORIGIN" always;
+                  add_header X-XSS-Protection "1; mode=block" always;
+                  add_header Referrer-Policy "strict-origin-when-cross-origin" always;
+                  add_header Permissions-Policy "geolocation=(), microphone=(), camera=(), fullscreen=(self)" always;
+                  add_header X-Powered-By "" always;
+                  add_header Server "" always;
+                  add_header X-Runtime "" always;
+                  add_header X-Version "" always;
+                  add_header X-Application-Version "" always;
+
+                  # Cache control
+                  add_header Cache-Control "public, max-age=31536000" always;
+                  add_header Pragma "public" always;
+                  add_header Expires "31536000" always;
+
+                  # Rate limiting
+                  limit_req zone=one burst=20 nodelay;
+                  limit_conn addr 1000;
+
+                  # Disable HTTP TRACE method
+                  if ($request_method = TRACE) {
+                      return 403;
+                  }
+
+                  # Health check endpoint
+                  location = /health {
+                      access_log off;
+                      add_header Content-Type text/plain;
+                      add_header X-Content-Type-Options "nosniff" always;
+                      add_header X-Frame-Options "SAMEORIGIN" always;
+                      add_header X-Powered-By "" always;
+                      add_header Server "" always;
+                      return 200 'OK';
+                  }
+
+                  # Block access to sensitive files and directories
+                  location ~ /\.(?!well-known).* {
+                      deny all;
+                      access_log off;
+                      log_not_found off;
+                  }
+
+                  # Block access to source code and sensitive files
+                  location ~* \.(php|ts|jsx|tsx|map|log|git|env|DS_Store|swp|bak|old|zip|config|json|md|txt|sql|yml|yaml|xml|ini|conf|sh|bash|exe|dll|so|dylib|class|jar|war|ear|zip|tar|gz|rar|7z)$ {
+                      deny all;
+                      access_log off;
+                      log_not_found off;
+                  }
+
+                  # Block access to node_modules and other sensitive directories
+                  location ~* /(\.git|\.svn|\.hg|\.idea|\.vscode|\.env|config|src|tests|coverage|dist|build|logs|temp|tmp|cache)/ {
+                      deny all;
+                      access_log off;
+                      log_not_found off;
+                  }
+
+                  # Favicon handling
+                  location = /favicon.ico {
+                      expires 365d;
+                      add_header Cache-Control "public, max-age=31536000" always;
+                      add_header X-Content-Type-Options "nosniff" always;
+                      add_header X-Frame-Options "SAMEORIGIN" always;
+                      add_header X-Powered-By "" always;
+                      add_header Server "" always;
+                      add_header Content-Type "image/x-icon" always;
+                      try_files $uri @empty_favicon;
+                      access_log off;
+                      log_not_found off;
+                  }
+
+                  # Empty favicon handler
+                  location @empty_favicon {
+                      expires 365d;
+                      add_header Cache-Control "public, max-age=31536000" always;
+                      add_header X-Content-Type-Options "nosniff" always;
+                      add_header X-Frame-Options "SAMEORIGIN" always;
+                      add_header X-Powered-By "" always;
+                      add_header Server "" always;
+                      add_header Content-Type "image/x-icon" always;
+                      return 204;
+                      access_log off;
+                      log_not_found off;
+                  }
+
+                  # Chunks directory
+                  location /chunks/ {
+                      expires 365d;
+                      add_header Cache-Control "public, max-age=31536000" always;
+                      add_header X-Content-Type-Options "nosniff" always;
+                      add_header X-Frame-Options "SAMEORIGIN" always;
+                      add_header X-Powered-By "" always;
+                      add_header Server "" always;
+                      try_files $uri =404;
+                      access_log off;
+                      log_not_found off;
+                  }
+
+                  # Static files with proper caching
+                  location ~* \.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot)$ {
+                      expires 365d;
+                      add_header Cache-Control "public, max-age=31536000" always;
+                      add_header X-Content-Type-Options "nosniff" always;
+                      add_header X-Frame-Options "SAMEORIGIN" always;
+                      add_header X-Powered-By "" always;
+                      add_header Server "" always;
+                      try_files $uri =404;
+                      access_log off;
+                      log_not_found off;
+                  }
+
+                  # Main application
+                  location / {
+                      try_files $uri $uri/ /index.html;
+
+                      # CORS configuration
+                      if ($request_method = 'OPTIONS') {
+                          add_header 'Access-Control-Allow-Origin' $http_origin;
+                          add_header 'Access-Control-Allow-Methods' 'GET, HEAD, PUT, POST, PATCH, OPTIONS';
+                          add_header 'Access-Control-Allow-Headers' 'Origin, Authorization, Accept, Content-Type, X-Requested-With, X-Database-Choice';
+                          add_header 'Access-Control-Allow-Credentials' 'true';
+                          add_header 'Access-Control-Expose-Headers' 'Correlation-ID';
+                          add_header 'Access-Control-Max-Age' 1728000;
+                          add_header 'Content-Type' 'text/plain; charset=utf-8';
+                          add_header 'Content-Length' 0;
+                          add_header X-Frame-Options "SAMEORIGIN" always;
+                          add_header X-Powered-By "" always;
+                          add_header Server "" always;
+                          return 204;
+                      }
+
+                      # CORS allowed origins
+                      if ($http_origin ~ '^https?://(examx\.ai|.*\.examx\.ai)$') {
+                          add_header 'Access-Control-Allow-Origin' $http_origin always;
+                      }
+
+                      add_header 'Access-Control-Allow-Methods' 'GET, HEAD, PUT, POST, PATCH, OPTIONS' always;
+                      add_header 'Access-Control-Allow-Headers' 'Origin, Authorization, Accept, Content-Type, X-Requested-With, X-Database-Choice' always;
+                      add_header 'Access-Control-Allow-Credentials' 'true' always;
+                      add_header 'Access-Control-Expose-Headers' 'Correlation-ID' always;
+                      add_header X-Frame-Options "SAMEORIGIN" always;
+                      add_header X-Powered-By "" always;
+                      add_header Server "" always;
+
+                      # Set HttpOnly flag for all cookies
+                      proxy_cookie_path / "/; HttpOnly; Secure; SameSite=Strict";
+                      proxy_cookie_path /api/ "/; HttpOnly; Secure; SameSite=Strict";
+                  }
+
+                  # Error pages
+                  error_page 404 /index.html;
+                  error_page 500 502 503 504 /index.html;
+              }
+          }
+    target:
+      kind: ConfigMap
+      name: frontend-ngnix-config
+# - patch: |-
+#     apiVersion: networking.k8s.io/v1
+#     kind: Ingress
+#     metadata:
+#       name: examxv2-ingress
+#       annotations:
+#         alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:ap-south-1:399600302704:certificate/29c7b407-7f44-4060-ab94-602a60d331a5
+#     spec:
+#       tls:
+#         - hosts:
+#             - examx.ai
+#           secretName: tls-secret
+#   target:
+#     kind: Ingress
+#     name: examxv2-ingress

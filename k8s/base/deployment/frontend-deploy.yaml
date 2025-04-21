@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: examxv2-frontend
+  labels:
+    app: examxv2-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: examxv2-frontend
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 0
+      maxSurge: 1
+  template:
+    metadata:
+      labels:
+        app: examxv2-frontend
+    spec:
+      volumes:
+        - name: nginx-configuration
+          configMap:
+            name: frontend-ngnix-config
+      containers:
+        - name: examxv2-frontend
+          image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-evolution:Updated_Docker_file___Expose_p-20241010-095912-d771fcd"
+          imagePullPolicy: Always
+          resources:
+            requests:
+              cpu: "500m"
+              memory: "500Mi"
+            limits:
+              cpu: "1"
+              memory: "1Gi"
+          ports:
+            - containerPort: 80
+          volumeMounts:  
+            - name: nginx-configuration
+              mountPath: /etc/nginx/nginx.conf
+              subPath: ngnix.conf
