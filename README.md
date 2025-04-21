@@ -102,4 +102,4 @@ The application is deployed using Kubernetes with the following components:
 
 ## Support
 
-For any issues or questions regarding the deployment process, please contact the development team.
+For any issues or questions regarding the deployment process, please contact the devops team.
