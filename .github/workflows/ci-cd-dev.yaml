@@ -1,4 +1,4 @@
-name: ExamXv2-Frontend-Deploy
+name: Deploy to Development
 
 on:
   workflow_dispatch:
@@ -58,14 +58,13 @@ jobs:
         id: login-ecr
         uses: aws-actions/amazon-ecr-login@v1
         
-      - name: Generate unique image tag
+      - name: Generate staging image tag
         id: generate-tag
         run: |
-          COMMIT_ID="${{ github.sha }}"
-          COMMIT_MSG=$(echo "${{ github.event.head_commit.message }}" | tr -d '\n' | cut -c1-50)
           TIMESTAMP=$(date +'%Y%m%d-%H%M%S')
-          SAFE_COMMIT_MSG=$(echo "$COMMIT_MSG" | sed -e 's/[^a-zA-Z0-9]/_/g' | cut -c1-30)
-          IMAGE_TAG="${SAFE_COMMIT_MSG}-${TIMESTAMP}-${COMMIT_ID:0:7}"
+          COMMIT_ID=$(git rev-parse HEAD)
+          IMAGE_TAG="dev-${TIMESTAMP}-${COMMIT_ID}"
+          
           echo "IMAGE_TAG=$IMAGE_TAG" >> $GITHUB_OUTPUT
           echo "Generated Image Tag: $IMAGE_TAG"
 
