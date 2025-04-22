@@ -9,6 +9,10 @@ on:
       sha:
         description: 'Git SHA of the commit'
         required: true
+      commit_message:
+        description: 'Original commit message'
+        required: true
+
 
 jobs:   
   deploy-frontend:
@@ -19,6 +23,7 @@ jobs:
         run: |
           echo "Image: ${{ github.event.inputs.image }}"
           echo "SHA: ${{ github.event.inputs.sha }}"
+          echo "Commit Message: ${{ github.event.inputs.commit_message }}"
           
       - name: Checkout code
         uses: actions/checkout@v3
@@ -65,8 +70,8 @@ jobs:
         uses: 8398a7/action-slack@v3
         with:
           status: ${{ job.status }}
-          fields: repo,message,commit,eventName,ref,workflow
-          author_name: Frontend Deployment Success
+          fields: repo,commit,eventName,ref,workflow
+          author_name: ExamX-V2-CICD
           mention: ${{ github.actor }}
           if_mention: success
           job_name: deploy-dev
