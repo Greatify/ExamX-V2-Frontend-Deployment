@@ -23,15 +23,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Download image tag files
-        uses: actions/download-artifact@v4
-        with:
-          name: frontend-image-tag
-          path: .
-
-      - name: Set image tags as environment variables
-        run: |
-          echo "FRONTEND_IMAGE=$(cat frontend_image_tag.txt)" >> $GITHUB_ENV
+      - name: Set image tag from dispatch input
+        run: echo "FRONTEND_IMAGE=${{ github.event.inputs.image }}" >> $GITHUB_ENV
 
       - name: Update Frontend React deployment image tag
         run: |
