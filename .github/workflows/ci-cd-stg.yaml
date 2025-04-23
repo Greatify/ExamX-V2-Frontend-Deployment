@@ -171,7 +171,7 @@ jobs:
           author_name: Docker Build Failure 🐳
           mention: ${{ github.actor }}
           if_mention: always
-          job_name: docker-build
+          job_name: build-frontend-staging-image
           channel: examxv2-frontend-alerts
           username: ExamX-V2-CICD
           text: |
@@ -246,7 +246,7 @@ jobs:
           author_name: Frontend Deployment Success
           mention: channel
           if_mention: success
-          job_name: deploy-staging
+          job_name: deploy-frontend-staging
           channel: examxv2-frontend-alerts
           username: ExamX-V2-CICD
           text: |
