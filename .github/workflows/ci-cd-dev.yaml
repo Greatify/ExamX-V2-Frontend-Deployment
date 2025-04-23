@@ -15,28 +15,28 @@ on:
 
 
 jobs:   
-  deploy-frontend:
+  deploy-frontend-dev:
     runs-on: ubuntu-latest
     environment: dev
     steps:
-      - name: Debug Info
+      - name: Display Deployment Information
         run: |
           echo "Image: ${{ github.event.inputs.image }}"
           echo "SHA: ${{ github.event.inputs.sha }}"
           echo "Commit Message: ${{ github.event.inputs.commit_message }}"
           
-      - name: Checkout code
-        uses: actions/checkout@v3
+      - name: Checkout repository code
+        uses: actions/checkout@v4
 
-      - name: Set image tag from dispatch input
+      - name: Set frontend image tag from dispatch input
         run: echo "FRONTEND_IMAGE=${{ github.event.inputs.image }}" >> $GITHUB_ENV
 
-      - name: Update Frontend React deployment image tag
+      - name: Update deployment image tag in Kustomization
         run: |
           # Update the image tag in the deployment patch
           sed -i 's|image: "[^"]*"|image: "'"$FRONTEND_IMAGE"'"|' k8s/overlays/dev/kustomization.yaml
 
-      - name: Commit changes
+      - name: Commit and push changes
         run: |
           git config --local user.email "hariharen@greatify.ai"
           git config --local user.name "Hariharen"
@@ -51,21 +51,21 @@ jobs:
       #     branch: dev
       #     unprotect_reviews: true
 
-      - name: Configure AWS credentials
+      - name: Configure AWS credentials for deployment
         uses: aws-actions/configure-aws-credentials@v3
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ secrets.AWS_REGION }}
 
-      - name: Update kube config
+      - name: Update Kubernetes configuration
         run: aws eks update-kubeconfig --name dev-stg-cluster --region ap-south-1
 
-      - name: Apply Kubernetes configuration to Dev
+      - name: Deploy to development environment
         run: |
           kubectl apply -k k8s/overlays/dev
 
-      - name: Slack Notification on Successful Deployment
+      - name: Send deployment success notification
         if: success()
         uses: 8398a7/action-slack@v3
         with:
@@ -74,7 +74,7 @@ jobs:
           author_name: ExamX-V2-CICD
           mention: ${{ github.actor }}
           if_mention: success
-          job_name: deploy-dev
+          job_name: deploy-development
           channel: examxv2-frontend-alerts
           username: ExamX-V2-CICD
           text: |
