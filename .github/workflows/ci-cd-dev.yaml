@@ -74,7 +74,7 @@ jobs:
           author_name: ExamX-V2-CICD
           mention: ${{ github.actor }}
           if_mention: success
-          job_name: deploy-development
+          job_name: deploy-frontend-dev
           channel: examxv2-frontend-alerts
           username: ExamX-V2-CICD
           text: |
