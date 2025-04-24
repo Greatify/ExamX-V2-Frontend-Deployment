@@ -23,7 +23,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:Replaced__in_input_commit_sha_-20250423-080326-5b04b12"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:Trigger_Deployment-20250424-051303-6673456"
                 imagePullPolicy: Always
                 resources:
                   requests:
