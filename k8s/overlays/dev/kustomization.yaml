@@ -23,7 +23,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:Added_filters_and_sorting_in_L-20250425-121924-02d3c9f"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:GE_9794__Table_filters___1631_-20250425-150343-c230d2d"
                 imagePullPolicy: Always
                 resources:
                   requests:
