@@ -23,7 +23,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:Exm_147_section_wise_student_b-20250424-112604-e297442"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:Froala_video_render_issue_fixe-20250425-042851-b919cec"
                 imagePullPolicy: Always
                 resources:
                   requests:
