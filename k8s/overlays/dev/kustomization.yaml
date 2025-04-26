@@ -23,7 +23,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:Revert_Exm_26___question_paper-20250426-072357-7536524"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:Exm_26___question_paper_author-20250426-073540-0cedc0f"
                 imagePullPolicy: Always
                 resources:
                   requests:
