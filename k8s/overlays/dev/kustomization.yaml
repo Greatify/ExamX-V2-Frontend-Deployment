@@ -23,7 +23,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:Exm_128_progress_bar_AI_evalua-20250428-093010-aee58a6"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:EXM_233_useMyContext_error_bug-20250428-101600-7077c3e"
                 imagePullPolicy: Always
                 resources:
                   requests:
