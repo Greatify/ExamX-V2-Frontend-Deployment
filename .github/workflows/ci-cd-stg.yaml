@@ -103,14 +103,14 @@ jobs:
             --debug
             --allow-insecure-entitlement security.insecure
             --allow-insecure-entitlement network.host
-          config-inline: |
+          buildkitd-config-inline: |
             [registry."docker.io"]
               mirrors = ["mirror.gcr.io"]
             [worker.oci]
               max-parallelism = 16
               gc = true
-              [worker.oci.snapshotter]
-                compression-level = 1
+            [worker.oci.snapshotter]
+              compression-level = 1
 
       - name: Login to Amazon ECR
         id: login-ecr
