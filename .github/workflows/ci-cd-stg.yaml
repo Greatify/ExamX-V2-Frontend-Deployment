@@ -103,14 +103,6 @@ jobs:
             --debug
             --allow-insecure-entitlement security.insecure
             --allow-insecure-entitlement network.host
-          buildkitd-config-inline: |
-            [registry."docker.io"]
-              mirrors = ["mirror.gcr.io"]
-            [worker.oci]
-              max-parallelism = 16
-              gc = true
-            [worker.oci.snapshotter]
-              compression-level = 1
 
       - name: Login to Amazon ECR
         id: login-ecr
@@ -133,7 +125,7 @@ jobs:
           key: ${{ runner.os }}-buildx-${{ github.sha }}
           restore-keys: |
             ${{ runner.os }}-buildx-
-  
+
       - name: Build and push frontend Docker image
         uses: docker/build-push-action@v5
         with:
@@ -143,15 +135,14 @@ jobs:
           platforms: linux/amd64
           build-args: |
             ENV_FILE=.env
-            BUILDKIT_INLINE_CACHE=1
             NODE_ENV=production
           cache-from: |
             type=local,src=/tmp/.buildx-cache
             type=registry,ref=${{ steps.login-ecr.outputs.registry }}/examxv2-frontend:build-cache
           cache-to: |
-            type=local,dest=/tmp/.buildx-cache-new,mode=max
+            type=local,dest=/tmp/.buildx-cache-new
             type=registry,ref=${{ steps.login-ecr.outputs.registry }}/examxv2-frontend:build-cache,mode=max
-          outputs: type=image,compression=zstd,compression-level=3,force-compression=true
+
       - name: Move cache directory
         run: |
           rm -rf /tmp/.buildx-cache
@@ -185,7 +176,7 @@ jobs:
           username: ExamX-V2-CICD
           text: |
             ❌ *Docker build failed* 🐳
-            *Pusher:* `${{ github.actor }}`
+            *Pusher:* `${{ github.actor }}`   
             Please fix the Docker build issues.
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
