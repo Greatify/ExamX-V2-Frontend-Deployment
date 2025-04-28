@@ -23,7 +23,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:EXM_230___Custom_Qp__System_sh-20250428-121114-26048e2"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:Added_Tamil_typing_in_editor__-20250428-164339-58199c8"
                 imagePullPolicy: Always
                 resources:
                   requests:
