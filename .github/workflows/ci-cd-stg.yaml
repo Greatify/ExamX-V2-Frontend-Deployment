@@ -99,10 +99,14 @@ jobs:
           version: v0.12.0
           driver-opts: |
             image=moby/buildkit:v0.12.0
+            network=host
           buildkitd-flags: |
             --debug
             --allow-insecure-entitlement security.insecure
             --allow-insecure-entitlement network.host
+            --oci-worker-gc
+            --oci-worker-gc-keepstorage=15000
+            --oci-worker-max-parallelism=16
 
       - name: Login to Amazon ECR
         id: login-ecr
@@ -136,12 +140,16 @@ jobs:
           build-args: |
             ENV_FILE=.env
             NODE_ENV=production
+            BUILDKIT_INLINE_CACHE=1
           cache-from: |
             type=local,src=/tmp/.buildx-cache
-            type=registry,ref=${{ steps.login-ecr.outputs.registry }}/examxv2-frontend:build-cache
           cache-to: |
-            type=local,dest=/tmp/.buildx-cache-new
-            type=registry,ref=${{ steps.login-ecr.outputs.registry }}/examxv2-frontend:build-cache,mode=max
+            type=local,dest=/tmp/.buildx-cache-new,mode=max,compression=zstd,compression-level=3
+          provenance: false
+          outputs: |
+            type=image,compression=zstd,compression-level=3,force-compression=true
+          no-cache-filter: |
+            node_modules
 
       - name: Move cache directory
         run: |
