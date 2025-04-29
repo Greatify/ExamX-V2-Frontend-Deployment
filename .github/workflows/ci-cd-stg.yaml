@@ -99,14 +99,15 @@ jobs:
           version: v0.12.0
           driver-opts: |
             image=moby/buildkit:v0.12.0
-            network=host
           buildkitd-flags: |
             --debug
             --allow-insecure-entitlement security.insecure
             --allow-insecure-entitlement network.host
-            --oci-worker-gc
-            --oci-worker-gc-keepstorage=15000
-            --oci-worker-max-parallelism=16
+          config-inline: |
+            [registry."docker.io"]
+              mirrors = ["mirror.gcr.io"]
+            [worker.oci]
+              max-parallelism = 12
 
       - name: Login to Amazon ECR
         id: login-ecr
@@ -129,7 +130,7 @@ jobs:
           key: ${{ runner.os }}-buildx-${{ github.sha }}
           restore-keys: |
             ${{ runner.os }}-buildx-
-
+  
       - name: Build and push frontend Docker image
         uses: docker/build-push-action@v5
         with:
@@ -137,20 +138,11 @@ jobs:
           push: true
           tags: ${{ steps.login-ecr.outputs.registry }}/examxv2-frontend:${{ steps.generate-tag.outputs.IMAGE_TAG }}
           platforms: linux/amd64
-          build-args: |
+          build-args: 
             ENV_FILE=.env
-            NODE_ENV=production
-            BUILDKIT_INLINE_CACHE=1
-          cache-from: |
-            type=local,src=/tmp/.buildx-cache
-          cache-to: |
-            type=local,dest=/tmp/.buildx-cache-new,mode=max,compression=zstd,compression-level=3
-          provenance: false
-          outputs: |
-            type=image,compression=zstd,compression-level=3,force-compression=true
-          no-cache-filter: |
-            node_modules
-
+          cache-from: type=local,src=/tmp/.buildx-cache
+          cache-to: type=local,dest=/tmp/.buildx-cache-new
+  
       - name: Move cache directory
         run: |
           rm -rf /tmp/.buildx-cache
@@ -184,7 +176,7 @@ jobs:
           username: ExamX-V2-CICD
           text: |
             ❌ *Docker build failed* 🐳
-            *Pusher:* `${{ github.actor }}`   
+            *Pusher:* `${{ github.actor }}`
             Please fix the Docker build issues.
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
