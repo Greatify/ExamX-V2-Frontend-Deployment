@@ -23,7 +23,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:increased_heap_memory___1746__-20250512-161449-d66692a"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:EXM_337_Exam_Creation_are_not_-20250513-074826-ead8c75"
                 imagePullPolicy: Always
                 resources:
                   requests:
