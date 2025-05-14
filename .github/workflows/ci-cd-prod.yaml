@@ -112,8 +112,8 @@ jobs:
         id: generate-tag
         run: |
           TIMESTAMP=$(date +'%Y%m%d-%H%M%S')
-          SOURCE_COMMIT_ID="${{ github.event.after }}"
-          SOURCE_COMMIT_MSG="${{ github.event.head_commit.message }}"
+          SOURCE_COMMIT_ID=$(git rev-parse HEAD)
+          SOURCE_COMMIT_MSG=$(git log -1 --pretty=format:%s)
           
           IMAGE_TAG="prod-${TIMESTAMP}-${SOURCE_COMMIT_ID}"
           
@@ -146,13 +146,12 @@ jobs:
             BUILDKIT_INLINE_CACHE=1
             NODE_ENV=production
           cache-from: |
-            type=registry,ref=${{ steps.login-ecr.outputs.registry }}/examxv2-frontend:cache-${{ github.sha }}
-            type=registry,ref=${{ steps.login-ecr.outputs.registry }}/examxv2-frontend:cache-latest
+            type=registry,ref=${{ steps.login-ecr.outputs.registry }}/examxv2-frontend:buildcache
             type=local,src=/tmp/.buildx-cache
           cache-to: |
-            type=registry,ref=${{ steps.login-ecr.outputs.registry }}/examxv2-frontend:cache-${{ github.sha }}
-            type=registry,ref=${{ steps.login-ecr.outputs.registry }}/examxv2-frontend:cache-latest,mode=max
+            type=registry,ref=${{ steps.login-ecr.outputs.registry }}/examxv2-frontend:buildcache,mode=max
             type=local,dest=/tmp/.buildx-cache-new
+          provenance: false
           compression: zstd
           compression-level: 5
   
