@@ -23,7 +23,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:refactor__improve_manual_chunk-20250514-072524-13c42a5"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:perf__optimize_chunk_splitting-20250514-074047-15d2e78"
                 imagePullPolicy: Always
                 resources:
                   requests:
