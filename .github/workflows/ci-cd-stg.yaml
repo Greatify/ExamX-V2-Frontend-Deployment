@@ -107,16 +107,19 @@ jobs:
             --oci-worker-gc
           buildkitd-config-inline: |
             [registry."docker.io"]
-              mirrors = ["mirror.gcr.io"]
+            mirrors = ["mirror.gcr.io"]
+            
             [worker.oci]
-              max-parallelism = 16
-              gcpolicy = ["*:30h"]
-              [worker.oci.compression]
-                level = 5
-                type = "zstd"
+            max-parallelism = 16
+            gc = true
+            
+            [worker.oci.compression]
+            level = 5
+            type = "zstd"
+            
             [registry."${{ steps.login-ecr.outputs.registry }}"]
-              cache-from = true
-              cache-to = true
+            cache-from = true
+            cache-to = true
 
       - name: Login to Amazon ECR
         id: login-ecr
