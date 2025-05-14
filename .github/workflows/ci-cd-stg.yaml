@@ -105,19 +105,15 @@ jobs:
             --allow-insecure-entitlement security.insecure
             --allow-insecure-entitlement network.host
             --oci-worker-gc
-          config-inline: |
+          buildkitd-config-inline: |
             [registry."docker.io"]
               mirrors = ["mirror.gcr.io"]
             [worker.oci]
               max-parallelism = 16
-              gc = true
+              gcpolicy = ["*:30h"]
               [worker.oci.compression]
                 level = 5
                 type = "zstd"
-            [worker.containerd]
-              gc = true
-              [worker.containerd.gc]
-                policy = ["*:30h"]
             [registry."${{ steps.login-ecr.outputs.registry }}"]
               cache-from = true
               cache-to = true
