@@ -23,7 +23,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:EXM_52_notification_reverted__-20250515-170559-72c274f"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:Delete_Degrees__due_to_empty_f-20250515-174151-e5b1b03"
                 imagePullPolicy: Always
                 resources:
                   requests:
