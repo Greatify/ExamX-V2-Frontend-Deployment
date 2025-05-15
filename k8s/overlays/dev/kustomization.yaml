@@ -23,7 +23,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:updated_languages_for_judge0_i-20250515-165137-7a7d75b"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:EXM_52_notification_reverted__-20250515-170559-72c274f"
                 imagePullPolicy: Always
                 resources:
                   requests:
