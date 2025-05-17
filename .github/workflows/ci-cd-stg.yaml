@@ -261,7 +261,7 @@ jobs:
           username: ExamX-V2-CICD
           text: |
             :rocket: *Frontend deployment to stg environment succeeded*         
-            *Pusher:* `${{ github.actor }}`
+            *Pusher:* `${{ github.actor }}`   
             *Commit:* `${{ env.COMMIT_MESSAGE }}`   
             The changes have been successfully deployed to the staging environment. Please verify the deployment and conduct necessary tests.
         env:
