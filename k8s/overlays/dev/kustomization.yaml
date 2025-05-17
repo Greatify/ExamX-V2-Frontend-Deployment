@@ -34,6 +34,28 @@ patches:
                     memory: "1Gi"
                 ports:
                   - containerPort: 80
+                livenessProbe:
+                  httpGet:
+                    path: /health
+                    port: 80
+                  initialDelaySeconds: 30
+                  periodSeconds: 10
+                  timeoutSeconds: 5
+                  failureThreshold: 3
+                readinessProbe:
+                  httpGet:
+                    path: /index.html
+                    port: 80
+                  initialDelaySeconds: 5
+                  periodSeconds: 5
+                  timeoutSeconds: 3
+                  failureThreshold: 3
+                startupProbe:
+                  httpGet:
+                    path: /health
+                    port: 80
+                  failureThreshold: 30
+                  periodSeconds: 10
     target:
       kind: Deployment
       name: examxv2-frontend
@@ -366,6 +388,20 @@ patches:
                   location / {
                       try_files $uri $uri/ /index.html;
 
+                      # Set cookie flags
+                      proxy_cookie_path / "/; HttpOnly; Secure; SameSite=Strict";
+                      proxy_cookie_path /api/ "/; HttpOnly; Secure; SameSite=Strict";
+
+                      # Add retry mechanism for upstream errors
+                      proxy_next_upstream error timeout http_500 http_502 http_503 http_504;
+                      proxy_next_upstream_tries 3;
+                      proxy_next_upstream_timeout 10s;
+
+                      # Increase timeouts
+                      proxy_connect_timeout 60s;
+                      proxy_send_timeout 60s;
+                      proxy_read_timeout 60s;
+
                       # CORS configuration
                       if ($request_method = 'OPTIONS') {
                           add_header 'Access-Control-Allow-Origin' $http_origin;
@@ -394,15 +430,19 @@ patches:
                       add_header X-Frame-Options "SAMEORIGIN" always;
                       add_header X-Powered-By "" always;
                       add_header Server "" always;
-
-                      # Set HttpOnly flag for all cookies
-                      proxy_cookie_path / "/; HttpOnly; Secure; SameSite=Strict";
-                      proxy_cookie_path /api/ "/; HttpOnly; Secure; SameSite=Strict";
                   }
 
-                  # Error pages
+                  # Error pages with proper handling
                   error_page 404 /index.html;
-                  error_page 500 502 503 504 /index.html;
+                  error_page 500 502 503 504 /50x.html;
+                  
+                  location = /50x.html {
+                      root /usr/share/nginx/html;
+                      internal;
+                      add_header Cache-Control "no-store, no-cache, must-revalidate";
+                      add_header Pragma "no-cache";
+                      add_header Expires "0";
+                  }
               }
           }
     target:

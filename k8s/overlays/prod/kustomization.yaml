@@ -14,7 +14,7 @@ patches:
         labels:
           app: examxv2-frontend
       spec:
-        replicas: 1
+        replicas: 2
         selector:
           matchLabels:
             app: examxv2-frontend
@@ -368,6 +368,10 @@ patches:
                   location / {
                       try_files $uri $uri/ /index.html;
 
+                      # Set cookie flags
+                      proxy_cookie_path / "/; HttpOnly; Secure; SameSite=Strict";
+                      proxy_cookie_path /api/ "/; HttpOnly; Secure; SameSite=Strict";
+
                       # CORS configuration
                       if ($request_method = 'OPTIONS') {
                           add_header 'Access-Control-Allow-Origin' $http_origin;
@@ -396,10 +400,6 @@ patches:
                       add_header X-Frame-Options "SAMEORIGIN" always;
                       add_header X-Powered-By "" always;
                       add_header Server "" always;
-
-                      # Set HttpOnly flag for all cookies
-                      proxy_cookie_path / "/; HttpOnly; Secure; SameSite=Strict";
-                      proxy_cookie_path /api/ "/; HttpOnly; Secure; SameSite=Strict";
                   }
 
                   # Error pages
