@@ -23,7 +23,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:BUG____EXM_382___EXM_475___EXM-20250521-054547-3f31251"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:EXM_483_Total_No_of_QP_count_i-20250521-065538-83af171"
                 imagePullPolicy: Always
                 resources:
                   requests:
