@@ -23,7 +23,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:Revert_EXM_541___Remove_editor-20250523-133817-bd54eb4"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:EXM_541___Remove_editorvalue_i-20250523-134547-84cc68c"
                 imagePullPolicy: Always
                 resources:
                   requests:
