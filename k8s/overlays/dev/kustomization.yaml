@@ -23,7 +23,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:Bug__EXM_558___EXM_553___EXM_5-20250526-094754-14892d4"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:EXM_554_QP_Creation__System_sh-20250526-121723-7c933ab"
                 imagePullPolicy: Always
                 resources:
                   requests:
