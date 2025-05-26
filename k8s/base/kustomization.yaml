@@ -6,5 +6,5 @@ resources:
   - autoscaling/frontend-autoscaler.yaml
   - deployment/frontend-deploy.yaml
   - service/frontend-svc.yaml
-  - ingress/examxv2-ingress.yaml
+  # - ingress/examxv2-ingress.yaml
   - configmap/frontend-nginx-config.yaml
