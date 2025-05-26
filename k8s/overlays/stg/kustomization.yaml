@@ -428,18 +428,18 @@ patches:
     target:
       kind: ConfigMap
       name: frontend-ngnix-config
-  - patch: |-
-      apiVersion: networking.k8s.io/v1
-      kind: Ingress
-      metadata:
-        name: examxv2-ingress
-        annotations:
-          alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:ap-south-1:399600302704:certificate/3ac85857-f810-414f-903b-1ab46d8e1520
-      spec:
-        tls:
-          - hosts:
-              - examx.co
-            secretName: tls-secret
-    target:
-      kind: Ingress
-      name: examxv2-ingress
+  # - patch: |-
+  #     apiVersion: networking.k8s.io/v1
+  #     kind: Ingress
+  #     metadata:
+  #       name: examxv2-ingress
+  #       annotations:
+  #         alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:ap-south-1:399600302704:certificate/3ac85857-f810-414f-903b-1ab46d8e1520
+  #     spec:
+  #       tls:
+  #         - hosts:
+  #             - examx.co
+  #           secretName: tls-secret
+  #   target:
+  #     kind: Ingress
+  #     name: examxv2-ingress
