@@ -23,7 +23,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:EXM_674_completed_exam_showing-20250602-144148-2f11428"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:Merge_branch__dev__of_https___-20250602-152013-531289d"
                 imagePullPolicy: Always
                 resources:
                   requests:
