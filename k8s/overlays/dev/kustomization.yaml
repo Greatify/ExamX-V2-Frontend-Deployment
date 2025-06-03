@@ -23,7 +23,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:black_screen_issue-20250603-104759-bc32c3a"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:EXM_597__Celery_based___Summar-20250603-114614-a206a9f"
                 imagePullPolicy: Always
                 resources:
                   requests:
