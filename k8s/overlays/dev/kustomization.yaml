@@ -23,7 +23,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:bugfix_EXM_702_course_outcome_-20250605-122606-908b3b7"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:_EXM_701_Add_Claim_amount_in_E-20250605-124152-9948046"
                 imagePullPolicy: Always
                 resources:
                   requests:
