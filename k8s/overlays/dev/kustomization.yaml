@@ -23,7 +23,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:EXM_657_Optimise_the_question_-20250604-124221-8eb10bf"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:Implement_strict_filtering_for-20250605-035524-4c7f9f1"
                 imagePullPolicy: Always
                 resources:
                   requests:
