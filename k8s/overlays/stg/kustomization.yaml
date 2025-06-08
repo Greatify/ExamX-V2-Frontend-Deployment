@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-_EXM_701_Add_Claim_amount_in_E-20250606-071431-0653716"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-Print_Margin_SRM_Issue_Fixed__-20250608-064428-76514bb"
                 imagePullPolicy: Always
                 resources:
                   requests:
