@@ -121,110 +121,14 @@ patches:
 
               # Content Security Policy
               add_header Content-Security-Policy "
-                  default-src 'self' data: blob:;
-                  script-src 'self'
-                      https://accounts.google.com 
-                      https://*.posthog.com 
-                      https://*.i.posthog.com 
-                      https://fpnpmcdn.net 
-                      https://*.examx.cloud
-                      https://examx.cloud
-                      https://cdn.jsdelivr.net 
-                      https://cdn.jsdelivr.net/npm/monaco-editor@0.52.2/ 
-                      blob:;
-                  style-src 'self'
-                      https://fonts.googleapis.com 
-                      https://accounts.google.com 
-                      https://cdnjs.cloudflare.com 
-                      https://*.examx.cloud
-                      https://examx.cloud
-                      https://cdn.jsdelivr.net 
-                      https://cdn.jsdelivr.net/npm/monaco-editor@0.52.2/ 
-                      https://greatify.work;
-                  font-src 'self'
-                      https://fonts.gstatic.com 
-                      https://cdnjs.cloudflare.com 
-                      data: 
-                      https://*.examx.cloud
-                      https://examx.cloud
-                      https://cdn.jsdelivr.net 
-                      https://cdn.jsdelivr.net/npm/monaco-editor@0.52.2/ 
-                      https://greatify.work;
-                  img-src 'self' 
-                      data: 
-                      blob: 
-                      https://cdn.jsdelivr.net 
-                      https://*.s3.amazonaws.com 
-                      https://*.amazonaws.com 
-                      https://*.examx.cloud 
-                      https://examx.cloud 
-                      https://cdn.jsdelivr.net 
-                      https://cdn.jsdelivr.net/npm/monaco-editor@0.52.2/ 
-                      https://greatify.work;
-                  object-src 'self' 
-                      https://*.s3.amazonaws.com 
-                      https://*.amazonaws.com 
-                      https://greatify.work;
-                  connect-src 'self' 
-                      https://examx.cloud 
-                      https://*.examx.cloud
-                      https://*.posthog.com 
-                      https://*.i.posthog.com 
-                      https://www.wiris.net 
-                      https://ap.api.fpjs.io 
-                      https://venkatmcajj.github.io/* 
-                      https://cdn.jsdelivr.net 
-                      data: 
-                      blob: 
-                      wss://*.examx.cloud 
-                      wss://examx.cloud 
-                      https://greatify.work 
-                      wss://greatify.work;
-                  frame-src 'self' 
-                      https://accounts.google.com 
-                      https://*.s3.amazonaws.com 
-                      https://*.amazonaws.com 
-                      https://greatify.work;
-                  worker-src 'self' 
-                      blob: 
-                      data: 
-                      https://cdn.jsdelivr.net/npm/monaco-editor@0.52.2/;
-                  child-src 'self' 
-                      blob:;
-                  frame-ancestors 'self';
-              " always;
-
-              # Optimized compression settings
-              gzip on;
-              gzip_comp_level 5;
-              gzip_min_length 256;
-              gzip_proxied any;
-              gzip_vary on;
-              gzip_types
-                  application/atom+xml
-                  application/javascript
-                  application/json
-                  application/ld+json
-                  application/manifest+json
-                  application/rss+xml
-                  application/vnd.geo+json
-                  application/vnd.ms-fontobject
-                  application/x-font-ttf
-                  application/x-web-app-manifest+json
-                  application/xhtml+xml
-                  application/xml
-                  font/opentype
-                  image/bmp
-                  image/svg+xml
-                  image/x-icon
-                  text/cache-manifest
-                  text/css
-                  text/plain
-                  text/vcard
-                  text/vnd.rim.location.xloc
-                  text/vtt
-                  text/x-component
-                  text/x-cross-domain-policy;
+                default-src *;
+                script-src * 'unsafe-inline' 'unsafe-eval';
+                style-src * 'unsafe-inline';
+                img-src * data:;
+                font-src * data:;
+                connect-src *;
+                frame-ancestors *;
+            " always;
 
               # Map for subdomains
               map $http_host $subdomain {

@@ -1,0 +1,421 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: uat-examxv2
+# Reference the base kustomization
+resources:
+  - ../../base
+# Patches
+patches:
+  - patch: |-
+      apiVersion: apps/v1
+      kind: Deployment
+      metadata:
+        name: examxv2-frontend
+        labels:
+          app: examxv2-frontend
+      spec:
+        replicas: 1
+        selector:
+          matchLabels:
+            app: examxv2-frontend
+        template:
+          metadata:
+            labels:
+              app: examxv2-frontend
+          spec:
+            containers:
+              - name: examxv2-frontend
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-initial-deployment"
+                imagePullPolicy: Always
+                resources:
+                  requests:
+                    cpu: "500m"
+                    memory: "500Mi"
+                  limits:
+                    cpu: "1"
+                    memory: "1Gi"
+                ports:
+                  - containerPort: 80
+    target:
+      kind: Deployment
+      name: examxv2-frontend
+  - patch: |-
+      apiVersion: v1
+      kind: ConfigMap
+      metadata:
+        name: frontend-ngnix-config
+      data:
+        ngnix.conf: |
+          worker_processes auto;
+          worker_cpu_affinity auto;
+          worker_rlimit_nofile 100000;
+          error_log /var/log/nginx/error.log warn;
+          pid /var/run/nginx.pid;
+
+          events {
+              worker_connections 65535;
+              multi_accept on;
+              use epoll;
+          }
+
+          http {
+              include /etc/nginx/mime.types;
+              default_type application/octet-stream;
+
+              # Hide nginx version and server information
+              server_tokens off;
+
+              # Enhanced logging for security analysis
+              log_format security '$remote_addr - $remote_user [$time_local] "$request" '
+                                '$status $body_bytes_sent "$http_referer" '
+                                '"$http_user_agent" "$http_x_forwarded_for" '
+                                '$request_time $upstream_response_time '
+                                '$http_x_real_ip $http_x_forwarded_proto';
+
+              access_log /var/log/nginx/access.log security buffer=64k flush=1m;
+              error_log /var/log/nginx/error.log warn;
+
+              # Optimized security settings
+              sendfile on;
+              tcp_nopush on;
+              tcp_nodelay on;
+              keepalive_timeout 65;
+              keepalive_requests 1000;
+              types_hash_max_size 2048;
+              types_hash_bucket_size 64;
+
+              # Optimized timeouts
+              client_body_timeout 12;
+              client_header_timeout 12;
+              send_timeout 10;
+              reset_timedout_connection on;
+
+              # Optimized buffer sizes
+              client_body_buffer_size 16k;
+              client_header_buffer_size 4k;
+              client_max_body_size 10m;
+              large_client_header_buffers 4 8k;
+              output_buffers 4 32k;
+              postpone_output 1460;
+
+              # Optimized rate limiting
+              limit_req_zone $binary_remote_addr zone=one:10m rate=10r/s;
+              limit_conn_zone $binary_remote_addr zone=addr:10m;
+              limit_conn addr 1000;
+
+              # Security headers
+              add_header Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" always;
+              add_header X-Content-Type-Options "nosniff" always;
+              add_header X-Frame-Options "SAMEORIGIN" always;
+              add_header X-XSS-Protection "1; mode=block" always;
+              add_header Referrer-Policy "strict-origin-when-cross-origin" always;
+              add_header Permissions-Policy "geolocation=(), microphone=(), camera=(), fullscreen=(self)" always;
+              add_header X-Powered-By "" always;
+              add_header Server "" always;
+              add_header X-Runtime "" always;
+              add_header X-Version "" always;
+              add_header X-Application-Version "" always;
+
+              # Cache control
+              add_header Cache-Control "public, max-age=31536000" always;
+              add_header Pragma "public" always;
+              add_header Expires "31536000" always;
+
+              # Content Security Policy
+              add_header Content-Security-Policy "
+                  default-src 'self' data: blob:;
+                  script-src 'self'
+                      https://accounts.google.com 
+                      https://*.posthog.com 
+                      https://*.i.posthog.com 
+                      https://fpnpmcdn.net 
+                      https://*.klockwork.ai 
+                      https://klockwork.ai 
+                      https://cdn.jsdelivr.net 
+                      https://cdn.jsdelivr.net/npm/monaco-editor@0.52.2/ 
+                      blob:;
+                  style-src 'self'
+                      https://fonts.googleapis.com 
+                      https://accounts.google.com 
+                      https://cdnjs.cloudflare.com 
+                      https://*.klockwork.ai 
+                      https://klockwork.ai 
+                      https://cdn.jsdelivr.net 
+                      https://cdn.jsdelivr.net/npm/monaco-editor@0.52.2/ 
+                      https://greatify.work;
+                  font-src 'self'
+                      https://fonts.gstatic.com 
+                      https://cdnjs.cloudflare.com 
+                      data: 
+                      https://*.klockwork.ai 
+                      https://klockwork.ai 
+                      https://cdn.jsdelivr.net 
+                      https://cdn.jsdelivr.net/npm/monaco-editor@0.52.2/ 
+                      https://greatify.work;
+                  img-src 'self' 
+                      data: 
+                      blob: 
+                      https://cdn.jsdelivr.net 
+                      https://*.s3.amazonaws.com 
+                      https://*.amazonaws.com 
+                      https://*.klockwork.ai 
+                      https://klockwork.ai 
+                      https://cdn.jsdelivr.net 
+                      https://cdn.jsdelivr.net/npm/monaco-editor@0.52.2/ 
+                      https://greatify.work;
+                  object-src 'self' 
+                      https://*.s3.amazonaws.com 
+                      https://*.amazonaws.com 
+                      https://greatify.work;
+                  connect-src 'self' 
+                      https://klockwork.ai 
+                      https://*.klockwork.ai 
+                      https://*.posthog.com 
+                      https://*.i.posthog.com 
+                      https://www.wiris.net 
+                      https://ap.api.fpjs.io 
+                      https://venkatmcajj.github.io/* 
+                      https://cdn.jsdelivr.net 
+                      data: 
+                      blob: 
+                      wss://*.klockwork.ai 
+                      wss://klockwork.ai 
+                      https://greatify.work 
+                      wss://greatify.work;
+                  frame-src 'self' 
+                      https://accounts.google.com 
+                      https://*.s3.amazonaws.com 
+                      https://*.amazonaws.com 
+                      https://greatify.work;
+                  worker-src 'self' 
+                      blob: 
+                      data: 
+                      https://cdn.jsdelivr.net/npm/monaco-editor@0.52.2/;
+                  child-src 'self' 
+                      blob:;
+                  frame-ancestors 'self';
+              " always;
+
+              # Optimized compression settings
+              gzip on;
+              gzip_vary on;
+              gzip_min_length 1000;
+              gzip_comp_level 6;
+              gzip_http_version 1.1;
+              gzip_types
+                  application/atom+xml
+                  application/geo+json
+                  application/javascript
+                  application/x-javascript
+                  application/json
+                  application/ld+json
+                  application/xml
+                  application/manifest+json
+                  application/rdf+xml
+                  application/rss+xml
+                  application/xhtml+xml
+                  font/eot
+                  font/otf
+                  font/ttf
+                  image/svg+xml
+                  text/css
+                  text/javascript
+                  text/plain
+                  text/xml
+                  text/csv;
+
+              # Optimized static file caching
+              location ~* \.(css|js|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot)$ {
+                  expires 1y;
+                  add_header Cache-Control "public, max-age=31536000, immutable";
+                  access_log off;
+                  tcp_nodelay off;
+                  open_file_cache max=3000 inactive=120s;
+                  open_file_cache_valid 45s;
+                  open_file_cache_min_uses 2;
+                  open_file_cache_errors off;
+              }
+
+              # Additional gzip support for Brotli
+              brotli on;
+              brotli_comp_level 6;
+              brotli_types
+                  text/plain
+                  text/css
+                  application/json
+                  application/javascript
+                  text/xml
+                  application/xml
+                  application/atom+xml
+                  text/javascript;
+
+              server {
+                  listen 80;
+                  server_name _;
+                  
+                  # Block unwanted user agents
+                  if ($http_user_agent ~* "(?i)(curl|wget|python|libwww|perl|bot|crawl|spider|slurp|scanner)") {
+                      return 403;
+                  }
+
+                  # Block requests with no referrer
+                  if ($http_referer = "") {
+                      set $block_no_ref 1;
+                  }
+                  if ($request_uri ~* "^/(favicon\.ico|robots\.txt|sitemap\.xml)$") {
+                      set $block_no_ref 0;
+                  }
+                  if ($block_no_ref = 1) {
+                      return 403;
+                  }
+
+                  # Security rate limiting
+                  limit_req zone=one burst=5 nodelay;
+
+                  root /usr/share/nginx/html;
+                  index index.html index.htm;
+
+                  # Handle React Router
+                  location / {
+                      try_files $uri $uri/ /index.html;
+                      
+                      # Security headers for dynamic content
+                      add_header X-Frame-Options "SAMEORIGIN" always;
+                      add_header X-Content-Type-Options "nosniff" always;
+                      add_header X-XSS-Protection "1; mode=block" always;
+                      add_header Referrer-Policy "strict-origin-when-cross-origin" always;
+                  }
+
+                  # Optimized health check
+                  location /health-check {
+                      access_log off;
+                      return 200 'healthy\n';
+                      add_header Content-Type text/plain;
+                  }
+
+                  # Block access to sensitive files
+                  location ~ /\. {
+                      deny all;
+                      access_log off;
+                      log_not_found off;
+                      return 404;
+                  }
+
+                  location ~ \.(htaccess|htpasswd|ini|log|sh|sql|conf)$ {
+                      deny all;
+                      access_log off;
+                      log_not_found off;
+                      return 404;
+                  }
+
+                  # Custom error pages
+                  error_page 404 /404.html;
+                  error_page 500 502 503 504 /50x.html;
+                  
+                  location = /50x.html {
+                      root /usr/share/nginx/html;
+                  }
+              }
+          }
+    target:
+      kind: ConfigMap
+      name: frontend-ngnix-config
+  - patch: |-
+      apiVersion: v1
+      kind: Service
+      metadata:
+        name: examxv2-frontend-service
+        labels:
+          app: examxv2-frontend
+      spec:
+        type: ClusterIP
+        ports:
+          - port: 80
+            targetPort: 80
+            protocol: TCP
+        selector:
+          app: examxv2-frontend
+    target:
+      kind: Service
+      name: examxv2-frontend-service
+  - patch: |-
+      apiVersion: networking.k8s.io/v1
+      kind: Ingress
+      metadata:
+        name: examxv2-frontend-ingress
+        annotations:
+          kubernetes.io/ingress.class: nginx
+          nginx.ingress.kubernetes.io/rewrite-target: /
+          nginx.ingress.kubernetes.io/ssl-redirect: "true"
+          nginx.ingress.kubernetes.io/use-regex: "true"
+          nginx.ingress.kubernetes.io/proxy-body-size: "10m"
+          nginx.ingress.kubernetes.io/proxy-read-timeout: "600"
+          nginx.ingress.kubernetes.io/proxy-send-timeout: "600"
+          nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
+          cert-manager.io/cluster-issuer: letsencrypt-prod
+      spec:
+        tls:
+          - hosts:
+              - klockwork.ai
+            secretName: uat-klockwork-tls
+        rules:
+          - host: klockwork.ai
+            http:
+              paths:
+                - path: /
+                  pathType: Prefix
+                  backend:
+                    service:
+                      name: examxv2-frontend-service
+                      port:
+                        number: 80
+    target:
+      kind: Ingress
+      name: examxv2-frontend-ingress
+  - patch: |-
+      apiVersion: autoscaling/v2
+      kind: HorizontalPodAutoscaler
+      metadata:
+        name: examxv2-frontend-hpa
+        labels:
+          app: examxv2-frontend
+      spec:
+        scaleTargetRef:
+          apiVersion: apps/v1
+          kind: Deployment
+          name: examxv2-frontend
+        minReplicas: 1
+        maxReplicas: 3
+        metrics:
+          - type: Resource
+            resource:
+              name: cpu
+              target:
+                type: Utilization
+                averageUtilization: 70
+          - type: Resource
+            resource:
+              name: memory
+              target:
+                type: Utilization
+                averageUtilization: 80
+        behavior:
+          scaleDown:
+            stabilizationWindowSeconds: 300
+            policies:
+              - type: Percent
+                value: 50
+                periodSeconds: 60
+          scaleUp:
+            stabilizationWindowSeconds: 0
+            policies:
+              - type: Percent
+                value: 100
+                periodSeconds: 15
+              - type: Pods
+                value: 2
+                periodSeconds: 60
+            selectPolicy: Max
+    target:
+      kind: HorizontalPodAutoscaler
+      name: examxv2-frontend-hpa 
