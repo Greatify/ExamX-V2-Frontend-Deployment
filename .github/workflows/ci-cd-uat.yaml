@@ -241,7 +241,7 @@ jobs:
           aws-region: ${{ secrets.AWS_REGION }}
 
       - name: Update Kubernetes configuration
-        run: aws eks update-kubeconfig --name greatify-production-cluster --region ap-south-1
+        run: aws eks update-kubeconfig --name dev-stg-cluster --region ap-south-1
 
       - name: Deploy to UAT environment
         run: |
