@@ -224,31 +224,6 @@ patches:
                   text/xml
                   text/csv;
 
-              # Optimized static file caching
-              location ~* \.(css|js|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot)$ {
-                  expires 1y;
-                  add_header Cache-Control "public, max-age=31536000, immutable";
-                  access_log off;
-                  tcp_nodelay off;
-                  open_file_cache max=3000 inactive=120s;
-                  open_file_cache_valid 45s;
-                  open_file_cache_min_uses 2;
-                  open_file_cache_errors off;
-              }
-
-              # Additional gzip support for Brotli
-              brotli on;
-              brotli_comp_level 6;
-              brotli_types
-                  text/plain
-                  text/css
-                  application/json
-                  application/javascript
-                  text/xml
-                  application/xml
-                  application/atom+xml
-                  text/javascript;
-
               server {
                   listen 80;
                   server_name _;
@@ -274,6 +249,18 @@ patches:
 
                   root /usr/share/nginx/html;
                   index index.html index.htm;
+
+                  # Optimized static file caching
+                  location ~* \.(css|js|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot)$ {
+                      expires 1y;
+                      add_header Cache-Control "public, max-age=31536000, immutable";
+                      access_log off;
+                      tcp_nodelay off;
+                      open_file_cache max=3000 inactive=120s;
+                      open_file_cache_valid 45s;
+                      open_file_cache_min_uses 2;
+                      open_file_cache_errors off;
+                  }
 
                   # Handle React Router
                   location / {
@@ -338,40 +325,6 @@ patches:
     target:
       kind: Service
       name: examxv2-frontend-service
-  - patch: |-
-      apiVersion: networking.k8s.io/v1
-      kind: Ingress
-      metadata:
-        name: examxv2-frontend-ingress
-        annotations:
-          kubernetes.io/ingress.class: nginx
-          nginx.ingress.kubernetes.io/rewrite-target: /
-          nginx.ingress.kubernetes.io/ssl-redirect: "true"
-          nginx.ingress.kubernetes.io/use-regex: "true"
-          nginx.ingress.kubernetes.io/proxy-body-size: "10m"
-          nginx.ingress.kubernetes.io/proxy-read-timeout: "600"
-          nginx.ingress.kubernetes.io/proxy-send-timeout: "600"
-          nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
-          cert-manager.io/cluster-issuer: letsencrypt-prod
-      spec:
-        tls:
-          - hosts:
-              - klockwork.ai
-            secretName: uat-klockwork-tls
-        rules:
-          - host: klockwork.ai
-            http:
-              paths:
-                - path: /
-                  pathType: Prefix
-                  backend:
-                    service:
-                      name: examxv2-frontend-service
-                      port:
-                        number: 80
-    target:
-      kind: Ingress
-      name: examxv2-frontend-ingress
   - patch: |-
       apiVersion: autoscaling/v2
       kind: HorizontalPodAutoscaler
