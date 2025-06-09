@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-Remove_Passage_Question_Mandat-20250609-131925-1d372c5"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-Exm_583_stop_scroll_from_alter-20250609-163643-d010e45"
                 imagePullPolicy: Always
                 resources:
                   requests:
