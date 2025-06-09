@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-Changing_filters_for_question_-20250609-100207-3bd97d5"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-Changing_filters_for_question_-20250609-084920-3bd97d5"
                 imagePullPolicy: Always
                 resources:
                   requests:
@@ -123,184 +123,209 @@ patches:
 
               # Content Security Policy
               add_header Content-Security-Policy "
-                  default-src 'self' data: blob:;
-                  script-src 'self'
-                      https://accounts.google.com 
-                      https://*.posthog.com 
-                      https://*.i.posthog.com 
-                      https://fpnpmcdn.net 
-                      https://*.klockwork.ai 
-                      https://klockwork.ai 
-                      https://cdn.jsdelivr.net 
-                      https://cdn.jsdelivr.net/npm/monaco-editor@0.52.2/ 
-                      blob:;
-                  style-src 'self'
-                      https://fonts.googleapis.com 
-                      https://accounts.google.com 
-                      https://cdnjs.cloudflare.com 
-                      https://*.klockwork.ai 
-                      https://klockwork.ai 
-                      https://cdn.jsdelivr.net 
-                      https://cdn.jsdelivr.net/npm/monaco-editor@0.52.2/ 
-                      https://greatify.work;
-                  font-src 'self'
-                      https://fonts.gstatic.com 
-                      https://cdnjs.cloudflare.com 
-                      data: 
-                      https://*.klockwork.ai 
-                      https://klockwork.ai 
-                      https://cdn.jsdelivr.net 
-                      https://cdn.jsdelivr.net/npm/monaco-editor@0.52.2/ 
-                      https://greatify.work;
-                  img-src 'self' 
-                      data: 
-                      blob: 
-                      https://cdn.jsdelivr.net 
-                      https://*.s3.amazonaws.com 
-                      https://*.amazonaws.com 
-                      https://*.klockwork.ai 
-                      https://klockwork.ai 
-                      https://cdn.jsdelivr.net 
-                      https://cdn.jsdelivr.net/npm/monaco-editor@0.52.2/ 
-                      https://greatify.work;
-                  object-src 'self' 
-                      https://*.s3.amazonaws.com 
-                      https://*.amazonaws.com 
-                      https://greatify.work;
-                  connect-src 'self' 
-                      https://klockwork.ai 
-                      https://*.klockwork.ai 
-                      https://*.posthog.com 
-                      https://*.i.posthog.com 
-                      https://www.wiris.net 
-                      https://ap.api.fpjs.io 
-                      https://venkatmcajj.github.io/* 
-                      https://cdn.jsdelivr.net 
-                      data: 
-                      blob: 
-                      wss://*.klockwork.ai 
-                      wss://klockwork.ai 
-                      https://greatify.work 
-                      wss://greatify.work;
-                  frame-src 'self' 
-                      https://accounts.google.com 
-                      https://*.s3.amazonaws.com 
-                      https://*.amazonaws.com 
-                      https://greatify.work;
-                  worker-src 'self' 
-                      blob: 
-                      data: 
-                      https://cdn.jsdelivr.net/npm/monaco-editor@0.52.2/;
-                  child-src 'self' 
-                      blob:;
-                  frame-ancestors 'self';
-              " always;
+                default-src *;
+                script-src * 'unsafe-inline' 'unsafe-eval';
+                style-src * 'unsafe-inline';
+                img-src * data:;
+                font-src * data:;
+                connect-src *;
+                frame-ancestors *;
+            " always;
 
-              # Optimized compression settings
-              gzip on;
-              gzip_vary on;
-              gzip_min_length 1000;
-              gzip_comp_level 6;
-              gzip_http_version 1.1;
-              gzip_types
-                  application/atom+xml
-                  application/geo+json
-                  application/javascript
-                  application/x-javascript
-                  application/json
-                  application/ld+json
-                  application/xml
-                  application/manifest+json
-                  application/rdf+xml
-                  application/rss+xml
-                  application/xhtml+xml
-                  font/eot
-                  font/otf
-                  font/ttf
-                  image/svg+xml
-                  text/css
-                  text/javascript
-                  text/plain
-                  text/xml
-                  text/csv;
+              # Map for subdomains
+              map $http_host $subdomain {
+                  default "";
+                  "~^(?<sub>.+)\.klockwork\.ai$" $sub;
+              }
+
+              # Open file cache
+              open_file_cache max=1000 inactive=20s;
+              open_file_cache_valid 30s;
+              open_file_cache_min_uses 2;
+              open_file_cache_errors on;
 
               server {
                   listen 80;
-                  server_name _;
-                  
-                  # Block unwanted user agents
-                  if ($http_user_agent ~* "(?i)(curl|wget|python|libwww|perl|bot|crawl|spider|slurp|scanner)") {
-                      return 403;
-                  }
+                  http2 on;
+                  server_name klockwork.ai *.klockwork.ai;
 
-                  # Block requests with no referrer
-                  if ($http_referer = "") {
-                      set $block_no_ref 1;
-                  }
-                  if ($request_uri ~* "^/(favicon\.ico|robots\.txt|sitemap\.xml)$") {
-                      set $block_no_ref 0;
-                  }
-                  if ($block_no_ref = 1) {
-                      return 403;
-                  }
-
-                  # Security rate limiting
-                  limit_req zone=one burst=5 nodelay;
+                  # Hide server version
+                  server_tokens off;
 
                   root /usr/share/nginx/html;
-                  index index.html index.htm;
+                  index index.html;
 
-                  # Optimized static file caching
-                  location ~* \.(css|js|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot)$ {
-                      expires 1y;
-                      add_header Cache-Control "public, max-age=31536000, immutable";
-                      access_log off;
-                      tcp_nodelay off;
-                      open_file_cache max=3000 inactive=120s;
-                      open_file_cache_valid 45s;
-                      open_file_cache_min_uses 2;
-                      open_file_cache_errors off;
+                  # Security headers for this specific server
+                  add_header Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" always;
+                  add_header X-Content-Type-Options "nosniff" always;
+                  add_header X-Frame-Options "SAMEORIGIN" always;
+                  add_header X-XSS-Protection "1; mode=block" always;
+                  add_header Referrer-Policy "strict-origin-when-cross-origin" always;
+                  add_header Permissions-Policy "geolocation=(), microphone=(), camera=(), fullscreen=(self)" always;
+                  add_header X-Powered-By "" always;
+                  add_header Server "" always;
+                  add_header X-Runtime "" always;
+                  add_header X-Version "" always;
+                  add_header X-Application-Version "" always;
+
+                  # Cache control
+                  add_header Cache-Control "public, max-age=31536000" always;
+                  add_header Pragma "public" always;
+                  add_header Expires "31536000" always;
+
+                  # Rate limiting
+                  limit_req zone=one burst=20 nodelay;
+                  limit_conn addr 1000;
+
+                  # Disable HTTP TRACE method
+                  if ($request_method = TRACE) {
+                      return 403;
                   }
 
-                  # Handle React Router
+                  # Health check endpoint
+                  location = /health {
+                      access_log off;
+                      add_header Content-Type text/plain;
+                      add_header X-Content-Type-Options "nosniff" always;
+                      add_header X-Frame-Options "SAMEORIGIN" always;
+                      add_header X-Powered-By "" always;
+                      add_header Server "" always;
+                      return 200 'OK';
+                  }
+
+                  # Block access to sensitive files and directories
+                  location ~ /\.(?!well-known).* {
+                      deny all;
+                      access_log off;
+                      log_not_found off;
+                  }
+
+                  # Block access to source code and sensitive files
+                  location ~* \.(php|ts|jsx|tsx|map|log|git|env|DS_Store|swp|bak|old|zip|config|json|md|txt|sql|yml|yaml|xml|ini|conf|sh|bash|exe|dll|so|dylib|class|jar|war|ear|zip|tar|gz|rar|7z)$ {
+                      deny all;
+                      access_log off;
+                      log_not_found off;
+                  }
+
+                  # Block access to node_modules and other sensitive directories
+                  location ~* /(\.git|\.svn|\.hg|\.idea|\.vscode|\.env|config|src|tests|coverage|dist|build|logs|temp|tmp|cache)/ {
+                      deny all;
+                      access_log off;
+                      log_not_found off;
+                  }
+
+                  # Favicon handling
+                  location = /favicon.ico {
+                      expires 365d;
+                      add_header Cache-Control "public, max-age=31536000" always;
+                      add_header X-Content-Type-Options "nosniff" always;
+                      add_header X-Frame-Options "SAMEORIGIN" always;
+                      add_header X-Powered-By "" always;
+                      add_header Server "" always;
+                      add_header Content-Type "image/x-icon" always;
+                      try_files $uri @empty_favicon;
+                      access_log off;
+                      log_not_found off;
+                  }
+
+                  # Empty favicon handler
+                  location @empty_favicon {
+                      expires 365d;
+                      add_header Cache-Control "public, max-age=31536000" always;
+                      add_header X-Content-Type-Options "nosniff" always;
+                      add_header X-Frame-Options "SAMEORIGIN" always;
+                      add_header X-Powered-By "" always;
+                      add_header Server "" always;
+                      add_header Content-Type "image/x-icon" always;
+                      return 204;
+                      access_log off;
+                      log_not_found off;
+                  }
+
+                  # Chunks directory
+                  location /chunks/ {
+                      expires 365d;
+                      add_header Cache-Control "public, max-age=31536000" always;
+                      add_header X-Content-Type-Options "nosniff" always;
+                      add_header X-Frame-Options "SAMEORIGIN" always;
+                      add_header X-Powered-By "" always;
+                      add_header Server "" always;
+                      try_files $uri =404;
+                      access_log off;
+                      log_not_found off;
+                  }
+
+                  # Static files with proper caching
+                  location ~* \.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot)$ {
+                      expires 365d;
+                      add_header Cache-Control "public, max-age=31536000" always;
+                      add_header X-Content-Type-Options "nosniff" always;
+                      add_header X-Frame-Options "SAMEORIGIN" always;
+                      add_header X-Powered-By "" always;
+                      add_header Server "" always;
+                      try_files $uri =404;
+                      access_log off;
+                      log_not_found off;
+                  }
+
+                  # Main application
                   location / {
                       try_files $uri $uri/ /index.html;
-                      
-                      # Security headers for dynamic content
+
+                      # Set cookie flags
+                      proxy_cookie_path / "/; HttpOnly; Secure; SameSite=Strict";
+                      proxy_cookie_path /api/ "/; HttpOnly; Secure; SameSite=Strict";
+
+                      # Add retry mechanism for upstream errors
+                      proxy_next_upstream error timeout http_500 http_502 http_503 http_504;
+                      proxy_next_upstream_tries 3;
+                      proxy_next_upstream_timeout 10s;
+
+                      # Increase timeouts
+                      proxy_connect_timeout 60s;
+                      proxy_send_timeout 60s;
+                      proxy_read_timeout 60s;
+
+                      # CORS configuration
+                      if ($request_method = 'OPTIONS') {
+                          add_header 'Access-Control-Allow-Origin' $http_origin;
+                          add_header 'Access-Control-Allow-Methods' 'GET, HEAD, PUT, POST, PATCH, OPTIONS';
+                          add_header 'Access-Control-Allow-Headers' 'Origin, Authorization, Accept, Content-Type, X-Requested-With, X-Database-Choice';
+                          add_header 'Access-Control-Allow-Credentials' 'true';
+                          add_header 'Access-Control-Expose-Headers' 'Correlation-ID';
+                          add_header 'Access-Control-Max-Age' 1728000;
+                          add_header 'Content-Type' 'text/plain; charset=utf-8';
+                          add_header 'Content-Length' 0;
+                          add_header X-Frame-Options "SAMEORIGIN" always;
+                          add_header X-Powered-By "" always;
+                          add_header Server "" always;
+                          return 204;
+                      }
+
+                      # CORS allowed origins
+                      if ($http_origin ~ '^https?://(klockwork\.ai|.*\.klockwork\.ai)$') {
+                          add_header 'Access-Control-Allow-Origin' $http_origin always;
+                      }
+
+                      add_header 'Access-Control-Allow-Methods' 'GET, HEAD, PUT, POST, PATCH, OPTIONS' always;
+                      add_header 'Access-Control-Allow-Headers' 'Origin, Authorization, Accept, Content-Type, X-Requested-With, X-Database-Choice' always;
+                      add_header 'Access-Control-Allow-Credentials' 'true' always;
+                      add_header 'Access-Control-Expose-Headers' 'Correlation-ID' always;
                       add_header X-Frame-Options "SAMEORIGIN" always;
-                      add_header X-Content-Type-Options "nosniff" always;
-                      add_header X-XSS-Protection "1; mode=block" always;
-                      add_header Referrer-Policy "strict-origin-when-cross-origin" always;
+                      add_header X-Powered-By "" always;
+                      add_header Server "" always;
                   }
 
-                  # Optimized health check
-                  location /health-check {
-                      access_log off;
-                      return 200 'healthy\n';
-                      add_header Content-Type text/plain;
-                  }
-
-                  # Block access to sensitive files
-                  location ~ /\. {
-                      deny all;
-                      access_log off;
-                      log_not_found off;
-                      return 404;
-                  }
-
-                  location ~ \.(htaccess|htpasswd|ini|log|sh|sql|conf)$ {
-                      deny all;
-                      access_log off;
-                      log_not_found off;
-                      return 404;
-                  }
-
-                  # Custom error pages
-                  error_page 404 /404.html;
+                  # Error pages with proper handling
+                  error_page 404 /index.html;
                   error_page 500 502 503 504 /50x.html;
                   
                   location = /50x.html {
                       root /usr/share/nginx/html;
+                      internal;
+                      add_header Cache-Control "no-store, no-cache, must-revalidate";
+                      add_header Pragma "no-cache";
+                      add_header Expires "0";
                   }
               }
           }
@@ -325,6 +350,40 @@ patches:
     target:
       kind: Service
       name: examxv2-frontend-service
+  # - patch: |-
+  #     apiVersion: networking.k8s.io/v1
+  #     kind: Ingress
+  #     metadata:
+  #       name: examxv2-frontend-ingress
+  #       annotations:
+  #         kubernetes.io/ingress.class: nginx
+  #         nginx.ingress.kubernetes.io/rewrite-target: /
+  #         nginx.ingress.kubernetes.io/ssl-redirect: "true"
+  #         nginx.ingress.kubernetes.io/use-regex: "true"
+  #         nginx.ingress.kubernetes.io/proxy-body-size: "10m"
+  #         nginx.ingress.kubernetes.io/proxy-read-timeout: "600"
+  #         nginx.ingress.kubernetes.io/proxy-send-timeout: "600"
+  #         nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
+  #         cert-manager.io/cluster-issuer: letsencrypt-prod
+  #     spec:
+  #       tls:
+  #         - hosts:
+  #             - klockwork.ai
+  #           secretName: uat-klockwork-tls
+  #       rules:
+  #         - host: klockwork.ai
+  #           http:
+  #             paths:
+  #               - path: /
+  #                 pathType: Prefix
+  #                 backend:
+  #                   service:
+  #                     name: examxv2-frontend-service
+  #                     port:
+  #                       number: 80
+  #   target:
+  #     kind: Ingress
+  #     name: examxv2-frontend-ingress
   - patch: |-
       apiVersion: autoscaling/v2
       kind: HorizontalPodAutoscaler
