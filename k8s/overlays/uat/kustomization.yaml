@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-Merge_branch__dev__of_https___-20250610-050146-df7bca6"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-bulk_select_and_acknowledge_fo-20250610-124045-713c4bd"
                 imagePullPolicy: Always
                 resources:
                   requests:
