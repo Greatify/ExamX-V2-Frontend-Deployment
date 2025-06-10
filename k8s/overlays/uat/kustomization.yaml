@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-Changing_filters_for_question_-20250609-084920-3bd97d5"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-Squashed_EXM_720_Co_is_not_dis-20250610-044051-a925127"
                 imagePullPolicy: Always
                 resources:
                   requests:
