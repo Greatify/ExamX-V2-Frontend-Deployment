@@ -23,7 +23,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:EXM_774_Delay_in_Authoring_lis-20250612-152050-d1a1a2a"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:EXM_790__Single_click_automati-20250612-165054-609c516"
                 imagePullPolicy: Always
                 resources:
                   requests:
