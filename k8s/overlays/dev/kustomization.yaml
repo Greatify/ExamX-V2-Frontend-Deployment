@@ -23,7 +23,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:EXM_738____enhance_download_fe-20250617-092219-ce0c55d"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:EXM_807_hide_role_editing_and_-20250617-122635-5e77275"
                 imagePullPolicy: Always
                 resources:
                   requests:
