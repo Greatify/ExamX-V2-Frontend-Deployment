@@ -23,7 +23,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:EXM_512____no_account_lock_pol-20250618-073142-736ca13"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:GE_9656_Integrate_Microsoft_SS-20250618-085029-34d8c49"
                 imagePullPolicy: Always
                 resources:
                   requests:
