@@ -23,7 +23,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:EXM_811_SRM_New_Template_issue-20250618-104431-ea0876b"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:E_9656_integrate_microsoft_sso-20250618-123945-6511978"
                 imagePullPolicy: Always
                 resources:
                   requests:
