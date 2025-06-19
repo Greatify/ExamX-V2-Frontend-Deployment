@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-Exm_739_Need_a_Terminology_Cha-20250617-135924-95fc514"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-GE_9656Integrate_Microsoft_SSO-20250619-070904-687c0e7"
                 imagePullPolicy: Always
                 resources:
                   requests:
