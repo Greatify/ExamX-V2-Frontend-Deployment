@@ -23,7 +23,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:EXM_842_PDF_generating_error__-20250623-051733-c470574"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:Conflict_clear_for_Weekly_Rele-20250623-052745-53d4a44"
                 imagePullPolicy: Always
                 resources:
                   requests:
