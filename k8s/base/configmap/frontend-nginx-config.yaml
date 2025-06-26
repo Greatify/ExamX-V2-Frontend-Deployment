@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: frontend-ngnix-config
+  name: frontend-nginx-config
 data:
-  ngnix.conf: |
+  nginx.conf: |
     worker_processes auto;
 
     events {
