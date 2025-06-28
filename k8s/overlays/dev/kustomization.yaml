@@ -23,7 +23,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:Update_localization_files_for_-20250628-132844-1c70832"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:EXM_926_Status_Issue_Fix___Exa-20250628-170753-1614e46"
                 imagePullPolicy: Always
                 resources:
                   requests:
