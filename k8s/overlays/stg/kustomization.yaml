@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-Update_package_lock_json_for_d-20250628-125749-f020e59"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-Update_localization_files_for_-20250628-131958-90279d3"
                 imagePullPolicy: Always
                 resources:
                   requests:
