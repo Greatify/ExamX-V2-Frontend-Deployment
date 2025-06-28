@@ -23,7 +23,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:EXM_902_If_a_user_logs_in_on_t-20250628-105135-6d1e8d3"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:Update_localization_files_and_-20250628-122209-bb8a4e7"
                 imagePullPolicy: Always
                 resources:
                   requests:
