@@ -23,7 +23,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:EXM_980_Add_Role_number_for_st-20250705-072602-9c5a46b"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:EXM_895_question_selectors_are-20250707-140210-addf403"
                 imagePullPolicy: Always
                 resources:
                   requests:
