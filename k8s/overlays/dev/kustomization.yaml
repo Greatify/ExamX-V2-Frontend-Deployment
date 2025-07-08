@@ -23,7 +23,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:Fixed_google_oauth_vulnerabili-20250708-074659-0d771d2"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:Exm_991_display_passage_progra-20250708-123501-bdd5fa0"
                 imagePullPolicy: Always
                 resources:
                   requests:
