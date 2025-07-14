@@ -23,7 +23,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:EXM_993_Added_global_configura-20250714-060258-98bd6bd"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:EXM_993_Added_prompt_for_micro-20250714-070843-952113f"
                 imagePullPolicy: Always
                 resources:
                   requests:
