@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-EXM_1006____answer_key_added_f-20250714-141312-d4d3a41"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-EXM_1026_Reset_the_password_is-20250716-052720-663b63c"
                 imagePullPolicy: Always
                 resources:
                   requests:
