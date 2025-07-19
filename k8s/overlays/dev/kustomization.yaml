@@ -23,7 +23,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:EXM_1085_Froala_Editor_iframe_-20250719-082214-23d77f8"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:EXM_1055___EXM_1087___2238_EXM-20250719-111351-9f30725"
                 imagePullPolicy: Always
                 resources:
                   requests:
