@@ -23,7 +23,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:EXM_1091_ByPass_Face_Recogniti-20250719-145723-0a4f15c"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:EXM_1091_ByPass_Face_Recogniti-20250719-151545-ff0fa70"
                 imagePullPolicy: Always
                 resources:
                   requests:
