@@ -23,7 +23,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:EXM_1083_SRM_claim_form_change-20250720-104544-33b4c89"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:EXM_1095_Optimize_Student_Dash-20250720-110436-5d1a94d"
                 imagePullPolicy: Always
                 resources:
                   requests:
