@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM_1099_Enhance_RangeFilterDr-20250720-191717-3697237"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-Fix_comparison_operator_for_mo-20250721-050011-fb4490f"
                 imagePullPolicy: Always
                 resources:
                   requests:
