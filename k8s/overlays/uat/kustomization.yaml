@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-Enhance_build_process_and_perf-20250724-102620-d08186b"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-Update__dockerignore_and_Docke-20250724-104203-b574a74"
                 imagePullPolicy: Always
                 resources:
                   requests:
