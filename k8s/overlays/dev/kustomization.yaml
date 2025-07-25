@@ -23,7 +23,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:Update_Dockerfile___dockerigno-20250725-093517-376c208"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:EXM_677_Need_a_filter_option_i-20250725-103450-796abb4"
                 imagePullPolicy: Always
                 resources:
                   requests:
