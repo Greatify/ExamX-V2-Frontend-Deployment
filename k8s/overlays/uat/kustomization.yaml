@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-Refactor_Dockerfile_and_packag-20250724-104748-2443107"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-EXM_1236_Enhance_evaluation_co-20250801-071413-9945809"
                 imagePullPolicy: Always
                 resources:
                   requests:
