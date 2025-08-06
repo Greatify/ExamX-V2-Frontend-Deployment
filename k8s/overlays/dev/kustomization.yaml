@@ -23,7 +23,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:EXM_1261_Refactor_validation_m-20250805-114229-8419fcb"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:EXM____1212_ai_assistant_in_li-20250806-054053-af1858b"
                 imagePullPolicy: Always
                 resources:
                   requests:
