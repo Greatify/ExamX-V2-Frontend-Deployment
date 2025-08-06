@@ -23,7 +23,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:EXM_1298_web_app_submission___-20250806-121855-4b5cfcb"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:EXM_1217_Enhance_Mark_Input_to-20250806-122357-d3707d4"
                 imagePullPolicy: Always
                 resources:
                   requests:
