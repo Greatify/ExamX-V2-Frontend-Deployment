@@ -12,9 +12,9 @@ on:
         required: true
         type: string
         
-# concurrency:
-#   group: ${{ github.workflow }}-${{ github.ref }}
-#   cancel-in-progress: true
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   security-password-check:
@@ -132,8 +132,9 @@ jobs:
         uses: actions/cache@v3
         with:
           path: /tmp/.buildx-cache
-          key: ${{ runner.os }}-buildx-${{ env.REPO_COMMIT_SHA }}
+          key: ${{ runner.os }}-buildx-prod-${{ env.REPO_COMMIT_SHA }}
           restore-keys: |
+            ${{ runner.os }}-buildx-prod-
             ${{ runner.os }}-buildx-
   
       - name: Build and push frontend Docker image
