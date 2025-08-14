@@ -68,10 +68,9 @@ jobs:
       - name: Send deployment success notification
         if: success()
         uses: 8398a7/action-slack@v3
-        with:
+                with:
           status: ${{ job.status }}
-          fields: repo,commit,eventName,ref,workflow
-          author_name: ExamX-V2-CICD
+          author_name: Frontend Deployment Success
           mention: ${{ github.actor }}
           if_mention: success
           job_name: deploy-frontend-dev
@@ -79,7 +78,11 @@ jobs:
           username: ExamX-V2-CICD
           text: |
             :rocket: *Frontend deployment to dev environment succeeded*
-            *Pusher:* `${{ github.actor }}`
-            @${{ github.actor }}, your changes have been deployed successfully. Please verify the deployment in the dev environment.
+            
+            *Deployment by:* @${{ github.actor }}
+            *Commit:* ${{ github.event.inputs.sha }}
+            *Commit message:* ${{ github.event.inputs.commit_message }}
+            
+            @${{ github.actor }}, your changes have been deployed successfully to Development.
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
