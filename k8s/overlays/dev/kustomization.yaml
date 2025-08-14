@@ -23,7 +23,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:EXM_1410___EXM___1409_Time_man-20250814-044100-112bcd2"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:Bugfix_sso_fix_middlesex___244-20250814-072232-bc2d747"
                 imagePullPolicy: Always
                 resources:
                   requests:
