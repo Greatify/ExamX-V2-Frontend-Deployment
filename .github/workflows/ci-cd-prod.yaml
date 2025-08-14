@@ -226,43 +226,43 @@ jobs:
           git commit -m "Update image tags for prod deployment - ${{ env.COMMIT_MESSAGE }}"
           git push origin main
           
-      # - name: Push to protected branch
-      #   uses: CasperWA/push-protected@v2
-      #   with:
-      #     token: ${{ secrets.PAT_TOKEN }}
-      #     branch: ${{ github.ref_name }}
-      #     unprotect_reviews: true
+      - name: Push to protected branch
+        uses: CasperWA/push-protected@v2
+        with:
+          token: ${{ secrets.PAT_TOKEN }}
+          branch: ${{ github.ref_name }}
+          unprotect_reviews: true
 
-      # - name: Configure AWS credentials for deployment
-      #   uses: aws-actions/configure-aws-credentials@v3
-      #   with:
-      #     aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-      #     aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      #     aws-region: ${{ secrets.AWS_REGION }}
+      - name: Configure AWS credentials for deployment
+        uses: aws-actions/configure-aws-credentials@v3
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
 
-      # - name: Update Kubernetes configuration
-      #   run: aws eks update-kubeconfig --name greatify-production-cluster --region ap-south-1
+      - name: Update Kubernetes configuration
+        run: aws eks update-kubeconfig --name greatify-production-cluster --region ap-south-1
 
-      # - name: Deploy to production environment
-      #   run: |
-      #     kubectl apply -k k8s/overlays/prod
+      - name: Deploy to production environment
+        run: |
+          kubectl apply -k k8s/overlays/prod
 
-      # - name: Send deployment success notification
-      #   if: success()
-      #   uses: 8398a7/action-slack@v3
-      #   with:
-      #     status: ${{ job.status }}
-      #     fields: repo,message,commit,eventName,ref,workflow
-      #     author_name: Frontend Deployment Success
-      #     mention: channel
-      #     if_mention: success
-      #     job_name: deploy-frontend-production
-      #     channel: examxv2-frontend-alerts
-      #     username: ExamX-V2-CICD
-      #     text: |
-      #       :rocket: *Frontend deployment to production environment succeeded*         
-      #       *Pusher:* `${{ github.actor }}`   
-      #       *Commit:* `${{ env.COMMIT_MESSAGE }}`   
-      #       The changes have been successfully deployed to the Production environment. Please verify the deployment and conduct necessary tests.
-      #   env:
-      #     SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+      - name: Send deployment success notification
+        if: success()
+        uses: 8398a7/action-slack@v3
+        with:
+          status: ${{ job.status }}
+          fields: repo,message,commit,eventName,ref,workflow
+          author_name: Frontend Deployment Success
+          mention: channel
+          if_mention: success
+          job_name: deploy-frontend-production
+          channel: examxv2-frontend-alerts
+          username: ExamX-V2-CICD
+          text: |
+            :rocket: *Frontend deployment to production environment succeeded*         
+            *Pusher:* `${{ github.actor }}`   
+            *Commit:* `${{ env.COMMIT_MESSAGE }}`   
+            The changes have been successfully deployed to the Production environment. Please verify the deployment and conduct necessary tests.
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
