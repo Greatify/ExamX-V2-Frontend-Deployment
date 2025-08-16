@@ -227,12 +227,12 @@ jobs:
           git commit -m "Update image tags for prod deployment - ${{ env.COMMIT_MESSAGE }}"
           git push origin main
           
-      - name: Push to protected branch
-        uses: CasperWA/push-protected@v2
-        with:
-          token: ${{ secrets.PAT_TOKEN }}
-          branch: ${{ github.ref_name }}
-          unprotect_reviews: true
+    #  - name: Push to protected branch
+    #    uses: CasperWA/push-protected@v2
+    #    with:
+     #     token: ${{ secrets.PAT_TOKEN }}
+     #     branch: ${{ github.ref_name }}
+      #    unprotect_reviews: true
 
       - name: Configure AWS credentials for deployment
         uses: aws-actions/configure-aws-credentials@v3
