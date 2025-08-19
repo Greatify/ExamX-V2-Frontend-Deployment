@@ -122,10 +122,10 @@ jobs:
           SAFE_COMMIT_MSG=$(echo "$COMMIT_MSG" | sed -e 's/[^a-zA-Z0-9]/_/g' | cut -c1-30)
           IMAGE_TAG="stg-${SAFE_COMMIT_MSG}-${TIMESTAMP}-${COMMIT_ID:0:7}"
           
-          echo "IMAGE_TAG=$IMAGE_TAG" >> $GITHUB_OUTPUT
-          echo "REPO_COMMIT_SHA=$COMMIT_ID" >> $GITHUB_OUTPUT
-          echo "COMMIT_MESSAGE=$COMMIT_MSG" >> $GITHUB_OUTPUT
-          echo "Generated Image Tag: $IMAGE_TAG"
+          printf 'IMAGE_TAG=%s\n' "$IMAGE_TAG" >> $GITHUB_OUTPUT
+          printf 'REPO_COMMIT_SHA=%s\n' "$COMMIT_ID" >> $GITHUB_OUTPUT
+          printf 'COMMIT_MESSAGE=%s\n' "$COMMIT_MSG" >> $GITHUB_OUTPUT
+          printf 'Generated Image Tag: %s\n' "$IMAGE_TAG"
 
       - name: Cache Docker layers
         uses: actions/cache@v3
@@ -160,9 +160,9 @@ jobs:
 
       - name: Save image tag and commit info to files
         run: |
-          echo "${{ steps.login-ecr.outputs.registry }}/examxv2-frontend:${{ steps.generate-tag.outputs.IMAGE_TAG }}" > frontend_image_tag.txt
+          printf '%s\n' "${{ steps.login-ecr.outputs.registry }}/examxv2-frontend:${{ steps.generate-tag.outputs.IMAGE_TAG }}" > frontend_image_tag.txt
           printf '%s\n' "${{ steps.generate-tag.outputs.COMMIT_MESSAGE }}" > commit_message.txt
-          echo "${{ steps.generate-tag.outputs.REPO_COMMIT_SHA }}" > commit_sha.txt
+          printf '%s\n' "${{ steps.generate-tag.outputs.REPO_COMMIT_SHA }}" > commit_sha.txt
 
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
@@ -215,9 +215,9 @@ jobs:
 
       - name: Set deployment variables from artifacts
         run: |
-          echo "FRONTEND_IMAGE=$(cat frontend_image_tag.txt)" >> $GITHUB_ENV
-          echo "COMMIT_MESSAGE=$(cat commit_message.txt)" >> $GITHUB_ENV
-          echo "COMMIT_SHA=$(cat commit_sha.txt)" >> $GITHUB_ENV
+          printf 'FRONTEND_IMAGE=%s\n' "$(cat frontend_image_tag.txt)" >> $GITHUB_ENV
+          printf 'COMMIT_MESSAGE=%s\n' "$(cat commit_message.txt)" >> $GITHUB_ENV
+          printf 'COMMIT_SHA=%s\n' "$(cat commit_sha.txt)" >> $GITHUB_ENV
 
       - name: Update deployment image tag in Kustomization
         run: |
