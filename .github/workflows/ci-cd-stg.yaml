@@ -161,7 +161,7 @@ jobs:
       - name: Save image tag and commit info to files
         run: |
           echo "${{ steps.login-ecr.outputs.registry }}/examxv2-frontend:${{ steps.generate-tag.outputs.IMAGE_TAG }}" > frontend_image_tag.txt
-          echo "${{ steps.generate-tag.outputs.COMMIT_MESSAGE }}" > commit_message.txt
+          printf '%s\n' "${{ steps.generate-tag.outputs.COMMIT_MESSAGE }}" > commit_message.txt
           echo "${{ steps.generate-tag.outputs.REPO_COMMIT_SHA }}" > commit_sha.txt
 
       - name: Upload build artifacts
