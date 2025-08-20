@@ -120,19 +120,19 @@ jobs:
           COMMIT_ID=$(git rev-parse HEAD)
           # Extract commit message and make it safe for use in tags
           COMMIT_MSG=$(git log -1 --pretty=%B | tr -d '\n' | cut -c1-50)
-          SAFE_COMMIT_MSG=$(echo "$COMMIT_MSG" | sed -e 's/[^a-zA-Z0-9]/_/g' | cut -c1-30)
+          SAFE_COMMIT_MSG=$(printf '%s' "$COMMIT_MSG" | sed -e 's/[^a-zA-Z0-9]/_/g' | cut -c1-30)
           IMAGE_TAG="prod-${SAFE_COMMIT_MSG}-${TIMESTAMP}-${COMMIT_ID:0:7}"
           
-          echo "IMAGE_TAG=$IMAGE_TAG" >> $GITHUB_OUTPUT
-          echo "REPO_COMMIT_SHA=$COMMIT_ID" >> $GITHUB_ENV
-          echo "COMMIT_MESSAGE=$COMMIT_MSG" >> $GITHUB_ENV
-          echo "Generated Image Tag: $IMAGE_TAG"
+          printf 'IMAGE_TAG=%s\n' "$IMAGE_TAG" >> $GITHUB_OUTPUT
+          printf 'REPO_COMMIT_SHA=%s\n' "$COMMIT_ID" >> $GITHUB_OUTPUT
+          printf 'COMMIT_MESSAGE=%s\n' "$COMMIT_MSG" >> $GITHUB_OUTPUT
+          printf 'Generated Image Tag: %s\n' "$IMAGE_TAG"
 
       - name: Cache Docker layers
         uses: actions/cache@v3
         with:
           path: /tmp/.buildx-cache
-          key: ${{ runner.os }}-buildx-prod-${{ env.REPO_COMMIT_SHA }}
+          key: ${{ runner.os }}-buildx-prod-${{ steps.generate-tag.outputs.REPO_COMMIT_SHA }}
           restore-keys: |
             ${{ runner.os }}-buildx-prod-
             ${{ runner.os }}-buildx-
@@ -151,7 +151,7 @@ jobs:
           no-cache: false
           pull: true
           labels: |
-            org.opencontainers.image.revision=${{ env.REPO_COMMIT_SHA }}
+            org.opencontainers.image.revision=${{ steps.generate-tag.outputs.REPO_COMMIT_SHA }}
             org.opencontainers.image.created=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
   
       - name: Move cache directory
@@ -159,15 +159,25 @@ jobs:
           rm -rf /tmp/.buildx-cache
           mv /tmp/.buildx-cache-new /tmp/.buildx-cache
 
-      - name: Save image tag to file
+      - name: Save image tag and commit info to files
+        env:
+          IMAGE_TAG: ${{ steps.generate-tag.outputs.IMAGE_TAG }}
+          COMMIT_MESSAGE: ${{ steps.generate-tag.outputs.COMMIT_MESSAGE }}
+          REPO_COMMIT_SHA: ${{ steps.generate-tag.outputs.REPO_COMMIT_SHA }}
+          REGISTRY: ${{ steps.login-ecr.outputs.registry }}
         run: |
-          echo "${{ steps.login-ecr.outputs.registry }}/examxv2-frontend:${{ steps.generate-tag.outputs.IMAGE_TAG }}" > frontend_image_tag.txt
+          printf '%s\n' "$REGISTRY/examxv2-frontend:$IMAGE_TAG" > frontend_image_tag.txt
+          printf '%s\n' "$COMMIT_MESSAGE" > commit_message.txt
+          printf '%s\n' "$REPO_COMMIT_SHA" > commit_sha.txt
 
-      - name: Upload frontend image tag file
+      - name: Upload build artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: frontend-image-tag
-          path: frontend_image_tag.txt
+          name: build-artifacts
+          path: |
+            frontend_image_tag.txt
+            commit_message.txt
+            commit_sha.txt
           if-no-files-found: error
 
       - name: Cleanup environment files
@@ -204,15 +214,17 @@ jobs:
           ref: 'main'
           fetch-depth: 0          
 
-      - name: Download image tag files
+      - name: Download build artifacts
         uses: actions/download-artifact@v4
         with:
-          name: frontend-image-tag
+          name: build-artifacts
           path: .
 
-      - name: Set image tags as environment variables
+      - name: Set deployment variables from artifacts
         run: |
-          echo "FRONTEND_IMAGE=$(cat frontend_image_tag.txt)" >> $GITHUB_ENV
+          printf 'FRONTEND_IMAGE=%s\n' "$(cat frontend_image_tag.txt)" >> $GITHUB_ENV
+          printf 'COMMIT_MESSAGE=%s\n' "$(cat commit_message.txt)" >> $GITHUB_ENV
+          printf 'COMMIT_SHA=%s\n' "$(cat commit_sha.txt)" >> $GITHUB_ENV
 
       - name: Update deployment image tag in Kustomization
         run: |
@@ -224,7 +236,7 @@ jobs:
           git config --local user.email "hariharen@greatify.ai"
           git config --local user.name "Hariharen"
           git add k8s/overlays/prod/kustomization.yaml
-          git commit -m "Update image tags for prod deployment - ${{ env.COMMIT_MESSAGE }}"
+          git commit -m "Update image tags for prod deployment - $(printf '%s' "$COMMIT_MESSAGE")"
           git push origin main
           
     #  - name: Push to protected branch
@@ -262,8 +274,11 @@ jobs:
           username: ExamX-V2-CICD
           text: |
             :rocket: *Frontend deployment to production environment succeeded*         
-            *Pusher:* `${{ github.actor }}`   
-            *Commit:* `${{ env.COMMIT_MESSAGE }}`   
-            The changes have been successfully deployed to the Production environment. Please verify the deployment and conduct necessary tests.
+            
+            *Deployment by:* @${{ github.actor }}   
+            *Commit:* `${{ env.COMMIT_SHA }}`
+            *Commit Message:* `${{ env.COMMIT_MESSAGE }}`   
+            
+            @${{ github.actor }}, your changes have been deployed successfully to Production. Please verify the deployment and conduct necessary tests.
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
