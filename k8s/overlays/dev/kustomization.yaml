@@ -23,7 +23,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:Added_microsoft_and_google_wit-20250824-121711-2bf7bcf"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:EXM_1683____Frontend_Workflow_-20250825-070436-dda1b1c"
                 imagePullPolicy: Always
                 resources:
                   requests:
