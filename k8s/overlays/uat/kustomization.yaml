@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-Enhance_FroalaEditor__Add_form-20250822-125442-0085671"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-Display_number_wip-20250825-044618-738b6b1"
                 imagePullPolicy: Always
                 resources:
                   requests:
