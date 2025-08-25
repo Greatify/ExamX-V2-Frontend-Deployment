@@ -23,7 +23,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:EXM_1680_Removed_problematic_t-20250825-105420-2f098c3"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:Refactor_ClickUp_task_validati-20250825-111354-81f59eb"
                 imagePullPolicy: Always
                 resources:
                   requests:
