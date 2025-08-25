@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM_1680__Added_microsoft_and_-20250825-064520-e30cf2f"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-Enhance_ClickUp_task_validatio-20250825-113813-3cf17d2"
                 imagePullPolicy: Always
                 resources:
                   requests:
