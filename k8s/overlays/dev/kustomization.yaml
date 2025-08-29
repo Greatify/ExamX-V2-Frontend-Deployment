@@ -23,7 +23,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:EXM___1519___Question_Type__Pe-20250829-101338-8a63b00"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:EXM_1755___Add_new_serial_numb-20250829-111727-fa7330e"
                 imagePullPolicy: Always
                 resources:
                   requests:
