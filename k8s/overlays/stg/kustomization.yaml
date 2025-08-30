@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-Exm_1370_cut_off_date_for_teac-20250829-134532-06bd1d7"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM_1074___Authoring_Screen_Fi-20250830-051457-858d8db"
                 imagePullPolicy: Always
                 resources:
                   requests:
