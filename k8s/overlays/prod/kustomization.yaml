@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-EXM_1786_Add_secure_operation_-20250901-125015-7e0d28e"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-Update_Vite_configuration_to_c-20250902-001745-569135e"
                 imagePullPolicy: Always
                 resources:
                   requests:
