@@ -23,7 +23,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-refactor-robust-commit-message-hand-4c14630"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Key-Changes-Made-Removed-timestamp-e6096ceea2fc61ea1fff41f508c4589dfb70f605"
                 imagePullPolicy: Always
                 resources:
                   requests:
