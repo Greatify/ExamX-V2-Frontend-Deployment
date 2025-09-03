@@ -116,7 +116,7 @@ jobs:
       - name: Generate production image tag from commit message
         id: generate-tag
         run: |
-          COMMIT_ID=$(git rev-parse HEAD | cut -c1-7)
+          COMMIT_ID=$(git rev-parse HEAD)
           # Robust commit message handling
           COMMIT_MSG=$(git log -1 --pretty=%B | head -1 || echo "no-message")
           # Remove newlines, tabs, and limit length

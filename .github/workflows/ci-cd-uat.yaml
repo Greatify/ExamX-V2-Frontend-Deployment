@@ -113,19 +113,23 @@ jobs:
         id: login-ecr
         uses: aws-actions/amazon-ecr-login@v1
 
-      - name: Generate UAT image tag
+      - name: Generate UAT image tag from commit message
         id: generate-tag
         run: |
-          TIMESTAMP=$(date +'%Y%m%d-%H%M%S')
           COMMIT_ID=$(git rev-parse HEAD)
-          # Extract commit message and make it safe for use in tags
-          COMMIT_MSG=$(git log -1 --pretty=%B | tr -d '\n' | cut -c1-50)
-          SAFE_COMMIT_MSG=$(echo "$COMMIT_MSG" | sed -e 's/[^a-zA-Z0-9]/_/g' | cut -c1-30)
-          IMAGE_TAG="uat-${SAFE_COMMIT_MSG}-${TIMESTAMP}-${COMMIT_ID:0:7}"
+          # Robust commit message handling
+          COMMIT_MSG=$(git log -1 --pretty=%B | head -1 || echo "no-message")
+          # Remove newlines, tabs, and limit length
+          CLEAN_MSG=$(echo "$COMMIT_MSG" | tr -d '\n\r\t' | head -c 60 | tr -s ' ' | xargs || echo "no-message")
+          # Sanitize to safe characters only
+          SAFE_MSG=$(echo "$CLEAN_MSG" | sed -e 's/[^a-zA-Z0-9 _-]//g' -e 's/[[:space:]]/-/g' -e 's/--*/-/g' -e 's/^-\+\|-\+$//g' | cut -c1-35 | sed 's/-$//' || echo "fallback")
+          # Ensure we have a valid tag
+          FINAL_MSG=$(echo "$SAFE_MSG" | grep -E '^[a-zA-Z0-9][a-zA-Z0-9_-]*$' || echo "commit-$(date +%s)")
+          IMAGE_TAG="uat-${FINAL_MSG}-${COMMIT_ID}"
           
           echo "IMAGE_TAG=$IMAGE_TAG" >> $GITHUB_OUTPUT
-          echo "REPO_COMMIT_SHA=$COMMIT_ID" >> $GITHUB_ENV
-          echo "COMMIT_MESSAGE=$COMMIT_MSG" >> $GITHUB_ENV
+          echo "REPO_COMMIT_SHA=$COMMIT_ID" >> $GITHUB_OUTPUT
+          echo "COMMIT_MESSAGE=$COMMIT_MSG" >> $GITHUB_OUTPUT
           echo "Generated Image Tag: $IMAGE_TAG"
 
       - name: Cache Docker layers
