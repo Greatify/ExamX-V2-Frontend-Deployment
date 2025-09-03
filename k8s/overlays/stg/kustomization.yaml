@@ -428,6 +428,16 @@ patches:
     target:
       kind: ConfigMap
       name: frontend-nginx-config
+  - patch: |-
+      apiVersion: autoscaling/v2
+      kind: HorizontalPodAutoscaler
+      metadata:
+        name: examxv2-frontend-pod-autoscaler
+      spec:
+        maxReplicas: 2
+    target:
+      kind: HorizontalPodAutoscaler
+      name: examxv2-frontend-pod-autoscaler
   # - patch: |-
   #     apiVersion: networking.k8s.io/v1
   #     kind: Ingress
