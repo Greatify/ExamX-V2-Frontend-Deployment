@@ -23,7 +23,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:EXM_1801_Severity_level_not_wo-20250902-201718-3f7b2bf"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-refactor-robust-commit-message-hand-4c14630"
                 imagePullPolicy: Always
                 resources:
                   requests:
