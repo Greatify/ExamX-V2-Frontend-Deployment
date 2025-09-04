@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-EXM_1799_In_editor_Curve_brace-20250902-142115-95c2632"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-EXM-1837-Linked-Student-overall-per-65964f66b955e8f83b7d4dc62733f4cf94b29eb6"
                 imagePullPolicy: Always
                 resources:
                   requests:
