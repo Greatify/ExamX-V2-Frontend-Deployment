@@ -23,7 +23,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-1809Update-Authoring-Module-Rep-b7fe413dda9e13fad148f16640f505f07752eef2"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-1837-Link-student-overall-repor-25cc831fc4085740773b33b2f411fab1de96cd2c"
                 imagePullPolicy: Always
                 resources:
                   requests:
