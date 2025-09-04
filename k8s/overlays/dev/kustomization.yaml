@@ -23,7 +23,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-1827-Term-modified-in-question-5a10813ac2ef2f8fd5f274d85b1fe977f046a6fb"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-1809Update-Authoring-Module-Rep-b7fe413dda9e13fad148f16640f505f07752eef2"
                 imagePullPolicy: Always
                 resources:
                   requests:
