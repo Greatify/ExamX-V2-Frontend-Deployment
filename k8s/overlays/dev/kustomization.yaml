@@ -23,7 +23,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-1837-Link-student-overall-repor-25cc831fc4085740773b33b2f411fab1de96cd2c"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Implement-Interactive-CI-Checks-to-01b606c5fcc1000ba278790820959a84bb1ac1c8"
                 imagePullPolicy: Always
                 resources:
                   requests:
