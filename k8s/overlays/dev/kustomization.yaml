@@ -23,7 +23,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-1809Filter-based-Download-CSV-f-002de92c3f0f0cc71c3488d55a3303d0f02cbab8"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-1556-Implemented-AI-Evaluation-beb237ee0dfa926f56ab3d0ad52e1cb4a97bef25"
                 imagePullPolicy: Always
                 resources:
                   requests:
