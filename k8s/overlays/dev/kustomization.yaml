@@ -23,7 +23,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Refactor-PR-review-workflow-to-stre-25c690b232ca72eb12b1c21bb4ca3b19b3800367"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-1857-Hierarchhy-based-filter-an-2705d275d4eed66e8c6768d6a1f5dd7586fd52dc"
                 imagePullPolicy: Always
                 resources:
                   requests:
