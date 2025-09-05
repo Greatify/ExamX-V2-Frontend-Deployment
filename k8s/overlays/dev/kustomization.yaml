@@ -23,7 +23,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Exm-1321-unattempted-question-count-d4906cb142ec70521532930c3c30ecf859e8e50c"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Exm-1592enhancement-choose-from-que-8ea2ed2540f93cb827c45c2f70d37505eff8dae2"
                 imagePullPolicy: Always
                 resources:
                   requests:
