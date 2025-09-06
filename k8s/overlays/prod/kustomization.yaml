@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-EXM-1809Filter-based-Download-CSV-f-6a4546a8a506781daf2b65fabe10e6d2cc5c89ef"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-EXM-1928-Teacher-Side-Multiple-time-cd66c4b71bdc8f01f8a9607c35d70403d48b416e"
                 imagePullPolicy: Always
                 resources:
                   requests:
