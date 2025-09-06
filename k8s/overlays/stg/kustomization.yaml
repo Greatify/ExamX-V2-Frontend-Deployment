@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-1854data-issue-in-student-login-50d23465f2e4f67ce17a61754b6582660b4dbe8f"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-Update-Vite-configuration-to-correc-efcf4f5ba0e27739c4c1b6d1de2b316b6cf79eb8"
                 imagePullPolicy: Always
                 resources:
                   requests:
