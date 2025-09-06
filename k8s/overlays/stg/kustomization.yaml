@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-1928-Teacher-Side-Multiple-time-b0c8d92f47db701e4ba6b1e47b095ad29a919f19"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-1929-Replace-from-question-bank-8c871b6df0d25d495f06d6c7d139d7428739df79"
                 imagePullPolicy: Always
                 resources:
                   requests:
