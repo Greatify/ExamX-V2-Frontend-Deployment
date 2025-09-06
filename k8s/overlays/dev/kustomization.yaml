@@ -23,7 +23,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-1854data-issue-in-student-login-0104eec3108a86a6aebd588ea5454bd3a5031ee4"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-1939-Fixed-export-paper-CORS-is-07f8ed68e77c909acb2feee3552eff17ad1b2b3f"
                 imagePullPolicy: Always
                 resources:
                   requests:
