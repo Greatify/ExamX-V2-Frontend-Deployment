@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-1919-Fixed-CORS-issue-by-changi-a5002daf1a532c3c66ed99ff4dc13a69bc6ac956"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-1928-Teacher-Side-Multiple-time-50d820ef051a265fadf187a7de9717e1177e0a97"
                 imagePullPolicy: Always
                 resources:
                   requests:
