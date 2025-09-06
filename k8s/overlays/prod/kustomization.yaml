@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-EXM-1928-Teacher-Side-Multiple-time-cd66c4b71bdc8f01f8a9607c35d70403d48b416e"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-EXM-1939-Fixed-export-paper-CORS-is-53222f2a5e2bc208878f7a98c433286098831058"
                 imagePullPolicy: Always
                 resources:
                   requests:
