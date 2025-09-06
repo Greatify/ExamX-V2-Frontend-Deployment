@@ -23,7 +23,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-1857-Hierarchhy-based-filter-an-2705d275d4eed66e8c6768d6a1f5dd7586fd52dc"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-1854data-issue-in-student-login-0104eec3108a86a6aebd588ea5454bd3a5031ee4"
                 imagePullPolicy: Always
                 resources:
                   requests:
