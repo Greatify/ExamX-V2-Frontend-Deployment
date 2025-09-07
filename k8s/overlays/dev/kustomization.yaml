@@ -23,7 +23,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-1929-Replace-from-question-bank-b43d45dc06e99ff1c8548d1c1cac548ab04e94ce"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-1949-url-change-in-chapter-impo-0387dd6bb7ef6146de445cf3a42a230a235922fd"
                 imagePullPolicy: Always
                 resources:
                   requests:
