@@ -23,7 +23,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-1587-TEMPLATE-Mark-Split-up-inp-9d183ef3c4613bf2b3e55ec355759e9c25ef042f"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-1978white-screen-after-exam-sub-8892102e3cf6ee4cfe25c1f2c71f7a52216dd20b"
                 imagePullPolicy: Always
                 resources:
                   requests:
