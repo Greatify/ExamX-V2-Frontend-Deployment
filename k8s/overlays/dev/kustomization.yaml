@@ -23,7 +23,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Exm-1592section-based-question-bank-4127d7bdf3dd792e792668be6abe250dbb5eb50c"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-1587-TEMPLATE-Mark-Split-up-inp-9d183ef3c4613bf2b3e55ec355759e9c25ef042f"
                 imagePullPolicy: Always
                 resources:
                   requests:
