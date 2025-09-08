@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-1864editor-context-menu-disable-ea1f6383f867ba9c8fd5a2de866592690b0c103d"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-1927qb-choosing-bugs-2746-fb4d38f75c6cc7d613b707ebb70d7cd74940d40e"
                 imagePullPolicy: Always
                 resources:
                   requests:
