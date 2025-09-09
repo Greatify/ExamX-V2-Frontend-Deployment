@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-1927white-screen-fix-2757-b0d8273eeff2c965510cc7ee63558f7ad930e457"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-1927removed-question-count-on-q-bf999779a14f7e18945305970020ab2f82443eab"
                 imagePullPolicy: Always
                 resources:
                   requests:
