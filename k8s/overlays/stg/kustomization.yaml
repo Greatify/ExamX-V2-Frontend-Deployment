@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-2007-SRM-Single-Match-Issue-Hot-698a2cceee6c26d6665d6bc8d3882edf7bf7887e"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-1927white-screen-fix-2757-b0d8273eeff2c965510cc7ee63558f7ad930e457"
                 imagePullPolicy: Always
                 resources:
                   requests:
