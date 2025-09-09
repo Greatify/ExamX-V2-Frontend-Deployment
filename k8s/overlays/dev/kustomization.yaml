@@ -23,7 +23,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Exm-1491-Single-Click-QP-Creation-2-0d8ac35efa5345fdc2b2170a6b09981faa6adfcf"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Delete-frontend_image_tagtxt-427203b987e1bccef12233635254352cabac177d"
                 imagePullPolicy: Always
                 resources:
                   requests:
