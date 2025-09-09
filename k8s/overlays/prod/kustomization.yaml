@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-EXM-1949-url-change-in-chapter-impo-c456f6c2488f2c09897e8247d37f83faeb6cf90c"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-EXM-2007-SRM-Single-Match-Issue-Hot-49cba024f8d78fe7e6e002247a57e63b4f5330ad"
                 imagePullPolicy: Always
                 resources:
                   requests:
