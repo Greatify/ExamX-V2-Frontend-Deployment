@@ -23,7 +23,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2011-Authoring-QP-creation-When-07a7931636cdde68b82757e9882f83e887ad26b2"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-1970-The-system-should-not-allo-9685ed5d13737bdcf57928d0ae8914156adf30ca"
                 imagePullPolicy: Always
                 resources:
                   requests:
