@@ -23,7 +23,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2017-Fixed-CORS-issue-in-multif-b7b1ebeaf81fb5bd4328da6d69f5bf8e647ce332"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2055-CHOOSE-FROM-AI-But-when-th-e571a2a595847be8276edcd0b7073a07263a9ea1"
                 imagePullPolicy: Always
                 resources:
                   requests:
