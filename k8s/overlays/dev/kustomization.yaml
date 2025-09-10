@@ -23,7 +23,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-1969-Exam-creation-validation-i-28a08e3a62b7a5c1652611c7debd98423c721272"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-1909-Missing-validation-for-pas-feb67b75fa88357fa9123f928dd2dfcf1092ecf5"
                 imagePullPolicy: Always
                 resources:
                   requests:
