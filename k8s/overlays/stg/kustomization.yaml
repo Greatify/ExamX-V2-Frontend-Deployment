@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-1927question-type-bug-fix-qb-27-1e8deaa9d63e7a10e17e1f1e75c175d2e8a45b4c"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-2011-Authoring-QP-creation-When-6f879ed88739adc5138904b4bb0c1b97137c28dd"
                 imagePullPolicy: Always
                 resources:
                   requests:
