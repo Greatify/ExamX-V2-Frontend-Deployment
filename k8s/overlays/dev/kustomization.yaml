@@ -23,7 +23,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-1970-The-system-should-not-allo-9685ed5d13737bdcf57928d0ae8914156adf30ca"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-1942-single-click-UI-Design-cha-598f0c87955c4d479f37ee92419ce72a065f6c17"
                 imagePullPolicy: Always
                 resources:
                   requests:
