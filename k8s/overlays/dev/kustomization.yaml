@@ -23,7 +23,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2068Annotation-for-images-in-on-18866479a3c23d709b88b5ac7ff86ddb220afd46"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2038-Fixed-AI-Evaluation-pdf-ex-ecdd433ee18d2c46c222e06d66416109d2c05d91"
                 imagePullPolicy: Always
                 resources:
                   requests:
