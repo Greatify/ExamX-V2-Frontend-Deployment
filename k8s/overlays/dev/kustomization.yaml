@@ -23,7 +23,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-1546-Exam-reschedule-not-valida-b42bf45d737241f03ca986d5a28680ed96b7bbcc"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2068Annotation-for-images-in-on-18866479a3c23d709b88b5ac7ff86ddb220afd46"
                 imagePullPolicy: Always
                 resources:
                   requests:
