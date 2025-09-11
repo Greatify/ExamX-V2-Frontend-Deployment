@@ -23,7 +23,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2055-CHOOSE-FROM-AI-But-when-th-e571a2a595847be8276edcd0b7073a07263a9ea1"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-1546-Exam-reschedule-not-valida-b42bf45d737241f03ca986d5a28680ed96b7bbcc"
                 imagePullPolicy: Always
                 resources:
                   requests:
