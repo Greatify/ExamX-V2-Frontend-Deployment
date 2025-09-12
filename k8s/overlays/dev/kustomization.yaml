@@ -23,7 +23,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2077-Authoring-Module-Question-4d98bec1018efb6f0792172ee1e61240578ceaa2"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2106-Switch-to-Duration-field-t-985daa3cb2a6c3bb578b1ba28eac7a0a6fc4ea15"
                 imagePullPolicy: Always
                 resources:
                   requests:
