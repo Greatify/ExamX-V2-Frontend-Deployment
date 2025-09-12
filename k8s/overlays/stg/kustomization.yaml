@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-2128question-types-based-on-sec-dc42c5edcc6d3a07b0ba9206e89ac46d1bbbff51"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-2014-Add-selectAllOption-to-cou-475b60693564ff97f93256df480fe8f749b751a5"
                 imagePullPolicy: Always
                 resources:
                   requests:
