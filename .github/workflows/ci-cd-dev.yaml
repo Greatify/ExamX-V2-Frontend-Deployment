@@ -41,8 +41,15 @@ jobs:
           git config --local user.email "hariharen@greatify.ai"
           git config --local user.name "Hariharen"
           git add k8s/overlays/dev/kustomization.yaml
-          git commit -m "Update image tags for dev deployment"
-          git push origin main
+          
+          # Check if there are any changes to commit
+          if git diff --cached --quiet; then
+            echo "No changes to commit, skipping commit and push"
+          else
+            echo "Changes detected, committing and pushing"
+            git commit -m "Update image tags for dev deployment"
+            git push origin main
+          fi
 
       # - name: Push to protected branch
       #   uses: CasperWA/push-protected@v2

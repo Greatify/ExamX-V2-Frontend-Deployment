@@ -228,6 +228,10 @@ jobs:
           printf 'COMMIT_MESSAGE=%s\n' "$(cat commit_message.txt)" >> $GITHUB_ENV
           printf 'COMMIT_SHA=%s\n' "$(cat commit_sha.txt)" >> $GITHUB_ENV
 
+      - name: Clean up artifact files
+        run: |
+          rm -f frontend_image_tag.txt commit_message.txt commit_sha.txt
+
       - name: Update deployment image tag in Kustomization
         run: |
           # Update the image tag in the deployment patch
@@ -238,8 +242,15 @@ jobs:
           git config --local user.email "hariharen@greatify.ai"
           git config --local user.name "Hariharen"
           git add k8s/overlays/stg/kustomization.yaml
-          git commit -m "Update image tags for stg deployment - $(printf '%s' "$COMMIT_MESSAGE")"
-          git push origin main
+          
+          # Check if there are any changes to commit
+          if git diff --cached --quiet; then
+            echo "No changes to commit, skipping commit and push"
+          else
+            echo "Changes detected, committing and pushing"
+            git commit -m "Update image tags for stg deployment - $(printf '%s' "$COMMIT_MESSAGE")"
+            git push origin main
+          fi
 
       # - name: Push to protected branch
       #   uses: CasperWA/push-protected@v2
