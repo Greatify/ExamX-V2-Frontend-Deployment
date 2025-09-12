@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-2014-Add-selectAllOption-to-cou-475b60693564ff97f93256df480fe8f749b751a5"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-2139api-call-on-smart-pick-ques-e85c10422c2baeeb19ee23d56a3b62920365cb96"
                 imagePullPolicy: Always
                 resources:
                   requests:
