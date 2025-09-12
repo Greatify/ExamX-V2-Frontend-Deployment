@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-2101or-split-question-creation-fcb03fcfc6799d48827f8968b198aa9ceffe6ed0"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-2119qb-section-based-bugs-2792-d03dbb29023bb16817c4f352354e1c241d021de2"
                 imagePullPolicy: Always
                 resources:
                   requests:
