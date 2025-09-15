@@ -23,7 +23,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Exm-2072-cutoff-date-remove-infield-a5e1b50553930ae592be8467df837a8bdbd2caba"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-86d0ama7qloading-state-ui-missing-2-632fe74dd0bd931498d87126c2fbf3cd420aeaa0"
                 imagePullPolicy: Always
                 resources:
                   requests:
