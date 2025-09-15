@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-1949-Update-API-endpoints-and-e-9216612d86e9fbc6cd005e6d7ee71fa25dc92d97"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-2125annotations-issue-stg-2814-181175739e751930c8241e9b1080aa44b3998644"
                 imagePullPolicy: Always
                 resources:
                   requests:
