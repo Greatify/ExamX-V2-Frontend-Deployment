@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2168-add-scroll-exam-view-unit-3f7bf03746595a165b131b9644cd2bd354b4747e"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2167Annotation-image-overlap-is-12c034d5c2c30edf4199b199527fcb3a3fa89605"
                 imagePullPolicy: Always
                 resources:
                   requests:
