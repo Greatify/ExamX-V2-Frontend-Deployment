@@ -29,11 +29,11 @@ patches:
                 imagePullPolicy: Always
                 resources:
                   requests:
-                    cpu: "100m"
-                    memory: "512Mi"
+                    cpu: "500m"
+                    memory: "1Gi"
                   limits:
                     cpu: "1"
-                    memory: "1Gi"
+                    memory: "2Gi"
                 ports:
                   - containerPort: 80
     target:
