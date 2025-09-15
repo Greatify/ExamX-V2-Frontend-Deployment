@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2169-Teacher-edit-datas-are-not-2e8a420888ed8aac0c76d53a36a2ba4c07d80dfc"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-1724-Requirement-Document-Quest-c8b3e4e945886b4e477cd048c8d73ba07a267996"
                 imagePullPolicy: Always
                 resources:
                   requests:
