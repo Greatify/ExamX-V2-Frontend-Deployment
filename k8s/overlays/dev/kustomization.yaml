@@ -23,7 +23,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-1949-Update-API-endpoints-and-e-477c1b97905d1df32c4714a0439e17a2e06d06ee"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-1074-Authoring-hierarchical-fil-f8cfbba232ccabf089c55421810422e3c07417f4"
                 imagePullPolicy: Always
                 resources:
                   requests:
