@@ -35,6 +35,7 @@ jobs:
         run: |
           # Update the image tag in the deployment patch
           sed -i 's|image: "[^"]*"|image: "'"$FRONTEND_IMAGE"'"|' k8s/overlays/dev/kustomization.yaml
+          sed -i 's|kubernetes.io/change-cause:.*|kubernetes.io/change-cause: Updated to "'"$FRONTEND_IMAGE"'"|g' k8s/overlays/dev/kustomization.yaml
 
       - name: Commit and push changes
         run: |

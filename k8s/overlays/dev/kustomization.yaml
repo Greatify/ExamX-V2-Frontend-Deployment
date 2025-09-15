@@ -11,6 +11,8 @@ patches:
         name: examxv2-frontend
         labels:
           app: examxv2-frontend
+        annotations:
+          change-cause: "Added change-cause annotation to deployment"
       spec:
         replicas: 1
         selector:
