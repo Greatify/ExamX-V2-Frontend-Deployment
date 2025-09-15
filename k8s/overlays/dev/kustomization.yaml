@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Revert-EXM-2125annotations-issue-28-d0e7e50899fe9d79377e65a9e1eb8730316b6b29"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2168-add-scroll-exam-view-unit-3f7bf03746595a165b131b9644cd2bd354b4747e"
                 imagePullPolicy: Always
                 resources:
                   requests:
