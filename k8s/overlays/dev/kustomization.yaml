@@ -23,7 +23,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-86d0ama7qloading-state-ui-missing-2-632fe74dd0bd931498d87126c2fbf3cd420aeaa0"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2125annotations-issue-2813-4784e0bd2d15d2c49ec5a0e6db6ac70a492a13a4"
                 imagePullPolicy: Always
                 resources:
                   requests:
