@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-2167Annotation-image-overlap-is-2647c33b682672a3e55a814605ab9bd9292af05d"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-Conflicts-clear-parser-2826-aac77ec667b63a7385a26a7487c74f8aa413a51a"
                 imagePullPolicy: Always
                 resources:
                   requests:
