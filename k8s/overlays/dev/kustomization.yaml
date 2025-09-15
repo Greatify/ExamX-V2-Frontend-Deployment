@@ -23,7 +23,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-1074-Authoring-hierarchical-fil-f8cfbba232ccabf089c55421810422e3c07417f4"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Exm-2072-cutoff-date-remove-infield-a5e1b50553930ae592be8467df837a8bdbd2caba"
                 imagePullPolicy: Always
                 resources:
                   requests:
