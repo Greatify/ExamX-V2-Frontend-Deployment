@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-Prod-exm-2068annotation-for-images-a15ceacf38332e82cb9413d3c8adc4fb37824c07"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-Refactor-Parser-component-to-align-a75d12025caba4d91de52799b40be5675f1eb419"
                 imagePullPolicy: Always
                 resources:
                   requests:
