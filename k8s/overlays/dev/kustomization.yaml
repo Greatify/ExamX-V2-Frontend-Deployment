@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2188-Add-Action-Icon-SVG-and-im-7150f1464e114b5a41d2b13d57776f6c05a2f582"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2174-Implement-Export-Option-fo-6aed4e1d057477c212bbf85ecbbf9267095459ca"
                 imagePullPolicy: Always
                 resources:
                   requests:
