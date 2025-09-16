@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-Refactor-Parser-component-to-align-29585e46020e342261c8b54c6a56971f87576011"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-1888white-screen-on-student-web-6a98391c77140dc8b79de42499f4e2cc1b38e197"
                 imagePullPolicy: Always
                 resources:
                   requests:
