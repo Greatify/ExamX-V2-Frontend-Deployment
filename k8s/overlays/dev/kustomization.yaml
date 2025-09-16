@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-1888white-screen-fix-2841-a663aff7d0a1b80e12fe1d375324c7d378eb4ee5"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Exm-1546-exam-reschedule-not-valida-6cbadfb75972dd790f22e611940a4aabe6f0722d"
                 imagePullPolicy: Always
                 resources:
                   requests:
