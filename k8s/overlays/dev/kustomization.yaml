@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-1888white-screen-on-student-web-0b6606c8aeb08763326243a52af58bf0cdbd33bd"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-1888white-screen-fix-2841-a663aff7d0a1b80e12fe1d375324c7d378eb4ee5"
                 imagePullPolicy: Always
                 resources:
                   requests:
