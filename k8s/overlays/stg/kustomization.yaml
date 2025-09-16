@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-1888white-screen-removed-return-ed70cc8274b4fece4d41e3f8cbbef9c3d6a696f2"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-2174-Implement-Export-Option-fo-06c11896796940ae3f0cb8a3e9070c45a688c146"
                 imagePullPolicy: Always
                 resources:
                   requests:
