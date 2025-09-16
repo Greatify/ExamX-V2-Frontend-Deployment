@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Refactor-Parser-component-removed-u-646195f7b02bb63c0798e3ea5de3507acc02f2ae"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2188-Add-Action-Icon-SVG-and-im-7150f1464e114b5a41d2b13d57776f6c05a2f582"
                 imagePullPolicy: Always
                 resources:
                   requests:
