@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-Refactor-Parser-component-removed-u-2b7513c8f80ec362c0910bd8f2d9cb0213d35eef"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-Add-retry-workflow-fields-to-Parser-bd52271b359b47dcafc1358d3a739f61a6849340"
                 imagePullPolicy: Always
                 resources:
                   requests:
