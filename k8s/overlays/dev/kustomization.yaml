@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2198Editor-intialization-issue-0d69bbaa84ddb7845c50f19761921c52f777524a"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2158-Update-AIEvaluationReport-8e4be98858d7ce8d4f97edc0d594845389806520"
                 imagePullPolicy: Always
                 resources:
                   requests:
