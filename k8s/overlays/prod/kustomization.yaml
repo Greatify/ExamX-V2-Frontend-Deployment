@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-EXM-2171api-call-prevented-on-quest-58640a89747d7b654db5237a054416e8c9b23b28"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-EXM-1943drag-drop-break-2865-3e9fb63550b3e1aa2f8818304d2f1e803bab059c"
                 imagePullPolicy: Always
                 resources:
                   requests:
