@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-EXM-1592enhancement-of-choose-from-25983d66d9a35d87f050a7e324d2612eed58d34d"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-EXM-2171api-call-prevented-on-quest-58640a89747d7b654db5237a054416e8c9b23b28"
                 imagePullPolicy: Always
                 resources:
                   requests:
