@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-1888prevent-window-closing-cach-83b46d433d923c123c6b60ecd4984557f48cc791"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2188-Add-Action-Icon-SVG-and-im-00f17a209d9e11d4f8970ff17628c3a2f582db14"
                 imagePullPolicy: Always
                 resources:
                   requests:
