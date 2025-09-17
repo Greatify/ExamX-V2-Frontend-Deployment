@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Add-retry-workflow-fields-to-Parser-b7c13a73bf87314162e93849b3e124f2cf62ab7b"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2191-student-result-ai-and-manu-1578a53d68cbdeb99cd258b616fa5ab02c4856ec"
                 imagePullPolicy: Always
                 resources:
                   requests:
