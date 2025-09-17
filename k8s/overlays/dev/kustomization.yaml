@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2209Export-question-bank-pass-a-d3bf5b65394c83196063550eec03fdf7943d69aa"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Exm-2209export-question-bank-pass-a-4ee4ea48e08353789ce69f3c1d5eca901077a338"
                 imagePullPolicy: Always
                 resources:
                   requests:
