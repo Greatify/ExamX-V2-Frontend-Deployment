@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-2174-Implement-Export-Option-fo-f342cafe5ba3b3ac9b38dfeb8c1ce1494e020ddd"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-2171api-call-prevented-on-quest-37240cf18339b1267177a1df663343f88a174420"
                 imagePullPolicy: Always
                 resources:
                   requests:
