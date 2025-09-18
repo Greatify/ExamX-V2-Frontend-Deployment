@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-2152-Section-wise-Question-Sele-fcab35650a3a235fc9f8051b5bfd2132f76562e9"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-2158-Update-AIEvaluationReport-546210d374c974b76ce8eac4c7de7d234816f03f"
                 imagePullPolicy: Always
                 resources:
                   requests:
