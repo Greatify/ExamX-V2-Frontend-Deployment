@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2205wrong-symbol-on-passage-que-5657a15c3a431e0147953ce1f7d52a90a49a71e1"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2205wrong-symbol-passage-type-2-2c5250d9c891635433d4225b9f8e019081ab8fac"
                 imagePullPolicy: Always
                 resources:
                   requests:
