@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-Refactor-QuestionRenderer-to-enhanc-3ee1a790e29dff48740e574c31513d949669b308"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-Remove-question-type-field-from-bul-0cd8b2ec749c05016b73d4dee2cdf1ff25379408"
                 imagePullPolicy: Always
                 resources:
                   requests:
