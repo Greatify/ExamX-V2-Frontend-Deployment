@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-Remove-question-type-field-from-bul-d38c4d327dc99ecef948ee96d256643ca89cb074"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-2223-Update-exam-report-filters-515b1bc9eb85cc782e47a8c6b278bf97a0ede8c5"
                 imagePullPolicy: Always
                 resources:
                   requests:
