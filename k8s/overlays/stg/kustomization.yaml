@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-2216-Question-Bank-Visibility-b-c4ab3db751ba3cf43818ee199e0d0beceb7eb9a6"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-Remove-question-type-field-from-bul-d38c4d327dc99ecef948ee96d256643ca89cb074"
                 imagePullPolicy: Always
                 resources:
                   requests:
