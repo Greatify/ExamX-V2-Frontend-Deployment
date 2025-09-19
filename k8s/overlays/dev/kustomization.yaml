@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-1592enhanced-choose-from-questi-916e82f147209375b51b6119bc993119572c8878"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2216-Question-Bank-Visibility-b-2d6ce791b5d10ad5eeba0d2ef1f04a6a2eefc504"
                 imagePullPolicy: Always
                 resources:
                   requests:
