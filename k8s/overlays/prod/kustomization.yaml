@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-Prod-exm-2209export-question-bank-p-6b2fe849fc58bd374cffa8971a9651a27c4607c1"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-Refactor-QuestionRenderer-to-enhanc-3ee1a790e29dff48740e574c31513d949669b308"
                 imagePullPolicy: Always
                 resources:
                   requests:
