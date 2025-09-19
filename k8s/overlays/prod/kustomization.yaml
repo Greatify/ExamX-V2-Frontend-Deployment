@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-EXM-2223-Update-exam-report-filters-b5a0e5356435f4fefc416a9da419c26c8c46102b"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-EXM-2245-Preview-is-not-properly-Sh-31ea183da2b69d961f2cd67db824cb26a611f6b6"
                 imagePullPolicy: Always
                 resources:
                   requests:
