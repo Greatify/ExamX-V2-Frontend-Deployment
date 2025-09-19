@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-Refactor-QuestionRenderer-to-enhanc-66a220b69fe36c5bd200df0c3956fb54281c4feb"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-2216-Question-Bank-Visibility-b-c4ab3db751ba3cf43818ee199e0d0beceb7eb9a6"
                 imagePullPolicy: Always
                 resources:
                   requests:
