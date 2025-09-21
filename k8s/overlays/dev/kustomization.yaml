@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Exm-2244grouping-checkbox-click-290-743618ee58830ce89615dcbc99bcc7ae95741eb6"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Fixbank-UI-2917-5f2206ad9de9f8ab2493a25e60ca3a815dd7770e"
                 imagePullPolicy: Always
                 resources:
                   requests:
