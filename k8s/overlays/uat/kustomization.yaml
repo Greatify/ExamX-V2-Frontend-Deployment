@@ -27,13 +27,14 @@ patches:
               - name: examxv2-frontend
                 image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-Display_number_wip-20250825-044618-738b6b1"
                 imagePullPolicy: Always
-                resources:
-                  requests:
-                    cpu: "50m"
-                    memory: "128Mi"
-                  limits:
-                    cpu: "200m"
-                    memory: "256Mi"
+                resources: null  # Commented out for UAT environment
+                # Original resources:
+                # requests:
+                #   cpu: "50m"
+                #   memory: "128Mi"
+                # limits:
+                #   cpu: "200m"
+                #   memory: "256Mi"
                 ports:
                   - containerPort: 80
     target:

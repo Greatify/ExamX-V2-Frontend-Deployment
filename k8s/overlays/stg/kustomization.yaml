@@ -29,13 +29,14 @@ patches:
               - name: examxv2-frontend
                 image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-2248-SRM-Template-CO-Hot-fix-29-8b18ea8702f666b0e14902f1fe5133b50fb8c612"
                 imagePullPolicy: Always
-                resources:
-                  requests:
-                    cpu: "50m"
-                    memory: "128Mi"
-                  limits:
-                    cpu: "200m"
-                    memory: "256Mi"
+                resources: null  # Commented out for staging environment
+                # Original resources:
+                # requests:
+                #   cpu: "50m"
+                #   memory: "128Mi"
+                # limits:
+                #   cpu: "200m"
+                #   memory: "256Mi"
                 ports:
                   - containerPort: 80
     target:
