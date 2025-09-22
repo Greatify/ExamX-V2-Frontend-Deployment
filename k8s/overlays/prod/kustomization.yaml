@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-Fixbank-UI-2917-2918-2919-784917d6d893c0840ce2e8970a8abd255ba151c5"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-EXM-2223-Enhance-AIEvaluationReport-376595b72ddef1746de2cfa54821b201c98ee7e5"
                 imagePullPolicy: Always
                 resources:
                   requests:
