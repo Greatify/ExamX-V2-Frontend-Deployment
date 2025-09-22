@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2051-Fixed-filter-issue-in-Add-0329e126164549b20f60eb9336a9756663234ead"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2045-EXM-2061-Template-bugs-293-060fdfa27e7c83c6c514900f3c45d320d38ce38e"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
