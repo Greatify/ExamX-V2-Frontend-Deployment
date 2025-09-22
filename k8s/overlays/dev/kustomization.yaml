@@ -27,13 +27,14 @@ patches:
               - name: examxv2-frontend
                 image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Fixbank-UI-2917-5f2206ad9de9f8ab2493a25e60ca3a815dd7770e"
                 imagePullPolicy: Always
-                resources:
-                  requests:
-                    cpu: "50m"
-                    memory: "128Mi"
-                  limits:
-                    cpu: "200m"
-                    memory: "256Mi"
+                resources: null  # Commented out for dev environment
+                # resources:
+                #   requests:
+                #     cpu: "50m"
+                #     memory: "128Mi"
+                #   limits:
+                #     cpu: "200m"
+                #     memory: "256Mi"
                 ports:
                   - containerPort: 80
     target:
