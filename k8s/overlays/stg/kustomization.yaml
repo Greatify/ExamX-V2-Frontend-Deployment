@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-2279-Fixed-export-CSV-issue-in-b8178d5aa708a29da691b10ce51f987d848729f8"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-1724-Requirement-Document-Quest-ce99fe9e66328053c615ee144f5e8b6491efbfb9"
                 imagePullPolicy: Always
                 resources: null  # Commented out for staging environment
                 # Original resources:
