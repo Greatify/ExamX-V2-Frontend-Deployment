@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2273exams-fetched-in-loop-issue-d624410e6d459f1ba81459eec8bb00c843b9a7b5"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2221-Added-bugfix-for-rubrics-m-967e01e30db5e89816a2df89bcfc3c8e92adb585"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
