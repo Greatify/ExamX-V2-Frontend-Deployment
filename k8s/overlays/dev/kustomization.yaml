@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-1724-Requirement-Document-Quest-093ff1bad44ee9de3a7ebe9fa67aab9fd2d0143d"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Fix-InputField-max-prop-handling-to-c5b4625f474180b7361e10767b4353d4d0d205aa"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
