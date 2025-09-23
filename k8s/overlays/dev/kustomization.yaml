@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2221-Added-bugfix-for-rubrics-m-967e01e30db5e89816a2df89bcfc3c8e92adb585"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-1724-Requirement-Document-Quest-093ff1bad44ee9de3a7ebe9fa67aab9fd2d0143d"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
