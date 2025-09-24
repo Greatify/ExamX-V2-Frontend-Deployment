@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-1888white-screen-on-exam-submis-6ab8d07da09290da5e148bc402955b2d4defe903"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Exm-875-Question-Bank-Redesign-2960-04d666cac73b35c78a6f59fb2d6bc03c77ba031d"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
