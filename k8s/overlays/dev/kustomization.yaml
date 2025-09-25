@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2303-User-directly-create-the-s-d8df9af70c23d167e58ae9f53cba38a0e47f00c8"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2297-Fixed-claim-form-Signature-ac868f2377afd614f56aacebc15cb37200f76c5e"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
