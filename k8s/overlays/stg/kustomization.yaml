@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-2291-Fixed-Multi-select-MCQ-and-cd369556d6ec775017997466657c1d8711e6d59c"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-2331-Template-Section-Position-89a2af16aa812007c5c4354d218213dd415ccdee"
                 imagePullPolicy: Always
                 resources: null  # Commented out for staging environment
                 # Original resources:
