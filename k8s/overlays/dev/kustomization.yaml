@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2330-Enhance-Claude-PR-Review-W-341f56a0883163d8eb5d410167131eb16ad7ebb9"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Exm-2329unified-evaluation-for-both-73ca7720f4b2890c72a723477fd490fc622be20c"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
