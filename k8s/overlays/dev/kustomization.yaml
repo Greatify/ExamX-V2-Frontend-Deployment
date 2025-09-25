@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2297-Fixed-claim-form-Signature-ac868f2377afd614f56aacebc15cb37200f76c5e"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2326-allow-multiple-Question-pa-c26689345e4331baaceb8ae8ec82a64a0d8dc4bd"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
