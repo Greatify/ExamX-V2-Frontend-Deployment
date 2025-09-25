@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Bump-SonarSourcesonarqube-scan-acti-508652a3db957f4f9778e909e3e07ff34b9e11eb"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2303-User-directly-create-the-s-d8df9af70c23d167e58ae9f53cba38a0e47f00c8"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
