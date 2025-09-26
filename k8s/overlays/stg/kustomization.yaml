@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-2331-Template-Section-Position-70ae55b68947a83d453d643b38012086cc725a3a"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-1724-Requirement-Document-Quest-167389f41da994ac84302a29df32fada90cc8a27"
                 imagePullPolicy: Always
                 resources: null  # Commented out for staging environment
                 # Original resources:
