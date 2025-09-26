@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2323-Bulk-update-evaluation-due-cb2fcee2272ad3fcf35c5cd9be48792e45905bf0"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Delete-System-should-not-display-st-d4e0a69dd9eb3a72c45466e17502d8c7788130af"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
