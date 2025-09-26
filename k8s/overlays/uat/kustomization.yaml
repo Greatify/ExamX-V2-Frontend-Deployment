@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-Handled-Adani-flows-c72c166e71d0c6167b9ce0739820508eb99385a7"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-Added-duplicate-feature-and-other-c-a03846dbad9cade5de384700c2c35622c5083935"
                 imagePullPolicy: Always
                 resources: null  # Commented out for UAT environment
                 # Original resources:
