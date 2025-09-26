@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2335Change-all-evaluation-route-9a677f0293ca59326b1c49722118a3fcdc64721c"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2323-Bulk-update-evaluation-due-cb2fcee2272ad3fcf35c5cd9be48792e45905bf0"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
