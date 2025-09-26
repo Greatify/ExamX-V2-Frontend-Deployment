@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Delete-System-should-not-display-st-d4e0a69dd9eb3a72c45466e17502d8c7788130af"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2351Unified-evaluation-mark-inp-06dd41db2f73af0d9657dbab91b65b637083b989"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
