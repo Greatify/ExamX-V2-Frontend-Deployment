@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-Passage-type-creation-field-fixed-6e20bd4e394662b243af12e98524757193a90874"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-hidden-non-usable-UI-elements-32fe36f2e05431acb47fbac3767770a95d9a8363"
                 imagePullPolicy: Always
                 resources: null  # Commented out for UAT environment
                 # Original resources:
