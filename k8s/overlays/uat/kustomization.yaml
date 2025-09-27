@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-Added-fix-for-MCQ-questions-1b6af2744819d954b437a3d4f1cefcc8bd0e5a33"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-Added-override-numbering-fix-878b35901fb976a65d147b31e1a9aa73f0a9054d"
                 imagePullPolicy: Always
                 resources: null  # Commented out for UAT environment
                 # Original resources:
