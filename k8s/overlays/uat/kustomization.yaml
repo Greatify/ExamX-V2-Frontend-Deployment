@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-Added-duplicate-feature-and-other-c-40262c53d926549903cdaf241df5fb13f4e00c1d"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-Passage-type-creation-field-fixed-6e20bd4e394662b243af12e98524757193a90874"
                 imagePullPolicy: Always
                 resources: null  # Commented out for UAT environment
                 # Original resources:
