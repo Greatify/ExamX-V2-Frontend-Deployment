@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-added-Ui-update-for-total-marks-and-efe26024aee283f6cb8ab4379d2c8f7e4f36f1d3"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-Fixed-subsection-validation-error-d-2509eb393f16587608fd69f8c3e3b6fcf86c8cbf"
                 imagePullPolicy: Always
                 resources: null  # Commented out for UAT environment
                 # Original resources:
