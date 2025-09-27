@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-Fixed-subsection-validation-error-d-2509eb393f16587608fd69f8c3e3b6fcf86c8cbf"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-Added-fix-for-MCQ-questions-1b6af2744819d954b437a3d4f1cefcc8bd0e5a33"
                 imagePullPolicy: Always
                 resources: null  # Commented out for UAT environment
                 # Original resources:
