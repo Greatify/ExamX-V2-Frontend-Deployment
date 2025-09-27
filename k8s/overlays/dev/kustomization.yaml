@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2364Unified-evaluation-minor-is-810bbac31ef6cae6386d1028acca3c7ddbf57ad2"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2362-Sub-Section-issues-2996-e4ed9c7434d76a5909cc4bfcd4add83cf09c141f"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
