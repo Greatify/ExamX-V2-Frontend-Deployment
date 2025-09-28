@@ -217,8 +217,16 @@ jobs:
 
       - name: Update deployment image tag in Kustomization
         run: |
-          # Update the image tag in the deployment patch
-          sed -i 's|image: "[^"]*"|image: "'"$FRONTEND_IMAGE"'"|' k8s/overlays/uat/kustomization.yaml
+          # Update image tags in the uat overlay kustomization file
+          if [[ "$RUNNER_OS" == "macOS" ]]; then
+            # macOS
+            sed -i '' 's|image: "[^"]*"|image: "'"$FRONTEND_IMAGE"'"|g' k8s/overlays/uat/kustomization.yaml
+            sed -i '' 's|kubernetes.io/change-cause:.*|kubernetes.io/change-cause: Updated to "'"$FRONTEND_IMAGE"'"|g' k8s/overlays/uat/kustomization.yaml
+          else
+            # Linux
+            sed -i 's|image: "[^"]*"|image: "'"$FRONTEND_IMAGE"'"|g' k8s/overlays/uat/kustomization.yaml
+            sed -i 's|kubernetes.io/change-cause:.*|kubernetes.io/change-cause: Updated to "'"$FRONTEND_IMAGE"'"|g' k8s/overlays/uat/kustomization.yaml
+          fi
 
       - name: Commit and push changes
         run: |

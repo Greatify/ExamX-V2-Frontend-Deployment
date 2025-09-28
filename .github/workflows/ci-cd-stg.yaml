@@ -232,10 +232,17 @@ jobs:
 
       - name: Update deployment image tag in Kustomization
         run: |
-          # Update the image tag in the deployment patch
-          sed -i 's|image: "[^"]*"|image: "'"$FRONTEND_IMAGE"'"|' k8s/overlays/stg/kustomization.yaml
-          sed -i 's|kubernetes.io/change-cause:.*|kubernetes.io/change-cause: Updated to "'"$FRONTEND_IMAGE"'"|g' k8s/overlays/stg/kustomization.yaml
-          
+          # Update image tags in the staging overlay kustomization file
+          if [[ "$RUNNER_OS" == "macOS" ]]; then
+            # macOS
+            sed -i '' 's|image: "[^"]*"|image: "'"$FRONTEND_IMAGE"'"|g' k8s/overlays/stg/kustomization.yaml
+            sed -i '' 's|kubernetes.io/change-cause:.*|kubernetes.io/change-cause: Updated to "'"$FRONTEND_IMAGE"'"|g' k8s/overlays/stg/kustomization.yaml
+          else
+            # Linux
+            sed -i 's|image: "[^"]*"|image: "'"$FRONTEND_IMAGE"'"|g' k8s/overlays/stg/kustomization.yaml
+            sed -i 's|kubernetes.io/change-cause:.*|kubernetes.io/change-cause: Updated to "'"$FRONTEND_IMAGE"'"|g' k8s/overlays/stg/kustomization.yaml
+          fi
+
       - name: Commit and push changes
         run: |
           git config --local user.email "hariharen@greatify.ai"
