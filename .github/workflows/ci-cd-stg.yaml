@@ -11,6 +11,11 @@ on:
         description: 'Enter branch name to deploy'
         required: true
         type: string
+      use_default_runner:
+        description: 'Run on default runner instead of self-hosted?'
+        required: true
+        type: boolean
+        default: false
         
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -18,7 +23,7 @@ concurrency:
 
 jobs:
   security-password-check:
-    runs-on: ubuntu-latest
+    runs-on: ${{ github.event.inputs.use_default_runner == 'true' && 'ubuntu-latest' || 'self-hosted' }}
     steps:
       - name: Verify deployment password
         id: password-check
@@ -62,7 +67,7 @@ jobs:
 
   build-frontend-staging-image:
     needs: security-password-check 
-    runs-on: ubuntu-latest
+    runs-on: ${{ github.event.inputs.use_default_runner == 'true' && 'ubuntu-latest' || 'self-hosted' }}
     environment: stg
     steps:
       - name: Checkout repository code
@@ -92,21 +97,13 @@ jobs:
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
 
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
-        with:
-          version: v0.12.0
-          driver-opts: |
-            image=moby/buildkit:v0.12.0
-          buildkitd-flags: |
-            --debug
-            --allow-insecure-entitlement security.insecure
-            --allow-insecure-entitlement network.host
-          config-inline: |
-            [registry."docker.io"]
-              mirrors = ["mirror.gcr.io"]
-            [worker.oci]
-              max-parallelism = 12
+      - name: Ensure Buildx is available
+        run: |
+          docker buildx use flamboyant_haslett || docker buildx create --name flamboyant_haslett --use
+          docker buildx inspect --bootstrap
+  
+      - name: Prune Docker
+        run: docker system prune -af 
 
       - name: Login to Amazon ECR
         id: login-ecr
@@ -146,7 +143,7 @@ jobs:
           context: .
           push: true
           tags: ${{ steps.login-ecr.outputs.registry }}/examxv2-frontend:${{ steps.generate-tag.outputs.IMAGE_TAG }}
-          platforms: linux/amd64
+          platforms: linux/arm64
           build-args: 
             ENV_FILE=.env
           cache-from: type=local,src=/tmp/.buildx-cache
@@ -205,7 +202,7 @@ jobs:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
 
   deploy-frontend-staging:
-    runs-on: ubuntu-latest
+    runs-on: ${{ github.event.inputs.use_default_runner == 'true' && 'ubuntu-latest' || 'self-hosted' }}
     needs: [build-frontend-staging-image]
     environment: stg
     steps:
@@ -268,7 +265,7 @@ jobs:
           aws-region: ${{ secrets.AWS_REGION }}
 
       - name: Update Kubernetes configuration
-        run: aws eks update-kubeconfig --name dev-stg-cluster --region ap-south-1
+        run: aws eks update-kubeconfig --name ${{ secrets.STG_CLUSTER_NAME }} --region ${{ secrets.AWS_REGION }}
 
       - name: Deploy to staging environment
         run: |
