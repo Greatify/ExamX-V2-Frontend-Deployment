@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-Restricted-question-paper-modificat-bdcab80b7c6954b5a70767c349e378997f3247fe"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-Implemented-upload-barcode-CSV-XLSX-d9df73cfc860ee738731547ce508987a3f12bd92"
                 imagePullPolicy: Always
                 resources: null  # Commented out for UAT environment
                 # Original resources:
