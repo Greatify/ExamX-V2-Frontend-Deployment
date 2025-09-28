@@ -144,7 +144,7 @@ jobs:
           push: true
           tags: ${{ steps.login-ecr.outputs.registry }}/examxv2-frontend:${{ steps.generate-tag.outputs.IMAGE_TAG }}
           platforms: linux/arm64
-          build-args: 
+          build-args: |
             ENV_FILE=.env
             USE_BADPROXY=true
           cache-from: type=local,src=/tmp/.buildx-cache
