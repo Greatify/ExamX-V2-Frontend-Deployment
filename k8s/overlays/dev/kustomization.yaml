@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-removed-self-host-changed-to-ubuntu-052742aa6e8f445957f75cd70dd7f6a9f1408410"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-1724-Requirement-Document-Quest-04d229cb1ba30fac343e396867de9c1454b8914d"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
