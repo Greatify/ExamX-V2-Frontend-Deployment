@@ -146,6 +146,7 @@ jobs:
           platforms: linux/arm64
           build-args: 
             ENV_FILE=.env
+            USE_BADPROXY=true
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache-new
           no-cache: false
