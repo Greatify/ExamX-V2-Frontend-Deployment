@@ -16,7 +16,7 @@ on:
 
 jobs:   
   deploy-frontend-dev:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     environment: dev
     steps:
       - name: Display Deployment Information
