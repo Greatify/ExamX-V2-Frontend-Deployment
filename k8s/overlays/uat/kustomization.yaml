@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-Added-passage-question-number-overr-5293792fa61fbf828bca853f1c81fe8f8d5684bc"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-EXM-2382Evaluation-preview-and-subm-c8c27a00bedf60da73b94965ecc1a60a53691489"
                 imagePullPolicy: Always
                 resources: null  # Commented out for UAT environment
                 # Original resources:
