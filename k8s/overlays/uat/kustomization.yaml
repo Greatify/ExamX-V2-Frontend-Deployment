@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-EXM-2382Evaluation-preview-and-subm-c8c27a00bedf60da73b94965ecc1a60a53691489"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-Fixed-display-issue-where-display-n-c1a916e8c3a53225b2477fc152e6097d6ac2c073"
                 imagePullPolicy: Always
                 resources: null  # Commented out for UAT environment
                 # Original resources:
