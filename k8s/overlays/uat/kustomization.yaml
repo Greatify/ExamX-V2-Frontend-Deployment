@@ -25,16 +25,15 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-Implemented-upload-barcode-CSV-XLSX-afd285d85ba354452d6a7e29e4ef4ca6177f4073"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-passage-questions-fix-8b474f4eefea739aae139e4f1e29f5206081c413"
                 imagePullPolicy: Always
-                resources: null  # Commented out for UAT environment
-                # Original resources:
-                # requests:
-                #   cpu: "50m"
-                #   memory: "128Mi"
-                # limits:
-                #   cpu: "200m"
-                #   memory: "256Mi"
+                resources: 
+                  requests:
+                    cpu: "500m"
+                    memory: "1Gi"
+                  limits:
+                    cpu: "1"
+                    memory: "2Gi"
                 ports:
                   - containerPort: 80
     target:
@@ -398,7 +397,7 @@ patches:
           kind: Deployment
           name: examxv2-frontend
         minReplicas: 1
-        maxReplicas: 2
+        maxReplicas: 10
         metrics:
           - type: Resource
             resource:
