@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-removed-options-for-staffs-3032-28c69883dfcd772873e2eb8221857016a2059246"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-Implemented-Evaluator-Report-3031-ceeab87f2e9ab224b13eddb6ce3a3ccf81bc2288"
                 imagePullPolicy: Always
                 resources: 
                   requests:
