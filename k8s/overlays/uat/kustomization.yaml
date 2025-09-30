@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-passage-questions-fix-8b474f4eefea739aae139e4f1e29f5206081c413"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-EXM-2388-Remove-or-type-validation-464d6ee021c22e20ba2477a0d126886735791cfe"
                 imagePullPolicy: Always
                 resources: 
                   requests:
