@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-added-submit-and-exit-modal-3035Co-564808115495b155378664651eb378105e7f7899"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-1724-Requirement-Document-Quest-6e2056815077bac6e771826a1675727f512ad887"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
