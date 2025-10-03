@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-Implemented-Evaluator-Report-3031-ceeab87f2e9ab224b13eddb6ce3a3ccf81bc2288"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-Assigned-vs-Completed-Evaluations-g-91b36ad92d4fca57334956eb4af128d025f79ca6"
                 imagePullPolicy: Always
                 resources: 
                   requests:
