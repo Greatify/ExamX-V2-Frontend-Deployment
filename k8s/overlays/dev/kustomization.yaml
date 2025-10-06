@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2393invalid-error-on-generation-7b638151dacc19e7a140083218d507c9774d2c27"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Refactor-CI-workflow-to-utilize-ben-5dd7db8156c143c0bd76cd2b88312e876239d17b"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
