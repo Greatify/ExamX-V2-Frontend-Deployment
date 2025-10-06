@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2407hide-question-view-if-uniqu-7f95265a608f8d49a47f2f7ed94b9131f916fbbc"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2408issue-in-unique-qp-3073-af0ab721a2ae749ae1acb9b80696cd7b406b41e5"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
