@@ -12,7 +12,7 @@ on:
         required: true
         type: string
       use_default_runner:
-        description: 'Run on default runner instead of self-hosted?'
+        description: 'Run on default runner (ubuntu-24.04-arm) instead of self-hosted?'
         required: true
         type: boolean
         default: false
@@ -23,7 +23,7 @@ concurrency:
 
 jobs:
   security-password-check:
-    runs-on: ${{ github.event.inputs.use_default_runner == 'true' && 'ubuntu-latest' || 'self-hosted' }}
+    runs-on: ${{ github.event.inputs.use_default_runner == 'true' && 'ubuntu-24.04-arm' || 'self-hosted' }}
     steps:
       - name: Verify deployment password
         id: password-check
@@ -67,7 +67,7 @@ jobs:
 
   build-frontend-staging-image:
     needs: security-password-check 
-    runs-on: ${{ github.event.inputs.use_default_runner == 'true' && 'ubuntu-latest' || 'self-hosted' }}
+    runs-on: ${{ github.event.inputs.use_default_runner == 'true' && 'ubuntu-24.04-arm' || 'self-hosted' }}
     environment: stg
     steps:
       - name: Checkout repository code
@@ -94,16 +94,31 @@ jobs:
             --query SecretString \
             --output text > .env
 
-      - name: Set up QEMU
-        uses: docker/setup-qemu-action@v3
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+        with:
+          version: v0.12.0
+          driver-opts: |
+            image=moby/buildkit:v0.12.0
+          buildkitd-flags: |
+            --debug
+            --allow-insecure-entitlement security.insecure
+            --allow-insecure-entitlement network.host
+          config-inline: |
+            [registry."docker.io"]
+              mirrors = ["mirror.gcr.io"]
+            [worker.oci]
+              max-parallelism = 4
 
-      - name: Ensure Buildx is available
+      - name: Free disk space
         run: |
-          docker buildx use flamboyant_haslett || docker buildx create --name flamboyant_haslett --use
-          docker buildx inspect --bootstrap
-  
-      - name: Prune Docker
-        run: docker system prune -af 
+          sudo rm -rf /usr/share/dotnet
+          sudo rm -rf /opt/ghc
+          sudo rm -rf "/usr/local/share/boost"
+          sudo rm -rf "$AGENT_TOOLSDIRECTORY"
+          sudo apt-get clean
+          docker system prune -af
+          df -h 
 
       - name: Login to Amazon ECR
         id: login-ecr
@@ -203,7 +218,7 @@ jobs:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
 
   deploy-frontend-staging:
-    runs-on: ${{ github.event.inputs.use_default_runner == 'true' && 'ubuntu-latest' || 'self-hosted' }}
+    runs-on: ${{ github.event.inputs.use_default_runner == 'true' && 'ubuntu-24.04-arm' || 'self-hosted' }}
     needs: [build-frontend-staging-image]
     environment: stg
     steps:
