@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2422copy-paste-disable-in-web-3-6287e7a5667249525b9597229c791f43d7d1dbbd"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2301quiz-feat-issues-dev-3094-a32f9747baa6a6b766df1676cf6d4e0bb8ad836e"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
