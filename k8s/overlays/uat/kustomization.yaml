@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-EXM-2420Show-barcode-number-in-Exam-157e5d3def12531c7c3834f9552007a88a3d1ef2"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-EXM-2425Unified-evaluation-Update-Q-2b958064873d68de4ec8ec20cd18c313a03c4ff3"
                 imagePullPolicy: Always
                 resources: 
                   requests:
