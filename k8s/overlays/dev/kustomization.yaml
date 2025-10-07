@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-1724-Requirement-Document-Quest-22812a6bd5856d5a748134bcde3cf2bf0b342c42"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2419-Add-action-button-function-56f57cbf0368fb0dbbd1fe29a1365511e4e4109d"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
