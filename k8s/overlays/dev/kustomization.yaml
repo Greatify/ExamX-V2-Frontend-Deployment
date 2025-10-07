@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2408unique-qp-interval-seconds-3834bebab4c31c8f4a0a0d3c207eb21b5f82c6ed"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2396quiz-report-view-changes-30-a499875f246bce69e79b368853138c5b5eb76bad"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
