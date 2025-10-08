@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-1724-Requirement-Document-Quest-cc406652a78499545e957f04e1f58e808b3da5f9"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2409quiz-bank-issues-3095-4997c869f91f0c6c6be3bdb727fa19704a2ab38b"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
