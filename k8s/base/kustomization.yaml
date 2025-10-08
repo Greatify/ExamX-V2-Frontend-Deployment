@@ -8,3 +8,6 @@ resources:
   - service/frontend-svc.yaml
   # - ingress/examxv2-ingress.yaml
   - configmap/frontend-nginx-config.yaml
+  
+  # Pod Disruption Budgets
+  - pdb/frontend-pdb.yaml
