@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2409quiz-bank-issues-3095-4997c869f91f0c6c6be3bdb727fa19704a2ab38b"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Exm-2386scrutini-revoke-assignee-in-f956cccbe3fc8170a6eda367d465305d3c57d7e1"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
