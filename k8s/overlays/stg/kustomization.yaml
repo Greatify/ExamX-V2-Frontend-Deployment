@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-2409quiz-bank-issues-stg-3096-34523143a4b8b74eea61a48d77a0231c2274a28d"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-Exm-2386scrutini-revoke-assignee-in-9dde993d9a30914c535424c0173941b5a38f461c"
                 imagePullPolicy: Always
                 resources: null  # Commented out for staging environment
                 # Original resources:
