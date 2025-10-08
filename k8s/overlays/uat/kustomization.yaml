@@ -26,7 +26,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-Added-exception-redirection-for-mse-f3f181c72332bde571a9ccf7a8dcc1d6a59e42d8"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-EXM-2435In-evaluation-auto-save-mar-20bb09049fa6ee68e73b35a2689f5863c9dafce3"
                 imagePullPolicy: Always
                 resources: 
                   requests:
