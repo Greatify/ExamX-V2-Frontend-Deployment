@@ -27,7 +27,7 @@ metadata:
       Authorization,Content-Type,X-Requested-With,Accept,Origin,X-Forwarded-For
     alb.ingress.kubernetes.io/cors-allow-methods: 'GET,POST,OPTIONS,DELETE,PUT'
     alb.ingress.kubernetes.io/cors-allow-origin: >-
-      https://adaniuni.examx.ai,https://www.adaniuni.examx.ai,https://*.adaniuni.examx.ai
+      https://adaniuni.examx.ai,https://www.adaniuni.examx.ai,https://*.adaniuni.examx.ai,https://ms.examx.ai,https://*.ms.examx.ai
     alb.ingress.kubernetes.io/cors-allow-credentials: 'true'
     alb.ingress.kubernetes.io/cors-expose-headers: Accept,Content-Type,Authorization,X-Database-Choice,X-CSRFToken,Baggage,Sentry-Trace,X-Timezone,X-Idempotency-Key
     alb.ingress.kubernetes.io/cors-max-age: '86400'
@@ -46,7 +46,18 @@ spec:
                 name: examxv2-frontend-service 
                 port:
                   number: 80
+    - host: ms.examx.ai
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: examxv2-frontend-service 
+                port:
+                  number: 80
   tls:
     - hosts:
         - adaniuni.examx.ai
+        - ms.examx.ai
       secretName: tls-secret
