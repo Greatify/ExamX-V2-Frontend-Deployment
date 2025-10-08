@@ -26,7 +26,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-EXM-2435In-evaluation-auto-save-mar-20bb09049fa6ee68e73b35a2689f5863c9dafce3"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-Exm-2436annotation-for-offline-exam-0693981d147bc9a62e484fbd581a9bba7d60fa86"
                 imagePullPolicy: Always
                 resources: 
                   requests:
