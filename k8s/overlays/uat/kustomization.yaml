@@ -26,7 +26,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-Exm-2436annotation-for-offline-exam-0693981d147bc9a62e484fbd581a9bba7d60fa86"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-EXM-2441Resizable-divider-in-unifie-51e12f127a0232adf06a8e5422155dc943046e2a"
                 imagePullPolicy: Always
                 resources: 
                   requests:
