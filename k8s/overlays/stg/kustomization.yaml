@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-2446-Update-terminology-for-Cre-31053dae141e4ef679ea87e6eb2770e9c8f30c4d"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-1724-Requirement-Document-Quest-6e8cf94329c585ee56f4043db6620989289de326"
                 imagePullPolicy: Always
                 resources: null  # Commented out for staging environment
                 # Original resources:
