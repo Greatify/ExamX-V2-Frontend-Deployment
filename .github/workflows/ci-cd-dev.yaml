@@ -172,6 +172,8 @@ jobs:
     runs-on: ubuntu-24.04-arm
     needs: [build-frontend-dev-image]
     environment: dev
+    env:
+      CLOUDFRONT_DISTRIBUTION: ${{ secrets.DEV_CLOUDFRONT_DISTRIBUTION }}
     steps:
       - name: Checkout deployment repository
         uses: actions/checkout@v4
@@ -230,7 +232,14 @@ jobs:
 
       - name: Deploy to development environment
         run: |
-          kubectl apply -k k8s/overlays/dev
+          kubectl apply -k k8s/overlays/dev --validate=true
+          kubectl rollout status deployment examxv2-frontend -n dev-examxv2 --timeout=300s
+
+      - name: Create CloudFront Invalidation
+        run: |
+          INVALIDATION_ID=$(aws cloudfront create-invalidation --distribution-id ${{ env.CLOUDFRONT_DISTRIBUTION }} --paths "/*" --query 'Invalidation.Id' --output text)
+          echo "Created invalidation: $INVALIDATION_ID"
+          aws cloudfront wait invalidation-completed --distribution-id ${{ env.CLOUDFRONT_DISTRIBUTION }} --id $INVALIDATION_ID
 
       - name: Send deployment success notification
         if: success()
