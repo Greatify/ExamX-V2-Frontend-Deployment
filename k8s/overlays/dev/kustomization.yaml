@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2450-Integrate-sub-domain-data-11ab1be8fe8266eb99fc89989e920cb20b6d1784"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-1724-Requirement-Document-Quest-11ee3524ae5e255db28afcb7d5004c27a6abdabd"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
