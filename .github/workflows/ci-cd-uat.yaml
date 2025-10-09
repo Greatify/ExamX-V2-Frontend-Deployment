@@ -11,8 +11,8 @@ on:
         description: 'Enter branch name to deploy'
         required: true
         type: string
-      use_default_runner:
-        description: 'Run on default runner (ubuntu-24.04-arm) instead of self-hosted?'
+      use_self_hosted_runner:
+        description: 'Run on self-hosted runner?'
         required: true
         type: boolean
         default: false
@@ -68,7 +68,7 @@ jobs:
 
   build-frontend-uat-image:
     # needs: security-password-check 
-    runs-on: ${{ github.event.inputs.use_default_runner == 'true' && 'ubuntu-24.04-arm' || 'self-hosted' }}
+    runs-on: ${{ github.event.inputs.use_self_hosted_runner == 'true' && 'self-hosted' || 'ubuntu-24.04-arm' }}
     environment: uat
     steps:
       - name: Checkout repository code
@@ -210,7 +210,7 @@ jobs:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
 
   deploy-frontend-uat:
-    runs-on: ${{ github.event.inputs.use_default_runner == 'true' && 'ubuntu-24.04-arm' || 'self-hosted' }}
+    runs-on: ${{ github.event.inputs.use_self_hosted_runner == 'true' && 'self-hosted' || 'ubuntu-24.04-arm' }}
     needs: [build-frontend-uat-image]
     environment: uat
     steps:
