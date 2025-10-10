@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-EXM-2460-Enhance-Paper-component-to-33dc6ae4037d62e4aa9c5be639b414e3efebe2bd"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-fixed-grouping-template-mark-issue-673904be665f14663efe10ca07c705ddd2fb0430"
                 imagePullPolicy: Always
                 resources:
                   requests:
