@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-Featunique-qpquiz-3107-90b43c2e5d4ecda7a599b12ee99e8f367fcb56cd"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-EXM-1724-Requirement-Document-Quest-da0a17cef95739103e54bc21e64d3b745ccc7310"
                 imagePullPolicy: Always
                 resources:
                   requests:
