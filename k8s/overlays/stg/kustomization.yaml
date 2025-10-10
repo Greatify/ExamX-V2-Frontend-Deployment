@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-Srm-hot-fix-grouping-template-stg-3-d67d27cef53831bca85e53b45864fe869fd230b5"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-2461-Need-a-Support-for-make-a-ab9543cb5b7a3d743eb44bed11f14fe8cc0ae87f"
                 imagePullPolicy: Always
                 resources: null  # Commented out for staging environment
                 # Original resources:
