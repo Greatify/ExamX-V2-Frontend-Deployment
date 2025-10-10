@@ -26,7 +26,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-EXM-2451Evaluation-student-list-eva-37cc75238c113bc35498c3f1829e9b3e4751f347"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-EXM-2459Shapes-in-Annotation-3132-04c78d1a4896d43e63c7ffde848ea04b8b35d60b"
                 imagePullPolicy: Always
                 resources: 
                   requests:
