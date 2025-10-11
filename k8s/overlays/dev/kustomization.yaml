@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2419-Implement-action-button-fo-911e5953e24cd2e0c7a37bf561f9dc30d34fd4fc"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Adani-evaluation-flow-uat-3152-30d8af0c883fdc93060c61aea86e46459114003e"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
