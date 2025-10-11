@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2414Show-option-text-in-evaluat-589873f8e081a223838af1ba685f2493a312acd4"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2419-Add-action-button-function-5b109ad2225a5c5c1c4c5daf2e3cee1e75e6e8a4"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
