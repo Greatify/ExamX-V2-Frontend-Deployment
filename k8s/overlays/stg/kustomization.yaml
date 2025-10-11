@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-Exm-2484-scroll-freeze-and-tabledyn-527c52d735741b77455c4e088654d1f5f14dfff4"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-2419-Implement-action-button-fo-8279cc11010fbf9099a610b60d08e684585f4dc4"
                 imagePullPolicy: Always
                 resources: null  # Commented out for staging environment
                 # Original resources:
