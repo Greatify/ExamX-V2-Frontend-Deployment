@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2537-Student-Profile-Phone-numb-202ccc05ec6f7cfe3e9ae8f9ecbdff9d418f2986"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2538File-upload-progress-tracke-ef973a79b3a8e5caeb453452466c19a239372785"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
