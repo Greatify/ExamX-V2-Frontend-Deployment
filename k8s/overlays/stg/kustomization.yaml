@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-Exm-1993desktop-proctoring-on-web-s-64609500a5c28fea5d4a2a80c18bb01d9d58908d"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-1993web-exam-enhanced-bugs-3165-a71ee15e6cd258c33885a7451f7c3ffabb49d8b8"
                 imagePullPolicy: Always
                 resources: null  # Commented out for staging environment
                 # Original resources:
