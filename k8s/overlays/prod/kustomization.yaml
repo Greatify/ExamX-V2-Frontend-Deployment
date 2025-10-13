@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-EXM-2461-Need-a-Support-for-make-a-f29ad3258ce8406c8a3e8c5272b219344b4c8cd7"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-EXM-2540-Refactor-DropdownSelect-co-f73a59bb6d0475f428beb56325f457fcfcd2badb"
                 imagePullPolicy: Always
                 resources:
                   requests:
