@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2565Sidebar-overflow-issue-3180-31cf39656b4d4a3cb72cb13bca8a1a6e4f0aeb4e"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2559-Enrichment-filter-added-in-e8382c6c7c4382e8ac7a2d715f4ef64f5effd2ba"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
