@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-2559-Enrichment-filter-added-in-2269d85f824c56c08c4968f90213a3050a6a2228"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-2555-When-selecting-Scheduled-T-cfbdc5e80b8a792ec7f83e783a68d17dae320645"
                 imagePullPolicy: Always
                 resources: null  # Commented out for staging environment
                 # Original resources:
