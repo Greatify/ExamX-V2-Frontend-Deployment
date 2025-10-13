@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2525EXM-2531EXM-2527bugs-3178-3c76aed0274c2c1c0ee08ea58cc75fa0e8b426d3"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2565Sidebar-overflow-issue-3180-31cf39656b4d4a3cb72cb13bca8a1a6e4f0aeb4e"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
