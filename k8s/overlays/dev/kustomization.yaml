@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2466-Implemented-hall-based-fil-4da147cc80a885f4ecebf3bb2bc865e0b28f84c2"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2560Tooltip-for-navLinks-in-sid-387f7f0f248e305efb64c0841370f7d691b3cdd6"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
