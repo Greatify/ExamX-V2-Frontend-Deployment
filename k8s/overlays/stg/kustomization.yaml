@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-2555-When-selecting-Scheduled-T-cfbdc5e80b8a792ec7f83e783a68d17dae320645"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-2489-In-template-level-If-user-0f197d1f11f514429cbe42f964ba81ad3eba22c8"
                 imagePullPolicy: Always
                 resources: null  # Commented out for staging environment
                 # Original resources:
