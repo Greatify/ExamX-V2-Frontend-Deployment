@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2520-CO-Mapped-its-Slowness-the-be1fe1d0967764afb4962aea8700559f862dc05d"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2559-Enrichment-filter-added-in-44ba6bc0abf963068f36ad7ee3cb7e53e220adaf"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
