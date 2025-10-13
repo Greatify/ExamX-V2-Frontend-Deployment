@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-EXM-2540-Refactor-DropdownSelect-co-f73a59bb6d0475f428beb56325f457fcfcd2badb"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-EXM-2559-Enrichment-filter-added-in-a4af7ffa07408f12968b849f8ee223348ca3e144"
                 imagePullPolicy: Always
                 resources:
                   requests:
