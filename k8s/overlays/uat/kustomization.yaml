@@ -26,7 +26,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-Login-redirection-to-evalaution-for-da773eea5ad68054c14e716226899fadd616193d"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-Hide-evaluation-progress-for-admin-c428c98ce74e8c0cd5a9f76c553812822339e641"
                 imagePullPolicy: Always
                 resources: 
                   requests:
