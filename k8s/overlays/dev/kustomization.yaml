@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-1993web-exam-enhanced-bugs-3164-08405a97aeb3d3dd63015a81066e80396f929ac3"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2540-Refactor-DropdownSelect-co-c4265ae332a7a86f17ee864c2b2ae3465d7e147e"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
