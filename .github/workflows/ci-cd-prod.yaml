@@ -65,8 +65,7 @@ jobs:
     needs: security-password-check 
     runs-on: ubuntu-latest
     environment: prod
-    env:
-      CLOUDFRONT_DISTRIBUTION: ${{ secrets.PROD_CLOUDFRONT_DISTRIBUTION }}
+
     steps:
       - name: Checkout repository code
         uses: actions/checkout@v4
@@ -212,6 +211,8 @@ jobs:
     runs-on: ubuntu-latest
     needs: [build-frontend-production-image]
     environment: prod
+    env:
+      CLOUDFRONT_DISTRIBUTION: ${{ secrets.PROD_CLOUDFRONT_DISTRIBUTION }}
     steps:
       - name: Checkout deployment repository
         uses: actions/checkout@v4
