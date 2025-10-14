@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-2586quiz-question-dynamic-rende-9d66e41dca9cd89cc4a48773bc0a0b0ae5dab196"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-2582-Fixed-PO-filter-issue-in-q-be668c3b711ad7bd2571d2a881fb3b72e29ad0f0"
                 imagePullPolicy: Always
                 resources: null  # Commented out for staging environment
                 # Original resources:
