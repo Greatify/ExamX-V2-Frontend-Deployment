@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2419-Add-action-button-for-bulk-2f1a4c7e092ae4dfa1d30d1c9619e71eac2e03ba"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2559-Enrichment-filter-added-in-cf59dcc33e1906df284f0b5980edb468817de204"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
