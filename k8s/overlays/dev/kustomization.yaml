@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2544-TEMPLATE-When-the-user-sel-aeda642a6618c0f7b6073594b621f5c5f094ba7e"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2583-Need-a-Support-for-make-a-3aec18c7dbae2dd67cc5743f4590ee997b430ad3"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
