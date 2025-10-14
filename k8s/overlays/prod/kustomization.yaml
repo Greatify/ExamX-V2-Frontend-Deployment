@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-EXM-2559-Enrichment-filter-added-in-a4af7ffa07408f12968b849f8ee223348ca3e144"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-EXM-2559-CO-PO-filter-issue-fixed-a-8baf9a0905554f8d2a2ef2b07726903d35119a67"
                 imagePullPolicy: Always
                 resources:
                   requests:
