@@ -11,6 +11,11 @@ on:
         description: 'Enter branch name to deploy'
         required: true
         type: string
+      use_self_hosted_runner:
+        description: 'Run on self-hosted runner?'
+        required: true
+        type: boolean
+        default: false
         
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -18,7 +23,7 @@ concurrency:
 
 jobs:
   security-password-check:
-    runs-on: ubuntu-latest
+    runs-on: ${{ github.event.inputs.use_self_hosted_runner == 'true' && 'self-hosted' || 'ubuntu-24.04-arm' }}
     steps:
       - name: Verify deployment password
         id: password-check
@@ -63,7 +68,7 @@ jobs:
 
   build-frontend-production-image:
     needs: security-password-check 
-    runs-on: ubuntu-latest
+    runs-on: ${{ github.event.inputs.use_self_hosted_runner == 'true' && 'self-hosted' || 'ubuntu-24.04-arm' }}
     environment: prod
 
     steps:
@@ -91,9 +96,6 @@ jobs:
             --query SecretString \
             --output text > .env
 
-      - name: Set up QEMU
-        uses: docker/setup-qemu-action@v3
-
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
         with:
@@ -108,7 +110,7 @@ jobs:
             [registry."docker.io"]
               mirrors = ["mirror.gcr.io"]
             [worker.oci]
-              max-parallelism = 12
+              max-parallelism = 4
 
       - name: Login to Amazon ECR
         id: login-ecr
@@ -148,7 +150,7 @@ jobs:
           context: .
           push: true
           tags: ${{ steps.login-ecr.outputs.registry }}/examxv2-frontend:${{ steps.generate-tag.outputs.IMAGE_TAG }}
-          platforms: linux/amd64
+          platforms: linux/arm64
           build-args: 
             ENV_FILE=.env
           cache-from: type=local,src=/tmp/.buildx-cache
@@ -208,7 +210,7 @@ jobs:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
 
   deploy-frontend-production:
-    runs-on: ubuntu-latest
+    runs-on: ${{ github.event.inputs.use_self_hosted_runner == 'true' && 'self-hosted' || 'ubuntu-24.04-arm' }}
     needs: [build-frontend-production-image]
     environment: prod
     env:
