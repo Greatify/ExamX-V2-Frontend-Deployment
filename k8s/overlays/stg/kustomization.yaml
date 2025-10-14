@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-2538File-upload-progress-tracke-6752326e2e99c7e8270daeb792d57281e097edf3"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-2419-Add-action-button-for-bulk-96f6aeae769db6cc9c345794aeaff45fb372429d"
                 imagePullPolicy: Always
                 resources: null  # Commented out for staging environment
                 # Original resources:
