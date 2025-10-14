@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-1579-Template-Reg-number-Field-6e51194a0ad4658bf51ebc2083f39152bb5ff1ba"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2586quiz-question-dynamic-rende-6cf14de768860bfd8abca300a6650ec3b90d3306"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
