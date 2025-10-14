@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2504numbering-parent-question-i-b6504625279f51a81d6124394fcce7f19aaa3793"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2544-TEMPLATE-When-the-user-sel-aeda642a6618c0f7b6073594b621f5c5f094ba7e"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
