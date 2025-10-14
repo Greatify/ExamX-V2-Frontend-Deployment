@@ -221,6 +221,8 @@ jobs:
     runs-on: ${{ github.event.inputs.use_self_hosted_runner == 'true' && 'self-hosted' || 'ubuntu-24.04-arm' }}
     needs: [build-frontend-staging-image]
     environment: stg
+    env:
+      CLOUDFRONT_DISTRIBUTION: ${{ secrets.STG_CLOUDFRONT_DISTRIBUTION }}
     steps:
       - name: Checkout deployment repository
         uses: actions/checkout@v4
@@ -292,7 +294,14 @@ jobs:
 
       - name: Deploy to staging environment
         run: |
-          kubectl apply -k k8s/overlays/stg
+          kubectl apply -k k8s/overlays/stg --validate=true
+          kubectl rollout status deployment examxv2-frontend -n stg-examxv2 --timeout=300s
+
+      - name: Create CloudFront Invalidation
+        run: |
+          INVALIDATION_ID=$(aws cloudfront create-invalidation --distribution-id ${{ env.CLOUDFRONT_DISTRIBUTION }} --paths "/*" --query 'Invalidation.Id' --output text)
+          echo "Created invalidation: $INVALIDATION_ID"
+          aws cloudfront wait invalidation-completed --distribution-id ${{ env.CLOUDFRONT_DISTRIBUTION }} --id $INVALIDATION_ID
 
       - name: Send deployment success notification
         if: success()

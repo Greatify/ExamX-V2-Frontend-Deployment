@@ -65,6 +65,8 @@ jobs:
     needs: security-password-check 
     runs-on: ubuntu-latest
     environment: prod
+    env:
+      CLOUDFRONT_DISTRIBUTION: ${{ secrets.PROD_CLOUDFRONT_DISTRIBUTION }}
     steps:
       - name: Checkout repository code
         uses: actions/checkout@v4
@@ -274,7 +276,14 @@ jobs:
 
       - name: Deploy to production environment
         run: |
-          kubectl apply -k k8s/overlays/prod
+          kubectl apply -k k8s/overlays/prod --validate=true
+          kubectl rollout status deployment examxv2-frontend -n examxv2-production --timeout=300s
+
+      - name: Create CloudFront Invalidation
+        run: |
+          INVALIDATION_ID=$(aws cloudfront create-invalidation --distribution-id ${{ env.CLOUDFRONT_DISTRIBUTION }} --paths "/*" --query 'Invalidation.Id' --output text)
+          echo "Created invalidation: $INVALIDATION_ID"
+          aws cloudfront wait invalidation-completed --distribution-id ${{ env.CLOUDFRONT_DISTRIBUTION }} --id $INVALIDATION_ID
 
       - name: Send deployment success notification
         if: success()
