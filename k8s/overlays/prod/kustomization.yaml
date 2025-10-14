@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-EXM-2583-Need-a-Support-for-make-a-025f2cb419594942bd8d619de0f333fe4460643e"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-EXM-2586quiz-question-dynamic-rende-02974d601cade62b3e54acaf0d53466cfcdf9577"
                 imagePullPolicy: Always
                 resources:
                   requests:
