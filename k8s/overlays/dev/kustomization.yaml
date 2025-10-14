@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2559-Enrichment-filter-added-in-cf59dcc33e1906df284f0b5980edb468817de204"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2504numbering-parent-question-i-b6504625279f51a81d6124394fcce7f19aaa3793"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
