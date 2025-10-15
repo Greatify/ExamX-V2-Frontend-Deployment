@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2504numbering-nested-questions-5c64713f6da4d741392d02f21b27f2e7ada358b8"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2606-Handled-co-distribution-in-b6f2d18791738f682d47b9dd5d5e6544e0c1a3d4"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
