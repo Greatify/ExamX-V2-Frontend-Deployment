@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-2606-Handled-co-distribution-in-822b4fb60490298a408febf97781c1ceaa427d23"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-1579-Template-Reg-number-Field-e2c609a8be999f91b0aab6993f57e58950c14ef8"
                 imagePullPolicy: Always
                 resources: null  # Commented out for staging environment
                 # Original resources:
