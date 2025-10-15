@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Exm-2598manual-select-not-working-c-46bb8f4735a7aa0a2b2d6276a02a198fc8a77e17"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2504numbering-nested-questions-5c64713f6da4d741392d02f21b27f2e7ada358b8"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
