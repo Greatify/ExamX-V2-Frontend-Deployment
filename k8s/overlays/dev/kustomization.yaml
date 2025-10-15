@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-1197-Terminology-component-to-u-e8b2e8e1547d1680d421e1779462d03dccb228ba"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-1178-reset-count-display-to-nul-3cec15d7a87ada69ca48918bf9aaa99d54b51ade"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
