@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2590-Question-mark-alignment-go-b482cc33e6f8c537007af7a329d3add74025f15f"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-1197-Terminology-component-to-u-e8b2e8e1547d1680d421e1779462d03dccb228ba"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
