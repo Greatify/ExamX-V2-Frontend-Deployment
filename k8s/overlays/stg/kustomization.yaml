@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-1178-reset-count-display-to-nul-f5a9ba86fbfbb1d554dbcedbd8e2e472f1c2496a"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-2504numbering-nested-questions-646d41e1a47e546ed2c37e5153d91a22a379ca08"
                 imagePullPolicy: Always
                 resources: null  # Commented out for staging environment
                 # Original resources:
