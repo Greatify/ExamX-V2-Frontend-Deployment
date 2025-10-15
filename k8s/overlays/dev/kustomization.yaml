@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2606-Handled-co-distribution-in-b6f2d18791738f682d47b9dd5d5e6544e0c1a3d4"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2611section-wise-qb-choosing-is-1aee0c6a9574a7e4d61a2b81229cd11372d8b815"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
