@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-EXM-2582-Fixed-PO-filter-issue-in-q-0608f9493fca73890cc4c41fa3063f642d51071b"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-EXM-1197-terminology-handling-to-us-f8e03722b63f4fdf37b9373141eb16748bf05128"
                 imagePullPolicy: Always
                 resources:
                   requests:
