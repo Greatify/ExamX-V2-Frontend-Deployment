@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2616-Template-Preview-Alignment-f39955120e2d76c8fb63fcd6c481dc794fc4b58a"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2626passage-question-unselectab-c507cb7ff39a9a977c7560c3e1ad002a2efbdeb5"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
