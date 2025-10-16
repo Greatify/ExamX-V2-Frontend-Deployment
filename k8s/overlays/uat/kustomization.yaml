@@ -26,7 +26,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-Implement-Barcode-PDF-report-downlo-8bd63df82d1b7992e38149f251f40a13844901d5"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-Fix-optional-chaining-for-menuOptio-104764d5374a9e904c1b6f8801af1edf4ca526a9"
                 imagePullPolicy: Always
                 resources: 
                   requests:
