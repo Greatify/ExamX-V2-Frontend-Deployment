@@ -26,7 +26,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-Add-evaluation-report-download-func-0461f7bfc12cfdec57ed53ecd0e895c06440634b"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-Implement-Barcode-PDF-report-downlo-8bd63df82d1b7992e38149f251f40a13844901d5"
                 imagePullPolicy: Always
                 resources: 
                   requests:
