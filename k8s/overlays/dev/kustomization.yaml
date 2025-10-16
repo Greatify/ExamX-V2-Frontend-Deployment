@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Exm-2201-Need-Section-Filter-and-Se-c49c6049c8198610c03ffd8f366809171e90dc3c"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-hidden-question-view-for-external-t-2e787ba68b7aaf373fc42777febd02928b80c298"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
