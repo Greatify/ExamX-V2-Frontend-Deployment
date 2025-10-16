@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-EXM-1197-terminology-handling-to-us-f8e03722b63f4fdf37b9373141eb16748bf05128"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-hidden-question-view-for-external-t-86be6d71a3ca2cc14074ce3dd1477640cc69332a"
                 imagePullPolicy: Always
                 resources:
                   requests:
