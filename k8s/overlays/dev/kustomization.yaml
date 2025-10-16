@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-hidden-question-view-for-external-t-2e787ba68b7aaf373fc42777febd02928b80c298"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2633viewtsx-live-exam-file-conv-0034f73c0777179ddb18a988621cc99d1bf99179"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
