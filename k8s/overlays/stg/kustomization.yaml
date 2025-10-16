@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-hidden-question-view-for-external-t-49083373094a406a7c74a79ba9dfb080f7e920dc"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-Optimized-and-modularized-Viewtsx-b-1fb4c198eb29e4d9073c3aab5714d0ed59a2dd59"
                 imagePullPolicy: Always
                 resources: null  # Commented out for staging environment
                 # Original resources:
