@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-2640-CO-display-issue-fixed-in-f05cf3427fdbbf625fb2e2a060f51344779784f5"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-Added-styling-for-editor-content-ta-5ef95f1861e56dec2600edadd9ac61c7a62dd2bb"
                 imagePullPolicy: Always
                 resources: null  # Commented out for staging environment
                 # Original resources:
