@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-Added-styling-for-editor-content-ta-5ef95f1861e56dec2600edadd9ac61c7a62dd2bb"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-Exm-2201-Need-Section-Filter-and-Se-01b0015d1ead38faed6a247cdae66ae44483997f"
                 imagePullPolicy: Always
                 resources: null  # Commented out for staging environment
                 # Original resources:
