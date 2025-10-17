@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-2649-Fixed-Unit-CO-fetch-issue-748112e9c4e620df52ce73481291b1501751aa19"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-2645-Vels-Style-Json-Save-Flow-c067236829f172be96436938716ff7bb88a70001"
                 imagePullPolicy: Always
                 resources: null  # Commented out for staging environment
                 # Original resources:
