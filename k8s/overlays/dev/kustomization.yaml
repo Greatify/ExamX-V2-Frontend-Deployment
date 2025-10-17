@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-CO-Distribution-Issue-Fixed-3250-10feee142515b957878fc9af5361f33d2236141c"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2551-Implemented-Nested-OR-SPLI-79e4a286453391ffe9649113333050f78924a76d"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
