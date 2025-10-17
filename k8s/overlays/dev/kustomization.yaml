@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2419-Add-action-button-for-upda-e9e94f155b00caba2b3b9a41dd84d5ad2df7e264"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2640-Fixed-CO-display-issue-in-7a27fa35e1587fc944c8809ca2010614747baa08"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
