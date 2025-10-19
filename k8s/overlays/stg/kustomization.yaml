@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-2645-Vels-Style-Json-Save-Flow-c067236829f172be96436938716ff7bb88a70001"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-2656-Alignment-issue-in-the-Que-f84dc7201813c82d85d65750f8af68257161ad79"
                 imagePullPolicy: Always
                 resources: null  # Commented out for staging environment
                 # Original resources:
