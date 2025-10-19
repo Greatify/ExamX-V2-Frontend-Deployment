@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-Added-styling-for-editor-content-ta-e2e807fe67a3a7d30bfb95fe9b90b160bf41354c"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-EXM-2656-Alignment-issue-in-the-Que-4130214a544f953e8dd9584acf01da02ced932a6"
                 imagePullPolicy: Always
                 resources:
                   requests:
