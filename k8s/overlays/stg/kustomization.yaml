@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-2656-Alignment-issue-in-the-Que-f84dc7201813c82d85d65750f8af68257161ad79"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-2551-Implemented-Nested-OR-SPLI-cc300bb5dafbf73f2fb2416e9dd47f245b292a55"
                 imagePullPolicy: Always
                 resources: null  # Commented out for staging environment
                 # Original resources:
