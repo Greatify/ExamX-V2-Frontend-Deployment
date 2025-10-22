@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2525single-match-not-visible-in-1255f3c85fd16da1ff10c5ce5bc057fcc1c11bfa"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2677-While-Enable-the-CO-PO-in-c7e677a0e61654752c9e3584b32cc6f3d4f2bc5c"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
