@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-2677-While-Enable-the-CO-PO-in-3c7acf489344ee84c0ffec021dd005a76d3c62a5"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-1378-Fixed-user-profile-update-fd26bef974044cfc286f253108886e734397ab61"
                 imagePullPolicy: Always
                 resources: null  # Commented out for staging environment
                 # Original resources:
