@@ -26,7 +26,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-Fix-optional-chaining-for-menuOptio-104764d5374a9e904c1b6f8801af1edf4ca526a9"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-EXM-2664Evaluation-Report-for-Adani-884ba529e63e768e3b6d6b161be48f863d6bcb75"
                 imagePullPolicy: Always
                 resources: 
                   requests:
