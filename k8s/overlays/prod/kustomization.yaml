@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-EXM-2656-Alignment-issue-in-the-Que-4130214a544f953e8dd9584acf01da02ced932a6"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-Srm-issue-Fixed-3289-248b46bceb37c1c6bb37020ac9ffe174520de196"
                 imagePullPolicy: Always
                 resources:
                   requests:
