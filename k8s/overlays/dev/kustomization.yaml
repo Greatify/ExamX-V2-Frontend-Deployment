@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2689-Added-NestedTable-componen-53ced60bfece9b09272c456b274145c226d761d6"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2701-Unit-Co-need-to-be-Editabl-bb7b09c981c8a4a55de696862c16039df2e6bd7d"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
