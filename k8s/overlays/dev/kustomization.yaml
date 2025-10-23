@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2704-In-split-type-questions-sp-e2b9dd9f84378e569dea08ae07671eba62dede29"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2702Student-profile-image-bulk-035be40539947509ca9bd6847346e6c88e9d133d"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
