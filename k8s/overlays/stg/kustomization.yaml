@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-Main-exm-2685exam-view-redesign-331-0e859034394dcf3d675d18916bc66bc6ff6c0f7d"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-Template-Edit-Old-CO-values-in-sub-1c3f2c7c08ca25b44efca252f4b375225c4bc793"
                 imagePullPolicy: Always
                 resources: null  # Commented out for staging environment
                 # Original resources:
