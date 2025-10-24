@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-prevented-multi-renders-3305-b1ced43f41292c07af48009841611d2f36b479be"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-2698-QuestionMarkAnalysis-compo-6789f5a717330a4967a66eaa24084cf0a8a62959"
                 imagePullPolicy: Always
                 resources: null  # Commented out for staging environment
                 # Original resources:
