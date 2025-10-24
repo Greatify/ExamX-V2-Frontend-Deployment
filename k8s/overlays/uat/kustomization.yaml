@@ -26,7 +26,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-Add-navigation-to-exam-details-in-B-6a84c0410044dbb86121287b24682d3ad5326250"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-Refactor-evaluation-report-fields-i-9111be3ae12f815bc8c1d340fadeeb0b8e38a188"
                 imagePullPolicy: Always
                 resources: 
                   requests:
