@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-2704-In-split-type-questions-sp-4ca80a0d438bc29409c81ecca00d0fbde2e6807c"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-prevented-multi-renders-3305-b1ced43f41292c07af48009841611d2f36b479be"
                 imagePullPolicy: Always
                 resources: null  # Commented out for staging environment
                 # Original resources:
