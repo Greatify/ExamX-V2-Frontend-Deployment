@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-2712Show-final-preview-modal-in-a1e97019f99946769994dc6c9d3ad22284643a56"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-Main-exm-2685exam-view-redesign-331-0e859034394dcf3d675d18916bc66bc6ff6c0f7d"
                 imagePullPolicy: Always
                 resources: null  # Commented out for staging environment
                 # Original resources:
