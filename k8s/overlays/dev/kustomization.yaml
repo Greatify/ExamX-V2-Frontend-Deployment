@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2729nested-questions-not-select-883041c796d3af2cfa810f753357e5c395c9b58a"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2730Action-button-overflow-issu-e9779b3d8904fe235349b89bdfcdd5f88559ef8f"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
