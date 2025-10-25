@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2676-Implement-migration-functi-e7f54324f22a7cc8db9ee7bf89f96f2607c89bf8"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2741-Fixed-Authoring-page-filte-a8d9a3d0da9766641d9c733100316e16ee4b3b7f"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
