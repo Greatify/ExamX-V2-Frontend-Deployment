@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-2728-Removed-Filter-Option-from-75a7b0f6c4be7af30af13d25c1042fa3b38db643"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-2741-Fixed-Authoring-page-filte-d40558cbda3ddbc6b6817200fa9e7d4425a0f913"
                 imagePullPolicy: Always
                 resources: null  # Commented out for staging environment
                 # Original resources:
