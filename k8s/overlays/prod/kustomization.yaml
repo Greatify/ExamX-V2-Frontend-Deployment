@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-srm-issue-co-fixed-3325-6d90cf1ae4e14cad2d1ae88ae6c9469309b7515a"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-srm-co-issue-fixed-3329-a2c7f4b93363d33860213a46747687850f2baf17"
                 imagePullPolicy: Always
                 resources:
                   requests:
