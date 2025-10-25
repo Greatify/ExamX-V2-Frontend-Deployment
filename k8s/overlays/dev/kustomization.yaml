@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2728-Removed-Filter-Option-from-6796957db4089e1a9c8bb8faae45c2fea8e10e3c"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2676-Implement-migration-functi-e7f54324f22a7cc8db9ee7bf89f96f2607c89bf8"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
