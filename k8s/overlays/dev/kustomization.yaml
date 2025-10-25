@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2741-Fixed-Authoring-page-filte-a8d9a3d0da9766641d9c733100316e16ee4b3b7f"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2716-Authoring-QP-Creation-When-54cd5cf696c8f1361c459fc6c2a36a95e302c75d"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
