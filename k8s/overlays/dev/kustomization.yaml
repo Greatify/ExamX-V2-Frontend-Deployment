@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2726-While-creation-the-questio-dfaa018e46db558661092870e9b8891e6218d9d3"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2728-Removed-Filter-Option-from-6796957db4089e1a9c8bb8faae45c2fea8e10e3c"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
