@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2716-Authoring-QP-Creation-When-54cd5cf696c8f1361c459fc6c2a36a95e302c75d"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-SRM-Passage-question-description-is-9814c695035c93764d4d0633254178941146dfec"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
