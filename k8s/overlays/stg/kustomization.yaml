@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-SRM-Passage-question-description-is-a547d05fe3ac5c200b6fa3a75708a8d0a293be82"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-2757tudent-profile-image-bulk-u-98c60848283e136743ac2c41106c7faa6849a818"
                 imagePullPolicy: Always
                 resources: null  # Commented out for staging environment
                 # Original resources:
