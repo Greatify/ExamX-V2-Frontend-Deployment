@@ -26,7 +26,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-Refactor-evaluation-report-fields-i-9111be3ae12f815bc8c1d340fadeeb0b8e38a188"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-EXM-2703Dashboard-Request-Paper-Eva-4cdf5c2833cce9819887d2c716e7543b1bdbe1eb"
                 imagePullPolicy: Always
                 resources: 
                   requests:
