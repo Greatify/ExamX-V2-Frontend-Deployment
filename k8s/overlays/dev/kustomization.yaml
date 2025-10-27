@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2750-While-creating-the-templat-4403c1cb12c9a4c9217cf90142cfffccbbca96be"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2779question-not-selecting-3346-d80e1b0c755bfb588bc422598b9a77b7ff63cfb4"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
