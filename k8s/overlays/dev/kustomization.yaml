@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2465-Add-instructional-note-for-669ecbea2487e7501d7a4d1ce843ab949b06188f"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Implement-auto-assignment-of-review-b22e3fcb5ebddd60ffbae6d5289eacb27adb2682"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
