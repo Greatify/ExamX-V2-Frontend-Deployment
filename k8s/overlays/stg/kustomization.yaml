@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-2465-Add-biometric-feature-to-s-5fe0163fc1a453744e947af9ad7945175a10f60d"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-2737-Fix-bloom-extraction-logic-d29f14b5cf09aec0c80a3ea78d8bdab449f13476"
                 imagePullPolicy: Always
                 resources: null  # Commented out for staging environment
                 # Original resources:
