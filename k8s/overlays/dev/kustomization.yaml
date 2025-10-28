@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2465-Add-biometric-feature-to-s-5c14a968dbd961ddff0d255882d4baf7466299e7"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2465-Add-instructional-note-for-669ecbea2487e7501d7a4d1ce843ab949b06188f"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
