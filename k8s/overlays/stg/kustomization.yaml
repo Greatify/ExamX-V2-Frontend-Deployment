@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-2779question-not-selecting-stg-aefe1cf2e1eb42d3f6c185756140ec9d66f9f4cc"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-2465-Add-biometric-feature-to-s-5fe0163fc1a453744e947af9ad7945175a10f60d"
                 imagePullPolicy: Always
                 resources: null  # Commented out for staging environment
                 # Original resources:
