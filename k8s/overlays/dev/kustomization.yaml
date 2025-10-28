@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-template-white-screen-issue-fix-336-ff660375298e7f8fcc7083e1c97f33b6493e1e36"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2820-Enhance-Question-Import-Ro-6fe5d0c02abe241779c0387fc8a85a16dadbb40b"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
