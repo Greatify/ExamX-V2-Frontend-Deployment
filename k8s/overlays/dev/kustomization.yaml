@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Complete-PR-workflow-migration-Add-6b2d1dc2d8daebb3d89dac9b2424390da5ea41ea"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-template-white-screen-issue-fix-336-ff660375298e7f8fcc7083e1c97f33b6493e1e36"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
