@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Fix-auto-merge-Exclude-Claude-check-644b96b93114d4d530825c29dc766ba4ecd118f9"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Fix-frontend-Claude-auto-merge-issu-1e8cbfe290d37cdb09333d18d4ab199fefcad7d1"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
