@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Implement-auto-assignment-of-review-b22e3fcb5ebddd60ffbae6d5289eacb27adb2682"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-5142-Fix-critical-frontend-work-53bd6343b12a94ee8c686551143398eb5076bddd"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
