@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-EXM-2465-Add-biometric-feature-to-s-28f286275f3e1068059c81066938e216f16f541b"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-EXM-2798-Implement-bypass-biometric-1c57284536932a327dd6fdf1cafafc0de324e062"
                 imagePullPolicy: Always
                 resources:
                   requests:
