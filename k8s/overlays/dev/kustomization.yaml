@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2820-Enhance-Question-Import-Ro-6fe5d0c02abe241779c0387fc8a85a16dadbb40b"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2816-CustomQPTemplate-Update-qu-458b581bc486570e5f4e031d08f712c83705a947"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
