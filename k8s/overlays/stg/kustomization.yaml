@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-fixed-teacher-restrictions-bug-3388-a8d7f2f62d0ce7299f72876fd774f3a522073852"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-2739-Implemented-Invigilator-ba-673956bee838794d95d28d90b1b6e721e3a71140"
                 imagePullPolicy: Always
                 resources: null  # Commented out for staging environment
                 # Original resources:
