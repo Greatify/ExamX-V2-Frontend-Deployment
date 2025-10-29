@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-2798-Implement-bypass-biometric-53532632d1f7229428865396e04021c46f713f35"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-2787co-value-cannot-be-reselect-293eecf9cbc35577971b7bab79d2ac226be1db44"
                 imagePullPolicy: Always
                 resources: null  # Commented out for staging environment
                 # Original resources:
