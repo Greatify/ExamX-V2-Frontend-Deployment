@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-restriction-routes-bug-stg-3385-bfd586214722051a268b9afe646b6fe2d6bf0ab8"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-fixed-teacher-restrictions-bug-3388-a8d7f2f62d0ce7299f72876fd774f3a522073852"
                 imagePullPolicy: Always
                 resources: null  # Commented out for staging environment
                 # Original resources:
