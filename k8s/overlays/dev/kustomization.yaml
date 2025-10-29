@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Use-dedicated-merge-action-for-reli-cbbb1f689368938922c0e44c8259e1d2b0137d76"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Student-exam-answer-image-export-fu-9828e968f9c4460bcd80a8e15cf2bbd450ecab84"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
