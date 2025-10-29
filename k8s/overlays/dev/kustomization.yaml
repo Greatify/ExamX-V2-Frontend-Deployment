@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-DEBUG-Add-approval-detection-loggin-7827f991a8dbee4c4ae67c5a133af371217bc3a3"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2576-Manual-mark-issue-fixed-33-d5900a24e4c5254070b516a89da531192748428a"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
