@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-2798-Implement-bypass-biometric-32f34d90faa108279b5d51c2aaa0932e932be565"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-restricted-routes-for-teacher-3381-2f4f473b9f29c746dc572612dc3a61484ad8f176"
                 imagePullPolicy: Always
                 resources: null  # Commented out for staging environment
                 # Original resources:
