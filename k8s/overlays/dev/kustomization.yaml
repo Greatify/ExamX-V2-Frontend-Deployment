@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2798-Implement-bypass-biometric-9bd5f7b43b5622c04de9df5522b5719d3d0e0276"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-featfeedback-3373-Co-authored-by-Ja-c739c42ebbaf67826a303ae3f58fba08e66df456"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
