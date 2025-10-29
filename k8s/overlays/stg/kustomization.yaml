@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-template-white-screen-issue-fix-336-d90484eee5e6ce91614981b7c28a3387c3567530"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-2798-Implement-bypass-biometric-53532632d1f7229428865396e04021c46f713f35"
                 imagePullPolicy: Always
                 resources: null  # Commented out for staging environment
                 # Original resources:
