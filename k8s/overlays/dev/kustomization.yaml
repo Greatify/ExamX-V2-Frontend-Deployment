@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Refactor-auto-merge-process-in-CI-w-a9a8ef87d17ff9d242456784468061e0f603defa"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-FIX-Use-auto-flag-to-respect-branch-0234f6d34367c37ca80c59ad8b5b5df5884fd6c1"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
