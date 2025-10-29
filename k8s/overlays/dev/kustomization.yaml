@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-CRITICAL-FIX-Separate-CI-jobs-from-44a1e85c311704e52d96673a5822c2639c70d758"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-DEBUG-Add-approval-detection-loggin-7827f991a8dbee4c4ae67c5a133af371217bc3a3"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
