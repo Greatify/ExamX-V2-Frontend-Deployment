@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-fixed-teacher-restrictions-bug-3387-6af67ecde42fd7870c7550e3e49e1c76205a7272"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2739-Implemented-Invigilator-ba-701c37384dca6f62b080908e1a9ee35e497cb72d"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
