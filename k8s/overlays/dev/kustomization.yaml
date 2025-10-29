@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2576-Manual-mark-issue-fixed-33-d5900a24e4c5254070b516a89da531192748428a"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2739-Implemented-invigilator-ro-e1e1b528aaed05f6d0dc8dda57b5c8396192e577"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
