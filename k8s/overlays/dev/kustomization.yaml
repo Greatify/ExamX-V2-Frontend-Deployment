@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-REMOVE-Auto-merge-functionality-fro-d2349f63039061d09c7040da8a85fe6cdf63d8b1"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-fixed-feedback-module-visibility-is-5064515e4bdd2b6079dd1a14dfdaa3223c9bd0ea"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
