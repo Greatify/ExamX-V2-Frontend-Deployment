@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-superadmin-settings-issue-3403-775898f038786493d60addec776e7b8af8f4eaed"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-REMOVE-Auto-merge-functionality-fro-d2349f63039061d09c7040da8a85fe6cdf63d8b1"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
