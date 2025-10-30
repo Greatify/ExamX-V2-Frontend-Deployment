@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-EXM-2798-Implement-bypass-biometric-1c57284536932a327dd6fdf1cafafc0de324e062"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-Restricted-routes-for-students-and-0a2604c6756b5030b40f0603997e9677b4d32e3f"
                 imagePullPolicy: Always
                 resources:
                   requests:
