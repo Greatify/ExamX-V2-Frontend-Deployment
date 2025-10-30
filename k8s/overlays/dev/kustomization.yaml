@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Scrutinizer-role-based-route-restri-bb76b21ddeea41a0786901d51d80ecbaad08ead0"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2844white-screen-template-issue-3419b3bc8735e634070e36d395b5003f8f969a40"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
