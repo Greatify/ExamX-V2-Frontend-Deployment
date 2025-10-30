@@ -29,14 +29,13 @@ patches:
               - name: examxv2-frontend
                 image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-superadmin-settings-issue-3403-3404-16e5831e626d18e54ede6eeb71cbbfa5a3a01bd7"
                 imagePullPolicy: Always
-                resources: null  # Commented out for staging environment
-                # Original resources:
-                # requests:
-                #   cpu: "50m"
-                #   memory: "128Mi"
-                # limits:
-                #   cpu: "200m"
-                #   memory: "256Mi"
+                resources:
+                  requests:
+                    cpu: "2"
+                    memory: "4Gi"
+                  limits:
+                    cpu: "4"
+                    memory: "8Gi"
                 ports:
                   - containerPort: 80
     target:
