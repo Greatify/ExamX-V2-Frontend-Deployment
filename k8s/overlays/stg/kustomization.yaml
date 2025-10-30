@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-Scrutinizer-role-based-route-restri-2b67af1db933155a83bb507c9aac9c9801bd0e61"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-2791co-breaking-issue-stg-3396-27e06efccfc8288f50a8f4bb41478c4794a5c2c3"
                 imagePullPolicy: Always
                 resources: null  # Commented out for staging environment
                 # Original resources:
