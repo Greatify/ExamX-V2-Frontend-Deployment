@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2865-Add-biometric-bypass-funct-9c14f39f9aecd0bedc8a66f375db5f17f51006d9"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2852-Fixed-invigilator-based-ex-ba9cbd6dc4b938998068c1d279028a74a53d1bed"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
