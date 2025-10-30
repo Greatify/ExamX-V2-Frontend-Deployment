@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-fixed-feedback-module-visibility-is-5064515e4bdd2b6079dd1a14dfdaa3223c9bd0ea"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-passage-ui-fixed-3406-9046e1e885381a38e3b72a8f7cb2952c7b95083b"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
