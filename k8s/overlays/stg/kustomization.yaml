@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-superadmin-settings-issue-3403-3404-16e5831e626d18e54ede6eeb71cbbfa5a3a01bd7"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-passage-ui-fixed-3406-3407-6aebfc4411f5ef51abcfd28203c6ea4dbdd85379"
                 imagePullPolicy: Always
                 resources:
                   requests:
