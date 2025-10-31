@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2852-Invigilator-creation-issue-5376623f70062c3ed5a3a5ecc2d6b7e48a8c5145"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Vels-Production-Fix-moved-to-DEV-34-fecce3ba7d5d48cfd70791c4e508235eb9cab439"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
