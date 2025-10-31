@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-Vels-Production-Fix-moved-to-STG-34-acf198ea98c68dec445dd5ae72eeb8ebf8231762"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-2816co-po-issue-stg-3422-ecd2fa56c34f79784746a3e2702e3179a85f4726"
                 imagePullPolicy: Always
                 resources:
                   requests:
