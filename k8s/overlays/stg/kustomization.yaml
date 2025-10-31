@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-2852-Fixed-invigilator-based-ex-27d63779fb67ea65b2b1686fed7a31bba940d931"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-2852-Invigilator-creation-issue-f0c52b1f74dcd5b360bbc29191d65a4af726b78d"
                 imagePullPolicy: Always
                 resources:
                   requests:
