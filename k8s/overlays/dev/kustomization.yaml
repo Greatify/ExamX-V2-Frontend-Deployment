@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Vels-Production-Fix-moved-to-DEV-34-fecce3ba7d5d48cfd70791c4e508235eb9cab439"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2816co-po-issue-3421-950781b5f8808ed1fd9ce5a3518ddc52875447ad"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
