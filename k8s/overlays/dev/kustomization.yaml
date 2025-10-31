@@ -30,7 +30,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2848invalid-payload-data-3411-04e616206291f1ef511479fa6d8531edb0b69d77"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2852-Invigilator-creation-issue-5376623f70062c3ed5a3a5ecc2d6b7e48a8c5145"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
