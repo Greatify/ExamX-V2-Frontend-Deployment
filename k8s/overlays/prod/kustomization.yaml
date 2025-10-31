@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-Layoutstyling-Individual-Question-f-e425df2eb188f6baf8e63ee6edd093e4a73b317f"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-fixed-the-layout-styling-issue-3416-694bed4157f15c57ae910330485e3215847fb1b6"
                 imagePullPolicy: Always
                 resources:
                   requests:
