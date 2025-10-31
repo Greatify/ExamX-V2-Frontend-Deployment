@@ -1,13 +1,8 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 namespace: dev-examxv2
-# Exclude base PDB resources and include only what's needed for dev
 resources:
-  - ../../base/autoscaling/frontend-autoscaler.yaml
-  - ../../base/deployment/frontend-deploy.yaml
-  - ../../base/service/frontend-svc.yaml
-  - ../../base/configmap/frontend-nginx-config.yaml
-  # NOTE: PDB resources are excluded for dev environment
+  - ../../base
 patches:
   - patch: |-
       apiVersion: apps/v1
