@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-CustomQpTemplatetsx-modified-3427-0ab4761f1c3a2215cd40a33935c4a6d56281e02e"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2899Student-profile-image-updat-4e30a5abf8a6cf3e75a88727f81c3d7fc3791eb7"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
