@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2896-biometric-bypass-logic-in-33db85c117d4c08796e00a7613c6e764e28dc5f1"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2897Grouped-bulk-action-button-946b4e938486e17a9d9a7f9337840945a3f2bc37"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
