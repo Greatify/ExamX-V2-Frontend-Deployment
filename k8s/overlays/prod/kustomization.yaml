@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-EXM-2739-Implemented-Invigilator-ba-fc16eb21e903f5f06532f7f9853660a2220161fe"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-Hot-fix-evalaution-routes-pointing-66a87598f40b1cddee9341c86aad7aa7fb0b8b3d"
                 imagePullPolicy: Always
                 resources:
                   requests:
