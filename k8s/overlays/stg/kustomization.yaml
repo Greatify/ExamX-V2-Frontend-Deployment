@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-2739-Issue-fixed-in-invigilator-b79b7d50de3622f774652a0816fb9ccb90d660f9"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-settings-white-screen-issue-fixed-3-f615db78a980bff19f3e766e4c44168cdf448c81"
                 imagePullPolicy: Always
                 resources:
                   requests:
