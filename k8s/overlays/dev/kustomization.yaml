@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2899Student-profile-image-updat-4e30a5abf8a6cf3e75a88727f81c3d7fc3791eb7"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-featfeedback-template-creation-bug-342e29733354608332f4d94e66c792d2fa5d1d70"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
