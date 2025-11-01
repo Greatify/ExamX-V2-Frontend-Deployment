@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Enhance-CI-workflow-by-enabling-can-ae602985ebfa514fe1de0bd57ca90a0a066a5017"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2739-Implemented-Invigilator-ba-086db9d856d3edabeaef11a53dec7ae34d4c767a"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
