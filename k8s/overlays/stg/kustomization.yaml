@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-2896-biometric-bypass-logic-in-04d02351f75187dc6a1fe19c3eb5c5aff734a219"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-featfeedback-stg-3435-2abbfe81e38d97f496d1fdfad0c9f43bec7fd1c0"
                 imagePullPolicy: Always
                 resources:
                   requests:
