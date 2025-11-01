@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-fixed-the-layout-styling-issue-3416-694bed4157f15c57ae910330485e3215847fb1b6"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-EXM-2739-Implemented-Invigilator-ba-fc16eb21e903f5f06532f7f9853660a2220161fe"
                 imagePullPolicy: Always
                 resources:
                   requests:
