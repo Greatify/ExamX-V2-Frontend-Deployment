@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2905-Implement-exam-password-ge-8be3140f3dd9ada7e29b5f056528c35bb61d12c9"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-featfeedback-remove-templates-exmin-528d03a58e16e1e7d682c34b088d9b038971556f"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
