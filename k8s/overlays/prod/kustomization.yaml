@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-Hot-fix-evalaution-routes-pointing-66a87598f40b1cddee9341c86aad7aa7fb0b8b3d"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-EXM-2842-Implemented-required-spend-f5863264fd959d70b5249076dd46266bcdabb864"
                 imagePullPolicy: Always
                 resources:
                   requests:
