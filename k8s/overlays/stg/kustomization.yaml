@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-2842-Implemented-required-spend-6bce947697886580151c9643018b2ec5cd838db5"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-featfeedback-remove-templates-exmin-230a6abf27e5eaf250d458c154829ecebdbc79ed"
                 imagePullPolicy: Always
                 resources:
                   requests:
