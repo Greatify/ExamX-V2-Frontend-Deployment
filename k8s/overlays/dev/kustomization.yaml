@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2898-Download-option-added-in-B-16a9ec711df34f24b0fd204fb036ba07f39e758d"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2898-Issue-fixed-in-Biometric-r-58b8ee91fb660390bdbd251ff1eae38c29aca963"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
