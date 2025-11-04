@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-EXM-2905-Implement-exam-password-ge-46342571e6c4a7842d0f774b3f1219564591a2dc"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-EXM-2898-Implemented-Biometric-log-90076b62dc86716ad781837d36661b485d1289c6"
                 imagePullPolicy: Always
                 resources:
                   requests:
