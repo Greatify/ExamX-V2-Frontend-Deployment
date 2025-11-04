@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2919-Implemented-Student-Feedba-a8ffc74b51b2a2fe1b3ca2d124722df6e40584ee"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2898-Issue-fixed-in-Biometric-r-2ee0e166e652ccb0e69be507a2acbf45a7a9bcb7"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
