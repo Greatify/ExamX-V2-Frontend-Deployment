@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-added-device-swapping-feat-3470-6f80317ca78f19d68b6234a980347771912a2e56"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-frequent-question-paper-list-api-ca-ffda8bd20016d825dfc0125287c7e89c61161221"
                 imagePullPolicy: Always
                 resources:
                   requests:
