@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-added-device-swapping-feat-3471-b460febb828e4cb88918c7242937ec863c17d923"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-frequent-question-paper-list-api-ca-b5160c174f543a5dafdd5e8aaa6ef19ccebb8d08"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
