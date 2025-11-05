@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-frequent-question-paper-list-api-ca-b5160c174f543a5dafdd5e8aaa6ef19ccebb8d08"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2931-Implemented-API-call-and-U-269463406542aa2b1362583c5494dc9bb11ee334"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
