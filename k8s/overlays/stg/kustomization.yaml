@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-frequent-question-paper-list-api-ca-ffda8bd20016d825dfc0125287c7e89c61161221"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-2933-Updated-device-lock-settin-35fcab8c2a7cda87dfc1761aebd6d155047d30f0"
                 imagePullPolicy: Always
                 resources:
                   requests:
