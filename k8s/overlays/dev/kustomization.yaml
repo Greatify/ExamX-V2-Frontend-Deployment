@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2933-Updated-device-lock-settin-ab1561e02a4216d176cf7fdb28fe7b2f5b3e438f"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2937-Refined-ProtectedRoutes-fo-8f46e1f2616d8a8072b3e02bef021dd6ff20c67b"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
