@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2937-Refined-ProtectedRoutes-fo-8f46e1f2616d8a8072b3e02bef021dd6ff20c67b"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2939-student-answer-export-func-ce6976eee06b77e7bb31433d5fe9a0dbbc850e8e"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
