@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-evaluation-bug-fixed-3489-08bf873e52aebb93a96b92083b81efd29ab1379e"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-EXM-2939-student-answer-export-func-91d3985b7f30ee702b2fd941f84a58a8db470d43"
                 imagePullPolicy: Always
                 resources:
                   requests:
