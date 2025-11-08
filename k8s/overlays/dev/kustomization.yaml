@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2941-Added-sync-functionality-f-a9fa6ff84910f48fd7dc7743839ecc90a6464d51"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-evaluation-bug-fixed-3487-c2ae615cda2852ceb437feb7c8cf2fa366f38261"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
