@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-EXM-2937-Updated-OfflineExam-compon-10aefc1eddad926d5920ac1235068ac04d5aabea"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-vels-hyphen-issue-fixed-3493-8411f08f76b78af999d9c1464da134f59c3abd2f"
                 imagePullPolicy: Always
                 resources:
                   requests:
