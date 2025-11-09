@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-evaluation-bug-fixed-3487-c2ae615cda2852ceb437feb7c8cf2fa366f38261"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-295-Enhanced-password-generatio-8ae6ef738e4bdbeb75b3eb0752d39fb9546ce45b"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
