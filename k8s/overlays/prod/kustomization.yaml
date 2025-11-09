@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-EXm-2937-ProtectedRoutes-in-MainRou-c8a983cb9bc8aa2c407835a91f85cdeee5cc50eb"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-EXM-2937-Updated-OfflineExam-compon-10aefc1eddad926d5920ac1235068ac04d5aabea"
                 imagePullPolicy: Always
                 resources:
                   requests:
