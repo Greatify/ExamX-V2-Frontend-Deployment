@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-evaluation-bug-fixed-3487-3488-5df0b1abc14f29176a281831d52cfa3c938e14ab"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-295-for-stg-Enhanced-password-g-dbaf5e09fb798e0b73efda178bcbda3c13856122"
                 imagePullPolicy: Always
                 resources:
                   requests:
