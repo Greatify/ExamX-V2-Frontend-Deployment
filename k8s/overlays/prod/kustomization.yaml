@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-EXM-2950-Production-Enhanced-passwo-c2eac1ec95457853569189e4d1b00ca87445ac50"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-settings-added-in-management-module-832425ab1838c683ca89e8489c38c832fe815bfc"
                 imagePullPolicy: Always
                 resources:
                   requests:
