@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-device-management-flow-added-3499-20074e9f6333baf400e0bee094a2c74fa82099a8"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-added-clear-filter-for-exam-status-e49f3e24899150fb1d65bdbf0660c2ba742af3a1"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
