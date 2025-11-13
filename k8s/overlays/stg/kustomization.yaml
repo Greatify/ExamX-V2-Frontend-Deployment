@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-Enhancement-for-evaluators-stg-3502-75ccc4697c089dde02347cd89d6ac9f9db23a214"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-settngs-enabled-in-organisation-man-38c79bc67387b622032f3eef073a7f66e97994e8"
                 imagePullPolicy: Always
                 resources:
                   requests:
