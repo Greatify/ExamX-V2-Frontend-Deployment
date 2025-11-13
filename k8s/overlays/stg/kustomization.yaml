@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-settngs-enabled-in-organisation-man-38c79bc67387b622032f3eef073a7f66e97994e8"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-exam-view-aac-flow-added-3515-f14bb25b0d0e3968762e0bd2f7425c5b84ca7564"
                 imagePullPolicy: Always
                 resources:
                   requests:
