@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-device-management-added-3508-fa73bf4aaaead2b3bb022b30ecdaa4e3df0adda2"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Update-CI-workflow-to-deploy-to-ans-620c38ee50d310f1d2ba39a2de99a3ce57c0e7d2"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
