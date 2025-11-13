@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-settngs-enabled-in-organisation-man-9326827b1a3880d9b872dec3c4ab92edd9d26d3f"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-customqp-component-changed-and-exam-22bcdc31054eb48589e8e2fa529dd59033febc75"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
