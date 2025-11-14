@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-fixed-search-filter-issue-3524-abd662a59e1063306879cc62dff9b8b1719b4c09"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-revert-student-info-hidden-for-eval-93b0b604236cdd107703236f51dba8c36cafe19e"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
