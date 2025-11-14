@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-fixed-exam-loading-state-issue-3526-6c5fb25c69c8614b7038336c16ba87468e2c77f7"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-Refactor-image-handling-in-Evaluati-04a38caca4a07f4319e6f6913d20d1abb21c8e45"
                 imagePullPolicy: Always
                 resources:
                   requests:
