@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-revert-student-info-hidden-for-eval-93b0b604236cdd107703236f51dba8c36cafe19e"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-customqp-qp-creation-issue-fixed-35-a3465be2e247aad0c5ae5026f61bc8d102380e99"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
