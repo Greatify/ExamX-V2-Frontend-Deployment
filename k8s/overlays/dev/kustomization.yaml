@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-settings-ui-optimized-3540-8726d4140e01c03590ef37ac26cab7ce304905bd"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2973Student-list-dropdown-issue-740af292e6516d42904d689c8f530afad7c165c0"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
