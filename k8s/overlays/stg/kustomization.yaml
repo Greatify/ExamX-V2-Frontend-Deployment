@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-customqp-qp-creation-issue-fixed-35-79d8b40aab797595cbd39710d50fe731535438aa"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-CustomQpComponent-Required-Question-fae85ba4578a153f0a8b5f2dd24909653da8794f"
                 imagePullPolicy: Always
                 resources:
                   requests:
