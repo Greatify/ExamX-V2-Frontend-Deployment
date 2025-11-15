@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Updated-visibility-logic-for-Dummy-3d3d86b7569021dd159903fbc9cc40e248c29258"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2971-Exam-Evaluation-status-Rep-e6b7dae2d8e06c2e7b5c573346c585b67ec182f4"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
