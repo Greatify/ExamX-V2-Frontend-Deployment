@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-CustomQpComponent-Required-Question-063c6a2191a8c023744fe2927202bfc7b001cd2c"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-settings-ui-optimized-3540-8726d4140e01c03590ef37ac26cab7ce304905bd"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
