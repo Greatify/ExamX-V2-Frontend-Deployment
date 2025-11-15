@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2971-Exam-Evaluation-status-Rep-e6b7dae2d8e06c2e7b5c573346c585b67ec182f4"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Added-support-for-aborting-API-requ-c97cfbe92e4f1697a32897c48e95daf5f2085198"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
