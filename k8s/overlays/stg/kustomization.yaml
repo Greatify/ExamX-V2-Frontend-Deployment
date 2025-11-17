@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-Updated-visibility-logic-for-Dummy-3329046319e319270f173ca90c21bf2d408e86ee"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-Evaluation-Report-3556-ada474a42e044fd9e5d6a1dda90618ec5b8095a8"
                 imagePullPolicy: Always
                 resources:
                   requests:
