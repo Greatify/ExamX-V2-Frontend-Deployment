@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-standardqp-print-issue-fixed-3552-5134fcd9f921548130abd625e22dd0ebc8adbe87"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-Vels-table-border-issue-added-3555-8dcbfb976d5e46cb68bd56c8ea155aea5bd3f77e"
                 imagePullPolicy: Always
                 resources:
                   requests:
