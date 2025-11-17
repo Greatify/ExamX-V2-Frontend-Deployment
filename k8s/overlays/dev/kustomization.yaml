@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Added-support-for-aborting-API-requ-c97cfbe92e4f1697a32897c48e95daf5f2085198"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Evaluation-Report-and-Vels-table-bo-e24a19ba64669c75fb1dccc90104d2742fec08bd"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
