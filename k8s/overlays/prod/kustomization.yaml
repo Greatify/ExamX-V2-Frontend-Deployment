@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-Vels-table-border-issue-added-3555-8dcbfb976d5e46cb68bd56c8ea155aea5bd3f77e"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-Online-evaluation-mark-update-issue-fa4447e6e7eaf3c640e771464e6c697d43436bba"
                 imagePullPolicy: Always
                 resources:
                   requests:
