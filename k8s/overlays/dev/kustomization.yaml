@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2919-CloudFront-URL-validation-0634541ef3d7592b4cf5ea5727c7fd3de1d1d24a"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-customqp-alignment-fixed-3563-ecb5ed30f11d4de1279f56fc1748e3ee286325e9"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
