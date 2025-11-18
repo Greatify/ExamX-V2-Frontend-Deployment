@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-customqp-alignment-fixed-3563-ecb5ed30f11d4de1279f56fc1748e3ee286325e9"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Improvised-UI-for-Large-datas-in-ta-148a13b6f2af426decfc6647f5fe30c579c2c474"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
