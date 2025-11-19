@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-customqp-alignment-fixed-3563-3564-a00410672dbac5dba3d7b3fbbfaa3f4fae440439"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-Time-Table-Flowchart-implemented-35-beeca6e93ca1e1165976a462742c3c8d1fc6c019"
                 imagePullPolicy: Always
                 resources:
                   requests:
