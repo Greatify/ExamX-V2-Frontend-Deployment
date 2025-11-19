@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Improvised-UI-for-Large-datas-in-ta-148a13b6f2af426decfc6647f5fe30c579c2c474"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Time-Table-Flowchart-implemented-35-d26eaf525e6d2eec2b2c7ea6d21f37cce61c8228"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
