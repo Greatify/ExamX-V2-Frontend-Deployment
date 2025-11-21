@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3019-added-text-wrap-and-font-c-ec44667813b86b46f21a10c34b4f5a57be33429c"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Refactor-CI-workflow-for-auto-merge-7c0a7aed75447f1f076de997df3e4a8db0c8dba3"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
