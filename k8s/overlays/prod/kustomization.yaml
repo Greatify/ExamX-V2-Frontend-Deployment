@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-device-management-exam-view-table-u-4db66a5c68c73be47ac618ae1b15c1563013fc40"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-Prod-exm-3020posthog-recording-inte-1edda52c096dc300564550cab3bc775eb73e440d"
                 imagePullPolicy: Always
                 resources:
                   requests:
