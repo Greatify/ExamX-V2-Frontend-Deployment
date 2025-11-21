@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-flowchart-and-calendar-issues-fixed-c6068df613cd72ead9b79fdda599b0b11bd69406"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-3019-added-text-wrap-and-font-c-7358f481319cc3a7a7eaa189ed6084fe9eef73ca"
                 imagePullPolicy: Always
                 resources:
                   requests:
