@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-3019-added-text-wrap-and-font-c-7358f481319cc3a7a7eaa189ed6084fe9eef73ca"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-3020Posthog-recording-integrati-772ff1d79c086b192ba69df4c4576587e4e3dccc"
                 imagePullPolicy: Always
                 resources:
                   requests:
