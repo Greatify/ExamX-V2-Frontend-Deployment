@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Refactor-CI-workflow-for-auto-merge-7c0a7aed75447f1f076de997df3e4a8db0c8dba3"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3020Posthog-recording-integrati-7c593a70972f3a238873df6b47416797184407cc"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
