@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-Exam-Calendar-view-issue-fixed-3571-20316522fd4d2ec15adc8395362657af5ea70b4f"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-flowchart-and-calendar-issues-fixed-c6068df613cd72ead9b79fdda599b0b11bd69406"
                 imagePullPolicy: Always
                 resources:
                   requests:
