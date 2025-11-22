@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-Prod-exm-3020posthog-recording-inte-1edda52c096dc300564550cab3bc775eb73e440d"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-Revert-layout-styling-header-wrap-3-980a6f4c574eab3c34585946e95d243abc516606"
                 imagePullPolicy: Always
                 resources:
                   requests:
