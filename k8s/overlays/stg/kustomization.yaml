@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-support-mathlive-styles-for-desktop-4692d5c0c3d32c836d5b78c802fd635e9bdacbaf"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-3024-Implemented-Question-Paper-1da7190380c5f0fb13d53f3907c27de033084cac"
                 imagePullPolicy: Always
                 resources:
                   requests:
