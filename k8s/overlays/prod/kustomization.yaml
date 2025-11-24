@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-Revert-layout-styling-header-wrap-3-980a6f4c574eab3c34585946e95d243abc516606"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-EXM-3024-Implemented-Question-Paper-3ea07bd2f50ce6fd0e6f83fe4b849bf888f21e2e"
                 imagePullPolicy: Always
                 resources:
                   requests:
