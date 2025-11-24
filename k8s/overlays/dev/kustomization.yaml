@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-support-mathlive-styles-for-desktop-5822c6ca9fcc1c49b70655a97f25dcefcb1d7ea1"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3024-Implemented-Question-Paper-e1d2f3bcf3b51213d657565a79e5105ac3abfba9"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
