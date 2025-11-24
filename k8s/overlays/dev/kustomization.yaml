@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Exm-3020posthog-recording-integrati-5b735a2fe1d03f5f9d4431611c352ef3f09f0f0e"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-support-mathlive-styles-for-desktop-5822c6ca9fcc1c49b70655a97f25dcefcb1d7ea1"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
