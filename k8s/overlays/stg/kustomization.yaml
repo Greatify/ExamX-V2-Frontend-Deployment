@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-student-exam-submission-glitch-issu-610a3150b0b69c27dac7019a4c006eb29cfde4a2"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-3028-QP-Report-download-added-i-5165df7a1d0ee55114ce27f30be6435e29c663ad"
                 imagePullPolicy: Always
                 resources:
                   requests:
