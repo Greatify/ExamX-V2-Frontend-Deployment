@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3028-QP-Report-download-added-i-53770ef041b354700a614a9e857fe9d2797eb1bc"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3028-QP-Report-download-added-i-9f2d4afd1966bef0152f1e6ed74f6fcd69c475ba"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
