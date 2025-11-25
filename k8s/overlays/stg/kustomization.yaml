@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-updated-s3-sync-data-3592-d08a3e7a3a3522d4a36d79a70103529351f3f86d"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-student-exam-submission-glitch-issu-610a3150b0b69c27dac7019a4c006eb29cfde4a2"
                 imagePullPolicy: Always
                 resources:
                   requests:
