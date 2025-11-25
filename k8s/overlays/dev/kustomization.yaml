@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-student-exam-submission-glitch-issu-6671a81116768edd861205543cd4820197759366"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3030Answer-sync-status-details-acad91a6b469c9a2917c95215057f53a9179b1d4"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
