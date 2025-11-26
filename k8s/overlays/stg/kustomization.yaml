@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-Main-percentage-for-answer-export-a-6fc3a46b94d87276468ad0fcd3d6f4f79dfdc3db"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-3028-QP-Report-download-added-i-63c4a0da230dc490f2431e7e8d32e70be520b9aa"
                 imagePullPolicy: Always
                 resources:
                   requests:
