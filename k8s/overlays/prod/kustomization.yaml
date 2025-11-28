@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-EXM-3055-Implement-backup-filter-in-e840801d9d0ed76e0a65f1d788f2d28f9a68df16"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-EXM-3055-Implement-backup-filter-in-bcd66d5f67e75e235a855138d518e35994228c8f"
                 imagePullPolicy: Always
                 resources:
                   requests:
