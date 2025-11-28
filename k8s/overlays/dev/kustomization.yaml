@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2914-Student-exam-calender-text-afe2c701f4ccaed3d967491fd70f890feee72a22"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Exm-2725-and-EXM-2722-bug-fixed-361-9e588776fd9427d45ddada1d37be7d1e48fd6494"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
