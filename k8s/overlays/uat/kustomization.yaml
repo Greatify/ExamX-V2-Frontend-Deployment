@@ -26,7 +26,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-EXM-2703Dashboard-Request-Paper-Eva-4cdf5c2833cce9819887d2c716e7543b1bdbe1eb"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-Section-wise-total-mark-in-preview-691218618ff12b9974d2829f53f3b84464f9b204"
                 imagePullPolicy: Always
                 resources: 
                   requests:
