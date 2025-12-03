@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-updated-exam-creation-with-more-con-ba0f05a93a92d0b527076c563ec27068d353a110"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-clearing-face-recognition-issue-fix-2e77e21dede0b31362db6e3cf61d7e28f8cb2ae8"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
