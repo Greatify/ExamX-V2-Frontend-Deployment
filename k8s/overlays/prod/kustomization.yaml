@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-added-subdomain-srmist-in-exam-view-b881450331702f878f5c99d45585e6ab673cda20"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-updated-exam-creation-with-more-con-e6396d5fc17ca2e22d8923c56cd762d93cff7343"
                 imagePullPolicy: Always
                 resources:
                   requests:
