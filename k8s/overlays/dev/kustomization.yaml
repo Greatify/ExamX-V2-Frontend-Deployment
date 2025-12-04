@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3069-Implemented-Question-Wise-a6d4c04d58bf0da6c36a109a080c5e508c24bb92"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3076-Vels-Style-Issue-Individua-fe6f1d4943607c0fdbc1e3e068514123287c519f"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
