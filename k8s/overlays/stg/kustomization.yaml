@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-clearing-face-recognition-issue-fix-83dcf261976139fc3ff15dcfdf5fb94103e1de8f"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-3073-template-issue-fixed-and-a-dd5914bf31d1885409bcb988af65322795888d99"
                 imagePullPolicy: Always
                 resources:
                   requests:
