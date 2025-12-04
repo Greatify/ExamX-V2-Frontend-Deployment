@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-3073-template-issue-fixed-and-a-dd5914bf31d1885409bcb988af65322795888d99"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-3069-Implemented-Question-Wise-1254474cca50b2988303ef483b0715fb8f867d5b"
                 imagePullPolicy: Always
                 resources:
                   requests:
