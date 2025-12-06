@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-2122-Need-to-handle-search-opti-268a603d45921c647fbc618df8aee457046d4438"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Update-auto-merge-workflow-to-inclu-66f3b41bf662a3a2d96b6f1b422e68e1b4459687"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
