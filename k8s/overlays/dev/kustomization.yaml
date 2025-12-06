@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Update-auto-merge-workflow-to-inclu-66f3b41bf662a3a2d96b6f1b422e68e1b4459687"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-flowchart-issue-fixed-and-customqp-5c30417c24f6bdde2be23fb563aafdb6c8dd3052"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
