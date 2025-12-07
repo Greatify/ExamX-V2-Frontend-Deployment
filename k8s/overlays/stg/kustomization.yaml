@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-Flowchart-Requirement-QP-Section-Re-b7fc28c23e9ac70797595355aa466677fbb6fd18"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-flowchart-issue-fixed-and-customqp-e21960c0626c1762b3c79e0b70fcf1a4cc1f6847"
                 imagePullPolicy: Always
                 resources:
                   requests:
