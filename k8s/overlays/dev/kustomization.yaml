@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-featlive-streaming-3659-4b03f0413d83723c98605e430a00a97b6730c7cf"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-package-issue-fixed-This-is-an-auto-51d11b15ca9683c9a442f687a3df57ff5d612032"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
