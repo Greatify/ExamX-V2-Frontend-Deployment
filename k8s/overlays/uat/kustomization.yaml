@@ -26,7 +26,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-Section-wise-total-mark-in-preview-691218618ff12b9974d2829f53f3b84464f9b204"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-Add-bulk-upload-job-retrieval-and-i-95455e522c724312b996495a50b81ef3bf10dfc2"
                 imagePullPolicy: Always
                 resources: 
                   requests:
