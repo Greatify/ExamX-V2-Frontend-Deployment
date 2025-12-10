@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3100-FlowChart-AC-Source-Fuse-a-45f02ebd1bbca2df79e08b6e681f15f059e5d908"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-fixed-ongoing-issue-3667-0b418aef81fbfc664eea9179f8f61fe4e1898c5a"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
