@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-button-visible-fixed-live-streaming-16a20eb4a7d9d1fcaf7d753650d835117e7e6ee5"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-bugchief-inv-camera-enabling-3670-67d4b73b13bb2917174e98fd72b9fb3eb427f39a"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
