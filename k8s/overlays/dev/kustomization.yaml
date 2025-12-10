@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3069-Issue-fixed-in-ExamWiseQue-e1b3aacb1f9c0c332caf66c7770d2b4580baf2bb"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-featlive-streaming-3659-4b03f0413d83723c98605e430a00a97b6730c7cf"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
