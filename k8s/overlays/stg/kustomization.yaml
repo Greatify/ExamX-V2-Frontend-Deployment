@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-package-issue-fixed-3663-e268333d9914541dfdfbfe934ae52aad8ea6a0a5"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-button-visible-fixed-live-streaming-9552c4a98bd6aa49c2d2d6226436aec916fb495a"
                 imagePullPolicy: Always
                 resources:
                   requests:
