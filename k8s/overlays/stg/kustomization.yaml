@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-paper-view-condition-added-3678-97f7faa0f46ddefa39a679e79c0847080031a468"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-fcm-token-condigiton-checked-3681-3-18b5a98877b16e859d2125e68b58a7014b73fd09"
                 imagePullPolicy: Always
                 resources:
                   requests:
