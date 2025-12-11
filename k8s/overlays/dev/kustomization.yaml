@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-bugchief-inv-camera-enabling-3670-67d4b73b13bb2917174e98fd72b9fb3eb427f39a"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-fixed-offline-message-3673-b672511b18d4bc4a177da2131055705a942993b4"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
