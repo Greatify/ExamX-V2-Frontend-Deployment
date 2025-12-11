@@ -26,7 +26,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-Add-bulk-upload-job-retrieval-and-i-95455e522c724312b996495a50b81ef3bf10dfc2"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-EXM-3116Allow-hypen-in-evaluation-m-96c1b9448337deaf53df5d7f0efbd65c394f479b"
                 imagePullPolicy: Always
                 resources: 
                   requests:
