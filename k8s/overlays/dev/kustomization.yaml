@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-fixed-offline-message-3673-b672511b18d4bc4a177da2131055705a942993b4"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Enhance-auto-merge-workflow-to-hand-99f7ec7a3f988c6b972cbf215aa62e1232592241"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
