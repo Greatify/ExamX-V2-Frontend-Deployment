@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-optimized-livestream-viewing-3676-0eca0c7fc77d63f7fcc18aefeda27bec04014606"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-paper-view-condition-added-3678-97f7faa0f46ddefa39a679e79c0847080031a468"
                 imagePullPolicy: Always
                 resources:
                   requests:
