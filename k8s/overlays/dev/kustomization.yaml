@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-optimized-livestream-viewing-3675-0187e74c64eec099cc3357c415f53651466e9169"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Enhance-auto-merge-workflow-by-addi-772adceab1487b410873fb0b9f59fb9e1eca143f"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
