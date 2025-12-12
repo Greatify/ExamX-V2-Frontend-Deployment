@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3134EXM-3136EXM-3140-3688-81984f94c059b203d1aa32af8e4d4ba6cb28b948"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-fcm-unregister-and-admin-check-cond-f0dc5898697978a3cd3443c2c0a286f93c75fd0d"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
