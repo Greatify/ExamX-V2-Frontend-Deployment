@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-fcm-unregister-and-admin-check-cond-2f4aa10aebe9cb76c1a042eaaee20b329dba396b"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-announcement-acknowledge-completed-903df0762aa4aa08834bd02a60b19cb6a2c0a484"
                 imagePullPolicy: Always
                 resources:
                   requests:
