@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3132-Malpractice-and-Logs-optio-88970d88497e6e56febb3c31a53d4efd9079447b"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-announcement-and-assigne-invigilato-320eb31161068fb907e0e9ca3561b57e6a8d61d4"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
