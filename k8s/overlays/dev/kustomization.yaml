@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-fcm-and-bug-fixed-in-announcement-a-8f7485a09d6900ca4eab5d0b4fa3337fa5864ef9"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Update-auto-merge-workflow-to-inclu-c9b129c09586fe780ca33363dbe7ffc481995555"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
