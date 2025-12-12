@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Update-auto-merge-workflow-to-inclu-c9b129c09586fe780ca33363dbe7ffc481995555"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3132-Malpractice-and-Logs-optio-88970d88497e6e56febb3c31a53d4efd9079447b"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
