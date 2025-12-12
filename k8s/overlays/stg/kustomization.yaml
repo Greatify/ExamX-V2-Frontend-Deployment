@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-fcm-token-condigiton-checked-3681-3-18b5a98877b16e859d2125e68b58a7014b73fd09"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-fcm-and-bug-fixed-in-announcement-a-227091f500f55b1ee784f5a23bcaffb83dd74aa3"
                 imagePullPolicy: Always
                 resources:
                   requests:
