@@ -26,7 +26,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-EXM-3116Allow-hypen-in-evaluation-m-96c1b9448337deaf53df5d7f0efbd65c394f479b"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-EXM-3143Evaluation-log-report-for-A-29459cb6ff4bc0d5630480a5c288d40e685bd658"
                 imagePullPolicy: Always
                 resources: 
                   requests:
