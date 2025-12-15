@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3134EXM-3138livestream-bugs-370-8e17bccb8469d8ce9c49432e635276d0c19228ae"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3154-Implement-Auto-Merge-Quali-7e5b34f8761ddbbda7e4f98909027252b1877189"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
