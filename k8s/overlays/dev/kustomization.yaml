@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-announcement-acknowledge-completed-f76013660331c0a49ababd3c0f70fdb311e43853"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3146-FCM-Key-changed-Announceme-7f3ada10e65260da24786837cf2adaf4876390e5"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
