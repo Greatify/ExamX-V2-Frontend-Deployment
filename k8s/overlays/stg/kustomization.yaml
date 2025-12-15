@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-3146-FCM-Key-changed-Announceme-4587f37e2b562cbb9469a7d07d920a1f750bdc21"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-3134EXM-3138livestream-bugs-370-c2b565cc53e504d4dfd121dc72a15d60352b5f43"
                 imagePullPolicy: Always
                 resources:
                   requests:
