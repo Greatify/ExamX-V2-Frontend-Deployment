@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3134show-firstname-bug-3708-81b390d4296a0f6cf9ad8415e0355c2b10d5b444"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3163-SRM-Exam-Creation-Assign-I-3ba3ca92bb20ece2cb5d56faef6a8f86ad8d6dbc"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
