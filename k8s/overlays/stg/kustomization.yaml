@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-3174-Enhanced-Exam-Completion-r-79cac4de66a08205ffa6ec49fda0bdcf2a1bf94d"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-3187-FCM-Triggering-Issue-3731-c6dabbba33d3a58bfa1d28d2196be16a9e376817"
                 imagePullPolicy: Always
                 resources:
                   requests:
