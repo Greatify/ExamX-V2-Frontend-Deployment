@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3168-Show-Chief-Invigilator-in-c65ea0954a298deb96b424e4837d1bae75ccda1c"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-1365-Implemented-Reset-Password-5840405873103f40af245fb8c0f3cd7fbe0ecb4c"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
