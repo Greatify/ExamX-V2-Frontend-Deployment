@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-3168-Show-Chief-Invigilator-in-bc52f0a84adca032eec316d341b2ce8d289b9bbf"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-2820-Enhance-Question-Import-Ro-c9ab2e8718261efdc87ad92188a1385eab10251d"
                 imagePullPolicy: Always
                 resources:
                   requests:
