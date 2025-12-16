@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3154-Implement-Auto-Merge-Quali-b6d1df8e073a130659cf7db483fa4f2d2a4e26b5"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3187-FCM-Triggering-Issue-3731-a90463bbba9a17b89912d8ff850818789ad6a21f"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
