@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-2820-Enhance-Question-Import-Ro-c9ab2e8718261efdc87ad92188a1385eab10251d"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-1365-Implemented-Reset-Password-a1971af2ecf2044fe07dad34cc6bc803114977fc"
                 imagePullPolicy: Always
                 resources:
                   requests:
