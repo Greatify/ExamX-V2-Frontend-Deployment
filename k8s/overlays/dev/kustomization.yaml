@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3187-FCM-Triggering-Issue-3731-a90463bbba9a17b89912d8ff850818789ad6a21f"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3191-When-the-OBE-tabs-is-selec-b705bcf419c6c5df261189fc65793fb9ce1fe980"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
