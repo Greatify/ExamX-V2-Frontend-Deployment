@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-GE-10382-Yaml-settings-updated-in-p-a4e329f97f5369090304ee1286fdc3822f1fae53"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Ge-10382-Bugfix-to-ignore-incorrect-6f71ad6c26a660f80857988802fd6c168615ad91"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
