@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3191-When-the-OBE-tabs-is-selec-b705bcf419c6c5df261189fc65793fb9ce1fe980"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-GE-10382-Yaml-settings-updated-in-p-a4e329f97f5369090304ee1286fdc3822f1fae53"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
