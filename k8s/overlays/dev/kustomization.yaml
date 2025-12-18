@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-GE-10382-Added-new-UI-for-Match-the-c77fede5bc3a820eaea13e0be5965d5377c0d3ee"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Ge-10382-Bugfix-Question-Paper-V2-c-0b0e27fc1314f24fef36385cef0c998a9e39f740"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
