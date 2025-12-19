@@ -26,7 +26,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-Exm-3194-Implement-exam-wise-evalua-159b60406e4648da4f935df21cf2f73da7dcfe6a"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-EXM-3214-Evaluation-track-report-an-5d141d59e876cf267aa87719735a59be0324641c"
                 imagePullPolicy: Always
                 resources: 
                   requests:
