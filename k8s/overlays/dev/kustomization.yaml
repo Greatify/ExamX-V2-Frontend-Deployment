@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Ge-10382-Bugfix-Question-Paper-V2-c-0b0e27fc1314f24fef36385cef0c998a9e39f740"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3220-Restrict-auto-merge-workfl-124467177c4771ebd16217d2a8e3caa132bb81e5"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
