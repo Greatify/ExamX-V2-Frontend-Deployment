@@ -26,7 +26,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-EXM-3213-Enhanced-the-Evaluation-Tr-b6880475d0d2e487110ca6ba5a0b92ba5cf5b707"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-Exm-3194-Implement-exam-wise-evalua-159b60406e4648da4f935df21cf2f73da7dcfe6a"
                 imagePullPolicy: Always
                 resources: 
                   requests:
