@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3226-Update-package-lockjson-to-ac9e45b3c2c4b65827ab958694ad440b4aefc12a"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-fixed-activity-display-for-invigila-3d75464e906c9532116dbe017778848e729da491"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
