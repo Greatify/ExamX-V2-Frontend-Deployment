@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-3206-Optimize-filter-updates-in-e8e60bb29cfaf99347a77e94e653c55db4f13d47"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-cleanup-chat-3759-8aeef98b92da38eba2f23207981bd5e2ded9223b"
                 imagePullPolicy: Always
                 resources:
                   requests:
