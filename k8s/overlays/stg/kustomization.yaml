@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-fixed-activity-display-for-invigila-dd53be485022b9789630f0164f5999cbb9527ffa"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-3172-Bug-Fix-3756-e5905c1817307b118ad87458526eaf3025cb6ec6"
                 imagePullPolicy: Always
                 resources:
                   requests:
