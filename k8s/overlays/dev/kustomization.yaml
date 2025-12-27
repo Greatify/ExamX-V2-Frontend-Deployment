@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3233Posthog-recording-configura-7d023e3c96f8e0a1d1ce20afa169edbdcc703a19"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3236-Attendance-report-issue-fi-dfae7ed1b0103d4e584cd3ae3346845401327136"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
