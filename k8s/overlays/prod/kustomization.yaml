@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-fixed-the-recording-cleanup-bug-377-6acc2d49207f66cd01128c3189f81a128ab9242d"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-Hidden-course-exams-api-call-on-stu-3d22845d0051ed4b07a5b87361546347ab161844"
                 imagePullPolicy: Always
                 resources:
                   requests:
