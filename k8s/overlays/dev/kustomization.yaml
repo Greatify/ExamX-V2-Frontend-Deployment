@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3237-Redirect-to-Management-ins-73e646d1c3721335b3813ac41a27338dbb41a39b"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-fixed-the-recording-cleanup-bug-377-ea0f2dccc01ca480fad1e017928f3aabc4bc9cb2"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
