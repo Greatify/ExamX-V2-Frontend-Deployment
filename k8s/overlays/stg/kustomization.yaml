@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-3172-Bug-Fix-3756-e5905c1817307b118ad87458526eaf3025cb6ec6"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-fixed-the-recording-cleanup-bug-377-4a64d5e4b5752f19cf1326be363e641793516572"
                 imagePullPolicy: Always
                 resources:
                   requests:
