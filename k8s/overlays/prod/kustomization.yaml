@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-Hidden-course-exams-api-call-on-stu-3d22845d0051ed4b07a5b87361546347ab161844"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-commented-dashboard-exams-api-call-ce9edf8697fd4a2e4bf537f5d127d7bab92a0f17"
                 imagePullPolicy: Always
                 resources:
                   requests:
