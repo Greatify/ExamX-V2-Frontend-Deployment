@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-livestream-listing-issue-fixed-3781-d95fae1f6b318ac180ceb9d78e87807b4c473e3b"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-EXM-3239-CO-is-Not-properly-Display-285a5f6111c8508d525cef504704e129aeadb054"
                 imagePullPolicy: Always
                 resources:
                   requests:
