@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-commented-dashboard-exams-api-call-ce9edf8697fd4a2e4bf537f5d127d7bab92a0f17"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-livestream-listing-issue-fixed-3781-d95fae1f6b318ac180ceb9d78e87807b4c473e3b"
                 imagePullPolicy: Always
                 resources:
                   requests:
