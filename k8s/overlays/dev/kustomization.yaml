@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Ge-10382-Layout-editor-and-template-97b734ac75307d037e1d9f748cb81b60bfd0c25e"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Ge-10382-Layout-editor-and-template-b86cb986fdc7e2c45a429f14932b4a2fb03a082a"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
