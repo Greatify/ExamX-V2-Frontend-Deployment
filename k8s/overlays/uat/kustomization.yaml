@@ -26,7 +26,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-EXM-3214-Evaluation-track-report-37-9598e7561b6d8c2092f969d6b18ca5864cd771d7"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-Add-PDF-upload-and-download-functio-e6a1e97eaa6fe49a096e0b162d87e6b3ad451551"
                 imagePullPolicy: Always
                 resources: 
                   requests:
