@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-GE-10382edit-modals-and-page-margin-31bb55512c729d1499897c7edfc4d2ec1dd68938"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-livestream-listing-issue-fixed-3781-02a5aca845056ec6b740bb11e769b10fcba563c5"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
