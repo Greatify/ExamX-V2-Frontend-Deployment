@@ -26,7 +26,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-EXM-3272-Duplicate-Exam-Feature-UAT-4a5f059df9cc6e768b9c9a5df9c7dab8eb54618f"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-Update-EvaluationHeader-to-replace-82c506dfa835d93651e273e18474761fd99f3647"
                 imagePullPolicy: Always
                 resources: 
                   requests:
