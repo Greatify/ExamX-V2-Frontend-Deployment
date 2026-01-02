@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-fixed-the-recording-cleanup-bug-377-ea0f2dccc01ca480fad1e017928f3aabc4bc9cb2"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Ge-10382-Layout-editor-and-template-97b734ac75307d037e1d9f748cb81b60bfd0c25e"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
