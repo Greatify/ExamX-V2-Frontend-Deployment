@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-3201popup-notification-for-stud-22f85ca81ba2a001f8c8923a6444c0b78c2a4f7e"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-3203qr-based-upload-3803-bb6bf303fb04f62c716d66dfbe467a6f742fd2bd"
                 imagePullPolicy: Always
                 resources:
                   requests:
