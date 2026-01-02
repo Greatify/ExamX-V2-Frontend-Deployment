@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3272-Duplicate-Exam-Feature-UAT-9fbbbf4533361fd37c84adce2cbb3480206a7a07"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3203qr-based-upload-3802-3e94067d5d09a91049f3453d6ebdbc1d57c590ab"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
