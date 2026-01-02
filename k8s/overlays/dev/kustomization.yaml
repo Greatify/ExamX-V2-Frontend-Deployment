@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-livestream-listing-issue-fixed-3781-02a5aca845056ec6b740bb11e769b10fcba563c5"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3201popup-notification-for-stud-e332d3dc65230d751a88e65041fa3d742c3b134b"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
