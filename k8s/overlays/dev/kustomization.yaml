@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3269-Updated-fields-for-default-c15e4c4b3c888e5f01e6b7194a3b76edff090f81"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3249-Fix-Group-Style-Configurat-0f61dbfd264f81a3fbc9e1bd1379ebaf976e4c85"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
