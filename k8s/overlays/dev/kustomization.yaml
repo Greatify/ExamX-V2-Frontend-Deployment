@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3269-Default-marks-validation-f-0db59312892f7b58b34ebaa21ed73233c72e4e35"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3269-Updated-fields-for-default-c15e4c4b3c888e5f01e6b7194a3b76edff090f81"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
