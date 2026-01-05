@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3258EXM-3260video-stream-qualif-a11cac0614003417fe0d7acbe11cceca1cd6c753"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3286-Implement-Generate-Random-be5acf9d447948553305d68f6d4b4d9be6c2a732"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
