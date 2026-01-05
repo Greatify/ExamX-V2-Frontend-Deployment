@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3315-Implement-Instructions-for-5b5911a44c6e34702a8bc3f9d2aff7a7e8ab43d8"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3294-Fix-dynamic-course-code-an-f5bd27633184f57fd4aba514c1ba945d763eae67"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
