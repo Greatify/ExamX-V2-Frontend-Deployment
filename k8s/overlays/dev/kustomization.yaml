@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3321-Ui-Changes-QP-Draft-and-Cr-f9f8157ed62b6d3f956f4ffe0b74226ef7a9717c"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3249-Added-clear-functionality-28bba55216611cf39ad71973018ca174fee6bc23"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
