@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3373-Add-qp_set_uuid-parameter-d7ae13178a66bb30f6580519a770a41ca3eb9e8d"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3352block-deletion-of-chief-inv-1c02f87b1cbe260124fcc97fd7be8506134e4ef5"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
