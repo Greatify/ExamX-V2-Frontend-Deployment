@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-EXM-3239-CO-is-Not-properly-Display-7b67bc0dca180ec2e96173aa7843310b445369d7"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-EXM-3337-Add-Download-as-Document-O-50d2725e2b1383985cd9b1af3db309d081331830"
                 imagePullPolicy: Always
                 resources:
                   requests:
