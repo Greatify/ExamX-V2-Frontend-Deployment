@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-3260pagination-issue-stg-3819-0fa6dc42369d2496af26193c51524de125feae38"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-3352block-deletion-of-chief-inv-e48ab6532b4548c92777cd9e1272c4ef1ac969e3"
                 imagePullPolicy: Always
                 resources:
                   requests:
