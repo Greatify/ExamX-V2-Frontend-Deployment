@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3249-Added-clear-functionality-28bba55216611cf39ad71973018ca174fee6bc23"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3333-Fixed-error-messages-3817-0b73bffb04e475b94057f57bef7a0b8e2214981b"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
