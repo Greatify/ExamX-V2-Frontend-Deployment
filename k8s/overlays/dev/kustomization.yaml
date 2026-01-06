@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3251-Added-clear-functionality-de76970b13afd9ece833ed8f19728983de8ba615"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3301-Updated-TemplateGrid-to-ha-49c123255e8afe363c2f7ac8d7dba4bebc97234c"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
