@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3248-Fixed-duplicate-functional-b30aa65eff09269226af75fcac04e1236bdbae91"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3154-Fix-Add-status-event-trigg-2dbd4ffa59947e65589be9e212c1d86951797dae"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
