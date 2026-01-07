@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3322-Update-RenderTemplateActio-f2f5f264c8ce4cc11a57908ba96cfe8e6b7e5bd4"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3340-Choose-From-Ai-Restructure-af8ade3c6f608d9ea7b0f6eb5129d2ca46909481"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
