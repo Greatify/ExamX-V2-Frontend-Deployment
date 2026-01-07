@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3316-Add-mandatory-template-nam-96aece90388d484c09e6b9e6d7b2251c05358bc8"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3399Custom-AI-integrated-Math-C-7ade318378478c5e5ee83f34301422f2cdcd707b"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
