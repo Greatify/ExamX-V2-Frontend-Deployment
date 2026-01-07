@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-3352block-deletion-of-chief-inv-e48ab6532b4548c92777cd9e1272c4ef1ac969e3"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-3399Custom-AI-integrated-Math-C-c498a97ccd9fbd764ccf9d272475f6a49ffdb5d9"
                 imagePullPolicy: Always
                 resources:
                   requests:
