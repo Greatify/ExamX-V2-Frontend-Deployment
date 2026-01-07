@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3292-Fix-readonly-marks-display-4dcb305ba2c7190f56908bc7dc0aacb000599665"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3382-Fixed-timezone-value-fetch-73a332843b1931a5362e21134478f66e34589438"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
