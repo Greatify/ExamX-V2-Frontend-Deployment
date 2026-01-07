@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Exm-3309group-badge-visibility-2-38-b233fe067a038aa3ebb20fd5577d0442b48b3747"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3322-Update-RenderTemplateActio-f2f5f264c8ce4cc11a57908ba96cfe8e6b7e5bd4"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
