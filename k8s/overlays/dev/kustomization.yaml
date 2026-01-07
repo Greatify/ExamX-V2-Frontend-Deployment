@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3309-Add-isGroupedQuestionPaper-cb8127a49633820e84cf59692ba96b1ce7eebbf6"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Exm-3309group-badge-visibility-2-38-b233fe067a038aa3ebb20fd5577d0442b48b3747"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
