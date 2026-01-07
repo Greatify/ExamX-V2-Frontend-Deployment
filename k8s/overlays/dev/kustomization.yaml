@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3323-Chem-Type-and-Math-Type-WI-214db4a3535486e669f4ab650cb59d7cd71561b9"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3365-Refactor-Container-and-Pag-ab4166b2b46c5888e22aab1a355b125f65216db4"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
