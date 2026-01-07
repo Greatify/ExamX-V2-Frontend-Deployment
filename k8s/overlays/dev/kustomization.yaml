@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3365-Refactor-Container-and-Pag-ab4166b2b46c5888e22aab1a355b125f65216db4"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3316-Add-mandatory-template-nam-96aece90388d484c09e6b9e6d7b2251c05358bc8"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
