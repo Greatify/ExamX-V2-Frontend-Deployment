@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3420-Confirmation-Popup-QP-Crea-76bb9abd8410a7ad0a70d1f97585c08b1bb47b97"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3320-Enhance-AddPageMarginField-084f856d6398df40ffae930d40a1f3885be31853"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
