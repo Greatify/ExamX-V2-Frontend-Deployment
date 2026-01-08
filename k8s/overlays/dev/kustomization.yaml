@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3391-Fixed-Choose-section-data-04f847ad30135f23f3d756e0f3d852c0e50d107f"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3397-Implemented-Summary-Report-48f514f1e6726c5ab5bd84082536ffa0d528255a"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
