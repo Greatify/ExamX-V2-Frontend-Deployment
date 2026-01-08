@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3340-Choose-From-Ai-Restructure-af8ade3c6f608d9ea7b0f6eb5129d2ca46909481"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3303-Invite-mail-should-be-sent-956a244958201d0a75a9c4e3f26b90b1a7904afc"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
