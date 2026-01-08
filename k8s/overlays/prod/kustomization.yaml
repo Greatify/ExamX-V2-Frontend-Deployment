@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-EXM-3337-Add-Download-as-Document-O-50d2725e2b1383985cd9b1af3db309d081331830"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-EXM-3423-CO-need-to-be-static-for-t-2d316f627e5cf996a0c3f965a98f4b92073e4516"
                 imagePullPolicy: Always
                 resources:
                   requests:
