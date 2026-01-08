@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3453-Fixed-breaking-functionali-0e23e82bbeb8228504b7724694690ab5c613bb94"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3453-Fixed-breaking-changes-for-a673b84cd70d2988acaea4b34c2507b0cf3d5843"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
