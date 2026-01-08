@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3419-Added-Filter-in-Add-from-Q-22ae508ff7cc8127d478c211e304aa1557b340db"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3437-Add-questionDropdown-looku-df44d072b255b3262b827f45efff8db4eb762a06"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
