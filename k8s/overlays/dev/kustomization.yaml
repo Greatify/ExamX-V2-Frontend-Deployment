@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3437-Integrate-questionDropdown-f830fcafc2b6da1fa3c1c80623295bf4a00b48e0"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3391-Fixed-Choose-section-data-04f847ad30135f23f3d756e0f3d852c0e50d107f"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
