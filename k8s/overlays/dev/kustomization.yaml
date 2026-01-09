@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3469-Implemented-line-clamping-c3f03491ccf419774c10904ab5109ba3b319f2a3"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Exm-3444-QP-Set-Report-Status-Count-7304c0a0f38e7502f3c8fc0602396da95a1ecb3d"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
