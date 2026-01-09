@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3456suspicious-activities-bugs-fef34e0bfdae2e03359d06b001abf155af8941a8"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3449-Remove-commented-out-Dropd-f9750263aab82e1558efa29d363a856eda292801"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
