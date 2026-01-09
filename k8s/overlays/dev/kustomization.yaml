@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3453-Fixed-breaking-changes-for-a673b84cd70d2988acaea4b34c2507b0cf3d5843"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3456global-chat-bug-3866-7c87ff0d8e2cca63ef38c6a85357fcc0f778f471"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
