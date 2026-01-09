@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3458-Enhance-TemplateGrid-with-4369c19519c877ae15e08aa392061bd73e73df91"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3456suspicious-activities-bugs-fef34e0bfdae2e03359d06b001abf155af8941a8"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
