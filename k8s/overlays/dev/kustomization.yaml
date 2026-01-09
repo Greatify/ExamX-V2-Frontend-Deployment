@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3456global-chat-bug-3866-7c87ff0d8e2cca63ef38c6a85357fcc0f778f471"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3424-Based-on-SRM-we-need-to-sh-f4f159b886c0c0653aa3192e686ac4bec853fe76"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
