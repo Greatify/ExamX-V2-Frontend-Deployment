@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3305-Fixed-issue-with-Question-15961b23539561356cc86b9dd9ea982e723441f2"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3353-Question-Duplication-is-fi-2525c322e488993c62e808f37b1fb459884c0857"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
