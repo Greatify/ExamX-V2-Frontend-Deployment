@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3414-Fixed-validation-issue-in-8b90e68d543c6d4b6361200d025056acbed790f5"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3298auto-inv-assign-3895-160572878dbece3eaab62db09241b02061ad24ba"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
