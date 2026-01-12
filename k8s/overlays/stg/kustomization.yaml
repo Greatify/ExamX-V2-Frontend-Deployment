@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-3456suspicious-activities-bugs-02439ab9bba7a1316bba7449f5fc60bb23aa3107"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-3480-Added-biometric-image-disp-56f01401b024cb327f48c5fe46dcc0cb5a8b2a45"
                 imagePullPolicy: Always
                 resources:
                   requests:
