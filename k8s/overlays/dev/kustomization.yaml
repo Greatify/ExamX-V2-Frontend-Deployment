@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3350-Authoring-page-Single-clic-66dd8bcd24d57e11adbe18675aa1be5c4df0ceef"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3502-Added-fix-for-breaking-tra-5173fbc62a67ebcaddf30c9a94be2f9cbfe19b3b"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
