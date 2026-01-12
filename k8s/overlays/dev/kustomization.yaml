@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3309-Bugfix-hidden-group-at-que-5c1907cd53456e757ede890523c1761a62a0daec"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3298auto-inv-assign-bugs-3899-b1350443b13a8a3fa83c6566c0a95fa10f0e7ec8"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
