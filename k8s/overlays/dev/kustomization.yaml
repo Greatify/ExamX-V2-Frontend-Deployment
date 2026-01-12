@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-bugqr-scanning-issue-for-mobile-web-4410991453f40f313407463651c2d4b0063fb0c7"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3298bug-fix-3903-7fb12f16d83e0c52d69396cd22d20071a29d93d4"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
