@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3499-Implement-AI-generation-re-33373379fb0d1d2d0a06506da68017c4f4c946a5"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3428-Qp-Creation-Tabular-column-994f0198d5ed3b9937f6b1eebde752a6a9086b4a"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
