@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3538whitescreen-and-chat-initia-1e17d43f200a85404285141acc0595280c4157c4"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3011-Added-joseph-exam-name-req-1bb73963be754780ab7d165ef278524a05964470"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
