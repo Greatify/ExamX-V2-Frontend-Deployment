@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-enhancementqr-added-capture-option-b86e5aa4d33ba1863eebcdb67e9cce9f8d31cb37"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-3538whitescreen-and-chat-initia-22a9a484eb91fa622fe93d6421dec1e0e93a8956"
                 imagePullPolicy: Always
                 resources:
                   requests:
