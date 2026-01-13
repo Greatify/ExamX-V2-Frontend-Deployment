@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3513-Implemented-Adjust-spacing-10265fbf5e07c47d418aceb1573ac4251616892a"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3505-Decimal-total-exam-marks-v-8bacb3148061cd0f5dab7248d88253e29cb1c042"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
