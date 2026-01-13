@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Exm-3359-Template-Add-Field-The-Add-4d01fd53f47169e6105a85f084e6cb6e66ce8a75"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3476-QP-Creation-Instruction-pa-5c660ee4637826ac5699ae5ab92bb62d6aad2dbf"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
