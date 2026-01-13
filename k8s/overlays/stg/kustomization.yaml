@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-bugqr-scanning-issue-for-mobile-web-cc76612565c4556295d909ddb3047da675ed47fe"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-enhancementqr-added-capture-option-b86e5aa4d33ba1863eebcdb67e9cce9f8d31cb37"
                 imagePullPolicy: Always
                 resources:
                   requests:
