@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-enhancementqr-added-capture-option-0dbed0483fe24d414bc6b9a940db6472495c1758"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3309-Fixed-grouped-template-vie-f565de7024958e2f02321c9ff51052c9f1026575"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
