@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3428-Qp-Creation-Tabular-column-994f0198d5ed3b9937f6b1eebde752a6a9086b4a"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3538whitescreen-and-chat-initia-1e17d43f200a85404285141acc0595280c4157c4"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
