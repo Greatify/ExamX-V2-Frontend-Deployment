@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Exm-3480-Export-Pdf-Answer-View-Dow-043491b912e365842a7df8d0ff068fdbd627250f"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-enhancementqr-added-capture-option-0dbed0483fe24d414bc6b9a940db6472495c1758"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
