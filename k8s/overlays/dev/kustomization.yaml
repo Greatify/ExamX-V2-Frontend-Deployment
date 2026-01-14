@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3545-RuleEngine-CRUD-Implementa-47741d2480a3b381c67b3ac6ba3003143556e50e"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3341-Enhance-UI-to-indicate-req-641089e61a4335a72b047fd7b73277142c8d404f"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
