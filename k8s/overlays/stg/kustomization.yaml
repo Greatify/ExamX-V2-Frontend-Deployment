@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-3538whitescreen-error-stg-3924-86c32f5f1f99ecec66481be4a47af4a7b54d46e9"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-3547file-upload-bug-stg-3927-15c4fdc649e16c14074a4d3c3af51279dbcb10c7"
                 imagePullPolicy: Always
                 resources:
                   requests:
