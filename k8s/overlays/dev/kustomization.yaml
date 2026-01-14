@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3520-Implemented-Reset-Create-a-c843b6b42ef6f416694425e98905075a9bedb29d"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3538whitescreen-error-3923-b08ee44f0b0105e51b37d433db790b310d53bb1b"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
