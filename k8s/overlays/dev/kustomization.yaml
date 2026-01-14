@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3544-Integrate-terminology-cont-f2e6ced483f002a9ba8b1a115cea2235ede9a8f0"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3537-Add-questionListMap-suppor-ea168301541a71f1bb7e8c4341239a9e19b6691d"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
