@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-3538whitescreen-and-chat-initia-22a9a484eb91fa622fe93d6421dec1e0e93a8956"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-3538whitescreen-error-stg-3924-86c32f5f1f99ecec66481be4a47af4a7b54d46e9"
                 imagePullPolicy: Always
                 resources:
                   requests:
