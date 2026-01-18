@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-EXM-3423-CO-need-to-be-static-for-t-2d316f627e5cf996a0c3f965a98f4b92073e4516"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-EXM-3547file-upload-bug-stg-3927-15c4fdc649e16c14074a4d3c3af51279dbcb10c7"
                 imagePullPolicy: Always
                 resources:
                   requests:
