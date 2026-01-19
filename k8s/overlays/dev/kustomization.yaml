@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3294-Added-new-overridefunction-398ea28b8d8032890d834a1ac5cac243e9d9951d"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3565admin-side-download-desktop-3aaece519c02badb782750445c9d5932d3de97d3"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
