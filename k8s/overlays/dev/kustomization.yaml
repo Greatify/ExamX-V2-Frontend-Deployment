@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3488-Modified-to-track-hasBeenE-633fd50fa73f634661433d17791c81bb426a8290"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3478-Enhanced-question-handling-993c5a13d3b00ea7814363f74a259ade61164f0b"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
