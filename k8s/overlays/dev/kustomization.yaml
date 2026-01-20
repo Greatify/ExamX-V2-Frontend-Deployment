@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3478-Enhanced-question-handling-993c5a13d3b00ea7814363f74a259ade61164f0b"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-bugaudio-notaudible-livestrem-3949-8639b02ce9c5983a4e4d2b66781e8d96568729c1"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
