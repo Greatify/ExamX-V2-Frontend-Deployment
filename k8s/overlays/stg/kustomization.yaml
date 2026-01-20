@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-3561livestream-audio-stg-3936-ccb609fc04c323fcaa3b3a32f59411b7662b5c46"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-3565admin-side-download-desktop-b37bd931b1528a18a9bfd1a23fe6752de95004e7"
                 imagePullPolicy: Always
                 resources:
                   requests:
