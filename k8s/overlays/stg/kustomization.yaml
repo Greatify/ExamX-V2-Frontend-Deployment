@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-3587-Annotation-CORS-loading-is-f9e2dbbde0dd82cbece56f4fe5af3634faff4775"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-bugaudio-notaudible-livestrem-stg-3-23bd5f546fe6bafb91ed76d784ca30cc4f1e34b3"
                 imagePullPolicy: Always
                 resources:
                   requests:
