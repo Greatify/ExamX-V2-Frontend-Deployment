@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-EXM-3561livestream-audio-prod-3939-eb337d47be39dd86ef8ebb1b428b87aa367fed80"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-Summary-report-Mismatch-3952-0cd262310a628f8823ce0d0150ac49dbba5aaa4a"
                 imagePullPolicy: Always
                 resources:
                   requests:
