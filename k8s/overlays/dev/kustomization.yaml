@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3439-Fixed-Search-Topic-Questio-05692a23d7fde25d6751df590372955015b275b2"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3442-Added-retrospective-config-7476007234ce870220b0bdcbc4c26ab20b6b53cc"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
