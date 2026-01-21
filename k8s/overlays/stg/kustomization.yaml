@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-Co-Issue-Fixed-For-SRM-3966-3967-4bbc947526e3dc9d3879013f77e7c73a5210bb2d"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-Old-formula-convertion-to-new-latex-c4f3a6af4d31a796a28519e754c803daf764902e"
                 imagePullPolicy: Always
                 resources:
                   requests:
