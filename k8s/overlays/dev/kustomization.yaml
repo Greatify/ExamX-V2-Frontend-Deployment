@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Exm-3341-The-Combine-Field-function-01cb60e4d6b6cba0dbe983a01f1a7c57c6a4e347"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3560-Integrated-Rule-Profile-AP-e296b807f2da3fc5d76e8abdda86731f3b32e3c4"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
