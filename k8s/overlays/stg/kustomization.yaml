@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-Summary-report-Mismatch-3951-65d1b2dd5cbad6bdad93e4360e2f747c7516b19d"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-bugslivestreaming-optimization-stg-604078afee201679802778adf2ca4a09cc03a392"
                 imagePullPolicy: Always
                 resources:
                   requests:
