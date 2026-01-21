@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-bugstudents-shown-twice-stg-3960-931e29a69391ea4f329267b63638334bac285630"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-Exm-3444-QP-Set-Report-Status-Count-0548820359ba1c9dbcf481f5f520ec0661d7727b"
                 imagePullPolicy: Always
                 resources:
                   requests:
