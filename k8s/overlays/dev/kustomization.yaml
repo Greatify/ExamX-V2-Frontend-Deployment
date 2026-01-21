@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-bugaudio-notaudible-livestrem-3949-8639b02ce9c5983a4e4d2b66781e8d96568729c1"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3516-Fixed-Grouping-Template-is-71e2eeaf78734910bf164a90245c8071e92d5d3c"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
