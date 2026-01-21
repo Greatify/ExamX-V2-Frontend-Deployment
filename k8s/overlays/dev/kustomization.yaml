@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-bugslivestreaming-optimization-3957-b3a1b9340da700c11cc9ee24b3e94b5119f9ebaf"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-bugstudents-shown-twice-3959-60aa44ed92db5d7fcc89089d90df3c957085c626"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
