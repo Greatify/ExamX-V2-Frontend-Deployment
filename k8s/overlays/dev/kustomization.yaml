@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3656-Enhance-field-access-contr-9550496a7f502d28d57c112c0143672f234188c4"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3439-Fixed-Search-Topic-Questio-05692a23d7fde25d6751df590372955015b275b2"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
