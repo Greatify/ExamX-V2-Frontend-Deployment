@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3563-Validate-the-rule-profile-68c4eb26613500e4839f0da5e433c22981e42202"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Exm-3620-Max-mark-for-template-over-fa442104a76f3b43149ba437caea8f7fc6229d79"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
