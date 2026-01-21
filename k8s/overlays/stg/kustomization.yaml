@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-Exm-3444-QP-Set-Report-Status-Count-0548820359ba1c9dbcf481f5f520ec0661d7727b"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-Co-Issue-Fixed-For-SRM-3966-3967-4bbc947526e3dc9d3879013f77e7c73a5210bb2d"
                 imagePullPolicy: Always
                 resources:
                   requests:
