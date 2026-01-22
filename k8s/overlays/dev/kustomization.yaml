@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Exm-3524-MBBS-template-3977-692763cc756b11af8914956f60d6b072ab790c20"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3438-Replace-text-input-with-Fr-4132fcdac66b4242d15d57f75213151abca951ff"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
