@@ -70,8 +70,13 @@ jobs:
     needs: security-password-check 
     runs-on: ${{ github.event.inputs.use_self_hosted_runner == 'true' && 'self-hosted' || 'ubuntu-24.04-arm' }}
     environment: prod
-
+    outputs:
+      deploy_branch: ${{ steps.branch-info.outputs.deploy_branch }}
     steps:
+      - name: Store branch information
+        id: branch-info
+        run: |
+          echo "deploy_branch=${{ github.event.inputs.deploy_branch }}" >> $GITHUB_OUTPUT
       - name: Checkout repository code
         uses: actions/checkout@v4
         with:
@@ -310,3 +315,20 @@ jobs:
             @${{ github.actor }}, your changes have been deployed successfully to Production. Please verify the deployment and conduct necessary tests.
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+
+  trigger-package-publish:
+    needs: deploy-frontend-production
+    runs-on: ubuntu-24.04-arm
+    steps:
+      - name: Trigger NPM package publish for production
+        uses: peter-evans/repository-dispatch@v2
+        with:
+          token: ${{ secrets.REPO_DISPATCH_TOKEN }}
+          repository: Greatify/ExamX-V2-Frontend
+          event-type: publish-package-production
+          client-payload: |
+            {
+              "branch": "${{ needs.build-frontend-production-image.outputs.deploy_branch }}",
+              "triggered_by": "${{ github.actor }}",
+              "deployment_workflow": "ci-cd-prod"
+            }

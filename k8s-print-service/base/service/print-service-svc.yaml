@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: examx-print-service
+  labels:
+    app: examx-print-service
+spec:
+  type: ClusterIP
+  selector:
+    app: examx-print-service
+  ports:
+    - protocol: TCP
+      port: 3000
+      targetPort: 3000
+      name: http

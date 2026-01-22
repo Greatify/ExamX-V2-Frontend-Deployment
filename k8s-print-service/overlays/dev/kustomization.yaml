@@ -1,0 +1,60 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: dev-print-service
+
+resources:
+  - ../../base
+
+patches:
+  - patch: |-
+      apiVersion: apps/v1
+      kind: Deployment
+      metadata:
+        name: examx-print-service
+        labels:
+          app: examx-print-service
+          environment: dev
+        annotations:
+          kubernetes.io/change-cause: "Deployed to dev environment"
+      spec:
+        replicas: 1
+        selector:
+          matchLabels:
+            app: examx-print-service
+        template:
+          metadata:
+            labels:
+              app: examx-print-service
+              environment: dev
+          spec:
+            containers:
+              - name: examx-print-service
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examx-print-service:dev-latest"
+                imagePullPolicy: Always
+                resources:
+                  requests:
+                    cpu: "50m"
+                    memory: "256Mi"
+                  limits:
+                    cpu: "300m"
+                    memory: "768Mi"
+                env:
+                  - name: NODE_ENV
+                    value: "development"
+                  - name: PORT
+                    value: "3000"
+    target:
+      kind: Deployment
+      name: examx-print-service
+  
+  - patch: |-
+      apiVersion: autoscaling/v2
+      kind: HorizontalPodAutoscaler
+      metadata:
+        name: examx-print-service-autoscaler
+      spec:
+        minReplicas: 1
+        maxReplicas: 2
+    target:
+      kind: HorizontalPodAutoscaler
+      name: examx-print-service-autoscaler

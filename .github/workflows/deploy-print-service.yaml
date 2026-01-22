@@ -1,0 +1,315 @@
+name: Deploy Print Service
+
+on:
+  repository_dispatch:
+    types: [deploy-print-service]
+  workflow_dispatch:
+    inputs:
+      examx_version:
+        description: 'ExamX package version (e.g., 1.0.53-dev)'
+        required: true
+        type: string
+      environment:
+        description: 'Target environment'
+        required: true
+        type: choice
+        options:
+          - dev
+          - staging
+          - production
+      use_self_hosted_runner:
+        description: 'Run on self-hosted runner?'
+        required: true
+        type: boolean
+        default: false
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.client_payload.environment || github.event.inputs.environment }}
+  cancel-in-progress: false
+
+jobs:
+  build-and-push-print-service:
+    runs-on: ${{ github.event.inputs.use_self_hosted_runner == 'true' && 'self-hosted' || 'ubuntu-24.04-arm' }}
+    environment: ${{ github.event.client_payload.environment || github.event.inputs.environment }}
+    outputs:
+      image_tag: ${{ steps.generate-tag.outputs.IMAGE_TAG }}
+      examx_version: ${{ steps.extract-info.outputs.EXAMX_VERSION }}
+      environment: ${{ steps.extract-info.outputs.ENVIRONMENT }}
+      target_namespace: ${{ steps.extract-info.outputs.TARGET_NS }}
+      overlay_dir: ${{ steps.extract-info.outputs.OVERLAY_DIR }}
+    
+    steps:
+      - name: Extract deployment info
+        id: extract-info
+        run: |
+          if [[ "${{ github.event_name }}" == "repository_dispatch" ]]; then
+            EXAMX_VERSION="${{ github.event.client_payload.examx_version }}"
+            ENVIRONMENT="${{ github.event.client_payload.environment }}"
+          else
+            EXAMX_VERSION="${{ github.event.inputs.examx_version }}"
+            ENVIRONMENT="${{ github.event.inputs.environment }}"
+          fi
+          
+          echo "EXAMX_VERSION=$EXAMX_VERSION" >> $GITHUB_OUTPUT
+          echo "ENVIRONMENT=$ENVIRONMENT" >> $GITHUB_OUTPUT
+          
+          # Set namespace and overlay based on environment
+          case "$ENVIRONMENT" in
+            "dev")
+              echo "TARGET_NS=dev-print-service" >> $GITHUB_OUTPUT
+              echo "OVERLAY_DIR=dev" >> $GITHUB_OUTPUT
+              echo "CLUSTER_SECRET=DEV_CLUSTER_NAME" >> $GITHUB_OUTPUT
+              ;;
+            "staging")
+              echo "TARGET_NS=stg-print-service" >> $GITHUB_OUTPUT
+              echo "OVERLAY_DIR=stg" >> $GITHUB_OUTPUT
+              echo "CLUSTER_SECRET=STG_CLUSTER_NAME" >> $GITHUB_OUTPUT
+              ;;
+            "production")
+              echo "TARGET_NS=prod-print-service" >> $GITHUB_OUTPUT
+              echo "OVERLAY_DIR=prod" >> $GITHUB_OUTPUT
+              echo "CLUSTER_SECRET=PROD_CLUSTER_NAME" >> $GITHUB_OUTPUT
+              ;;
+          esac
+          
+          echo "📦 Deploying print service with examx@$EXAMX_VERSION to $ENVIRONMENT"
+      
+      - name: Checkout print-service repository
+        uses: actions/checkout@v4
+        with:
+          repository: 'Greatify/examx-print-service'
+          ref: 'main'
+          token: ${{ secrets.REPO_DISPATCH_TOKEN }}
+      
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v3
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+      
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+        with:
+          version: v0.12.0
+          driver-opts: |
+            image=moby/buildkit:v0.12.0
+          buildkitd-flags: |
+            --debug
+            --allow-insecure-entitlement security.insecure
+            --allow-insecure-entitlement network.host
+      
+      - name: Login to Amazon ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v1
+      
+      - name: Generate image tag
+        id: generate-tag
+        run: |
+          ENV_SHORT="${{ steps.extract-info.outputs.ENVIRONMENT }}"
+          if [[ "$ENV_SHORT" == "staging" ]]; then
+            ENV_SHORT="stg"
+          elif [[ "$ENV_SHORT" == "production" ]]; then
+            ENV_SHORT="prod"
+          fi
+          
+          COMMIT_SHA=$(echo "${{ github.sha }}" | cut -c1-7)
+          TIMESTAMP=$(date +%Y%m%d-%H%M%S)
+          IMAGE_TAG="print-service-${ENV_SHORT}-examx-v${{ steps.extract-info.outputs.EXAMX_VERSION }}-${TIMESTAMP}"
+          
+          echo "IMAGE_TAG=$IMAGE_TAG" >> $GITHUB_OUTPUT
+          echo "ENV_SHORT=$ENV_SHORT" >> $GITHUB_OUTPUT
+          echo "Generated tag: $IMAGE_TAG"
+      
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          tags: |
+            ${{ steps.login-ecr.outputs.registry }}/examx-print-service:${{ steps.generate-tag.outputs.IMAGE_TAG }}
+            ${{ steps.login-ecr.outputs.registry }}/examx-print-service:${{ steps.generate-tag.outputs.ENV_SHORT }}-latest
+          platforms: linux/arm64
+          build-args: |
+            NODE_AUTH_TOKEN=${{ secrets.GITHUB_TOKEN }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+          labels: |
+            org.opencontainers.image.revision=${{ github.sha }}
+            org.opencontainers.image.created=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
+            examx.version=${{ steps.extract-info.outputs.EXAMX_VERSION }}
+            examx.environment=${{ steps.extract-info.outputs.ENVIRONMENT }}
+      
+      - name: Save image tag
+        run: |
+          echo "${{ steps.login-ecr.outputs.registry }}/examx-print-service:${{ steps.generate-tag.outputs.IMAGE_TAG }}" > image_tag.txt
+      
+      - name: Upload image info
+        uses: actions/upload-artifact@v4
+        with:
+          name: image-info
+          path: image_tag.txt
+      
+      - name: Notify build failure
+        if: failure()
+        uses: 8398a7/action-slack@v3
+        with:
+          status: ${{ job.status }}
+          author_name: Print Service Build Failed 🐳
+          mention: channel
+          if_mention: failure
+          channel: examxv2-frontend-alerts
+          username: ExamX-V2-CICD
+          text: |
+            ❌ *Print service Docker build failed*
+            
+            *ExamX Package:* `v${{ steps.extract-info.outputs.EXAMX_VERSION }}`
+            *Environment:* ${{ steps.extract-info.outputs.ENVIRONMENT }}
+            
+            Please check logs and fix immediately.
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+
+  deploy-to-kubernetes:
+    needs: build-and-push-print-service
+    runs-on: ${{ github.event.inputs.use_self_hosted_runner == 'true' && 'self-hosted' || 'ubuntu-24.04-arm' }}
+    environment: ${{ needs.build-and-push-print-service.outputs.environment }}
+    
+    steps:
+      - name: Download image info
+        uses: actions/download-artifact@v4
+        with:
+          name: image-info
+          path: .
+      
+      - name: Set deployment variables
+        id: deploy-vars
+        run: |
+          IMAGE_TAG=$(cat image_tag.txt)
+          echo "IMAGE_TAG=$IMAGE_TAG" >> $GITHUB_ENV
+          
+          EXAMX_VERSION="${{ needs.build-and-push-print-service.outputs.examx_version }}"
+          ENVIRONMENT="${{ needs.build-and-push-print-service.outputs.environment }}"
+          TARGET_NS="${{ needs.build-and-push-print-service.outputs.target_namespace }}"
+          OVERLAY_DIR="${{ needs.build-and-push-print-service.outputs.overlay_dir }}"
+          
+          echo "EXAMX_VERSION=$EXAMX_VERSION" >> $GITHUB_ENV
+          echo "ENVIRONMENT=$ENVIRONMENT" >> $GITHUB_ENV
+          echo "TARGET_NS=$TARGET_NS" >> $GITHUB_ENV
+          echo "OVERLAY_DIR=$OVERLAY_DIR" >> $GITHUB_ENV
+          
+          # Set cluster name based on environment
+          case "$ENVIRONMENT" in
+            "dev")
+              echo "CLUSTER_NAME=${{ secrets.DEV_CLUSTER_NAME }}" >> $GITHUB_ENV
+              ;;
+            "staging")
+              echo "CLUSTER_NAME=${{ secrets.STG_CLUSTER_NAME }}" >> $GITHUB_ENV
+              ;;
+            "production")
+              echo "CLUSTER_NAME=${{ secrets.PROD_CLUSTER_NAME }}" >> $GITHUB_ENV
+              ;;
+          esac
+      
+      - name: Checkout deployment repository
+        uses: actions/checkout@v4
+        with:
+          ref: 'main'
+          fetch-depth: 0
+      
+      - name: Update kustomization with new image
+        run: |
+          # Update image in the print-service overlay kustomization
+          if [[ "$RUNNER_OS" == "macOS" ]]; then
+            sed -i '' 's|image: "[^"]*"|image: "'"$IMAGE_TAG"'"|g' k8s-print-service/overlays/$OVERLAY_DIR/kustomization.yaml
+            sed -i '' 's|kubernetes.io/change-cause:.*|kubernetes.io/change-cause: "Updated to '"$IMAGE_TAG"'"|g' k8s-print-service/overlays/$OVERLAY_DIR/kustomization.yaml
+          else
+            sed -i 's|image: "[^"]*"|image: "'"$IMAGE_TAG"'"|g' k8s-print-service/overlays/$OVERLAY_DIR/kustomization.yaml
+            sed -i 's|kubernetes.io/change-cause:.*|kubernetes.io/change-cause: "Updated to '"$IMAGE_TAG"'"|g' k8s-print-service/overlays/$OVERLAY_DIR/kustomization.yaml
+          fi
+      
+      - name: Commit and push changes
+        run: |
+          git config user.name "ExamX Bot"
+          git config user.email "bot@examx.ai"
+          git add k8s-print-service/overlays/$OVERLAY_DIR/kustomization.yaml
+          
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "🚀 Deploy print-service with examx v$EXAMX_VERSION to $ENVIRONMENT"
+            git push origin main
+          fi
+      
+      - name: Configure AWS credentials for deployment
+        uses: aws-actions/configure-aws-credentials@v3
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+      
+      - name: Update Kubernetes configuration
+        run: |
+          aws eks update-kubeconfig --name $CLUSTER_NAME --region ${{ secrets.AWS_REGION }}
+      
+      - name: Deploy to Kubernetes
+        run: |
+          echo "Deploying to $TARGET_NS namespace..."
+          kubectl apply -k k8s-print-service/overlays/$OVERLAY_DIR --validate=true
+          kubectl rollout status deployment/examx-print-service -n $TARGET_NS --timeout=300s
+      
+      - name: Verify deployment
+        run: |
+          echo "Verifying deployment health..."
+          kubectl get pods -n $TARGET_NS -l app=examx-print-service
+          kubectl get svc -n $TARGET_NS examx-print-service-service
+          
+          echo ""
+          echo "=== Deployment Details ==="
+          kubectl describe deployment examx-print-service -n $TARGET_NS | grep -A 5 "Image:"
+      
+      - name: Notify deployment success
+        if: success()
+        uses: 8398a7/action-slack@v3
+        with:
+          status: ${{ job.status }}
+          author_name: Print Service Deployed ✅
+          channel: examxv2-frontend-alerts
+          username: ExamX-V2-CICD
+          text: |
+            🚀 *Print service deployed successfully*
+            
+            *Environment:* ${{ env.ENVIRONMENT }}
+            *ExamX Package:* `@greatify/examx@${{ env.EXAMX_VERSION }}`
+            *Image:* `${{ env.IMAGE_TAG }}`
+            *Namespace:* ${{ env.TARGET_NS }}
+            
+            Service is now live with the latest examx package!
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+      
+      - name: Notify deployment failure
+        if: failure()
+        uses: 8398a7/action-slack@v3
+        with:
+          status: ${{ job.status }}
+          author_name: Print Service Deployment Failed ❌
+          mention: channel
+          if_mention: failure
+          channel: examxv2-frontend-alerts
+          username: ExamX-V2-CICD
+          text: |
+            ❌ *Print service deployment failed*
+            
+            *Environment:* ${{ env.ENVIRONMENT }}
+            *ExamX Package:* `@greatify/examx@${{ env.EXAMX_VERSION }}`
+            *Namespace:* ${{ env.TARGET_NS }}
+            
+            Please check logs and rollback if necessary.
+            
+            Rollback command:
+            ```
+            kubectl rollout undo deployment/examx-print-service -n ${{ env.TARGET_NS }}
+            ```
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}

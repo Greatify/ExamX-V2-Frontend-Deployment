@@ -1,0 +1,60 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: stg-print-service
+
+resources:
+  - ../../base
+
+patches:
+  - patch: |-
+      apiVersion: apps/v1
+      kind: Deployment
+      metadata:
+        name: examx-print-service
+        labels:
+          app: examx-print-service
+          environment: staging
+        annotations:
+          kubernetes.io/change-cause: "Deployed to staging environment"
+      spec:
+        replicas: 2
+        selector:
+          matchLabels:
+            app: examx-print-service
+        template:
+          metadata:
+            labels:
+              app: examx-print-service
+              environment: staging
+          spec:
+            containers:
+              - name: examx-print-service
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examx-print-service:stg-latest"
+                imagePullPolicy: Always
+                resources:
+                  requests:
+                    cpu: "100m"
+                    memory: "512Mi"
+                  limits:
+                    cpu: "500m"
+                    memory: "1Gi"
+                env:
+                  - name: NODE_ENV
+                    value: "staging"
+                  - name: PORT
+                    value: "3000"
+    target:
+      kind: Deployment
+      name: examx-print-service
+  
+  - patch: |-
+      apiVersion: autoscaling/v2
+      kind: HorizontalPodAutoscaler
+      metadata:
+        name: examx-print-service-autoscaler
+      spec:
+        minReplicas: 2
+        maxReplicas: 4
+    target:
+      kind: HorizontalPodAutoscaler
+      name: examx-print-service-autoscaler
