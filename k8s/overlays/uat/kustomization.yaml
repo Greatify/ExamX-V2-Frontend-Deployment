@@ -26,7 +26,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-Update-EvaluationHeader-to-replace-82c506dfa835d93651e273e18474761fd99f3647"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:uat-EXM-3589-Add-evaluation-status-filt-d77df2b87ce20938c44d82176e5f8857a293fb49"
                 imagePullPolicy: Always
                 resources: 
                   requests:
