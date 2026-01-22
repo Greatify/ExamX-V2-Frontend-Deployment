@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-Old-formula-convertion-to-new-latex-c4f3a6af4d31a796a28519e754c803daf764902e"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-3584livestreaming-stg-3986-40ad9236d4747734b3ee6b04fbb6be536c674cad"
                 imagePullPolicy: Always
                 resources:
                   requests:
