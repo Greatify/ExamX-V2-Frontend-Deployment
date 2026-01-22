@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3670-Enhance-Froala-dropdown-me-f77a5cf64f015717f9adc6d809a29d3849511e05"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3479-Fixed-navigation-issue-398-73e2e821309e1e81645879b18c525b775edde53a"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
