@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3662-Implemented-Over-riding-Qu-f97bd6a560a5ba0ac21d452afdaa5da52481a614"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3584livestreaming-3985-ca474303f0c9627e7bb463a566bc4925c8f476fd"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
