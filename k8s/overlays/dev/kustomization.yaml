@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3710-Fixed-print-styles-and-min-d043cc4d06679c23dfe4c9a38414104f64729c20"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3715-Bugfix-fixed-passage-quest-70fcb00c977f71cbae2362461374e26ffa667e7f"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
