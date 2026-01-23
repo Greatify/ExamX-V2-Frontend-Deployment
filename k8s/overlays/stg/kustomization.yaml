@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-added-javascript-to-remove-p-tag-wh-5dd3065a49426b37dfcf76747923c02d6db47893"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-3727-SRM-Group-Question-Print-F-9302474a533e8eb49751ace58be543db5f335f7a"
                 imagePullPolicy: Always
                 resources:
                   requests:
