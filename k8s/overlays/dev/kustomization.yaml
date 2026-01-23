@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3715-Bugfix-fixed-passage-quest-70fcb00c977f71cbae2362461374e26ffa667e7f"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3580-Enhance-DynamicSection-and-871ff530d357f73d27db7ee45d6b9fa44f29818f"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
