@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3479-Fixed-navigation-issue-398-73e2e821309e1e81645879b18c525b775edde53a"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3698-Report-Question-Paper-Stat-f10cc4162855702e409a19aadd8a2057ad040289"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
