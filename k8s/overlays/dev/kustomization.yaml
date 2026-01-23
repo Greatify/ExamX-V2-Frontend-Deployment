@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3580-Enhance-DynamicSection-and-871ff530d357f73d27db7ee45d6b9fa44f29818f"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3591-Update-ManualV2-component-99f29a002982aa89369cbffced77d02b215d656c"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
