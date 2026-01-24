@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-3727-SRM-Group-Question-Print-F-9302474a533e8eb49751ace58be543db5f335f7a"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-enhancedcustom-prompt-for-ai-quiz-s-70b2d2c5889aa4b21c438468fb35ec78570fb4ba"
                 imagePullPolicy: Always
                 resources:
                   requests:
