@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3692-UI-changes-to-make-UI-simi-6d011cf24d2a4495081c09ebaef1199db78023af"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3625-Implement-question-wise-ru-77384981dfc56c2ef64f80a41acb3d132fad0d3b"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
