@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-4256-RenderTemplateActions-to-h-9651bece345665e535f57d92e17d3885134004b7"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-4258-Fixed-Question-paper-adjus-31c0d7d5ca0c4d84ba55649f3f9d892f20efb8db"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
