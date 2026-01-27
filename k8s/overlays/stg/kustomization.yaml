@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-3569freeze-time-duration-defaul-857d073dd4dadcb9cdf1bb207f9f70dc04b4f3a3"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-4263size-switcher-stg-4017-072dad5fd279fe5546654462677eea81773b114a"
                 imagePullPolicy: Always
                 resources:
                   requests:
