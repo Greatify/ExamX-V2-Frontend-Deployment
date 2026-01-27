@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-enhancedcustom-prompt-for-ai-quiz-s-70b2d2c5889aa4b21c438468fb35ec78570fb4ba"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-3569freeze-time-duration-defaul-857d073dd4dadcb9cdf1bb207f9f70dc04b4f3a3"
                 imagePullPolicy: Always
                 resources:
                   requests:
