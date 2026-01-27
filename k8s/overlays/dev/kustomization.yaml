@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3734-Added-direct-edit-function-6079381c789f8293767e9ad64028dd738b1a04b2"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-4253-RenderHeaderField-ui_eleme-8faf0c4f9113f44b108d564aa79949e3db385e3d"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
