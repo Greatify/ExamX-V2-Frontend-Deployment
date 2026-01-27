@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3756-Fixed-Fetching-question-Is-b5b401e36801b81950177a77a34638634acfe60b"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-feator-split-exams-4009-9760bd1c040c5093091552c5508edf246429e42b"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
