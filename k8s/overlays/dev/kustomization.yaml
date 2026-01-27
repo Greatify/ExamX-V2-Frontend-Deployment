@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3342Fixed-import-csv-fix-4015-2a3528e8a137e88284c61f8be88eaa7c2c8ef118"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-4263size-switcher-4016-227f4b46606844b608ea21a44a90c388b9f051d8"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
