@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Exm-3564-When-a-user-duplicates-a-t-5a7f8bbf18fb2754741c7ebb45b9ac7efb28c444"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3326-Added-grouped-question-fix-c1530b6dc279c7fe9227bff9526fcdb142e8f5da"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
