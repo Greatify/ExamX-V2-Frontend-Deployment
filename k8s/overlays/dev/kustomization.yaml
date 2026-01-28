@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-4288-Bugs-Related-to-Rule-Engin-f759876f5d5123bae2a20301671ccd4e71569b44"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3625-Implement-question-wise-ru-4d556ccd7036d84a7ffc92e90f6de59805c0d47e"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
