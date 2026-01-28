@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-4287Create-Question-Math-equati-3fcc619649f74d7476c97e8935a8a6df76a1cf68"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Exm-4287create-question-math-equati-444708bf17e4008f9cdf462d860542505f9fa8d3"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
