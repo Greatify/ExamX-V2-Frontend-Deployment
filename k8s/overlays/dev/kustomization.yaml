@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3705-Fix-API-endpoint-in-useDra-baff0aee3642a46a5b47ed163f5d34ee582ba5b0"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3591-Refactor-subsectionMarks-r-b7f05c71b353488578b5c3fe40b0ebdaaf2da013"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
