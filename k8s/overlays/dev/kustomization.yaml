@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-4252-Fixed-styling-changes-temp-ca04c06f097b25048c82050113ea86507f779dec"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-4309-Implement-question-wise-ru-09d2501e82de721b186b8d9541dd3ff4ff25d40d"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
