@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-method-changed-for-getchapterlist-4-b937b3819f4b83b1b968fe4987288590ded9bc01"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-4263size-bugs-4023-0243706d163466a1c5302b01c13c5cdf918ddf16"
                 imagePullPolicy: Always
                 resources:
                   requests:
