@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-4265-Integrate-the-course-outco-335f202b37dd22c812ed3461bd5026ea37594e35"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3657-Passage-Child-Question-iss-dee3b731dfd8455754a450e98644b12af4a8834f"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
