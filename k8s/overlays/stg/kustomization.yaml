@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-2820-Enhance-Question-Import-Ro-3fec30b802c67ad8050ea9ca5697673bcd1e33f7"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-4287Create-Question-Math-equati-156a67693b8c7d76e90f061e3fc6294002996800"
                 imagePullPolicy: Always
                 resources:
                   requests:
