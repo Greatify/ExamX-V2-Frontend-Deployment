@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Commented-out-code-related-to-Answe-d7bedeb1d664693a9bced57e59eb7b1257f346cf"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3581-Refactor-Styling-Sidebar-l-e2237a3727a7afdc827e78f8ff018b57f535a88e"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
