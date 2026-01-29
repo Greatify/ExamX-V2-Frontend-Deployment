@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3752-Add-Roman-numeral-conversi-282f0d09e99ff8c9bee24d51901289beea0e5f03"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Commented-out-code-related-to-Answe-d7bedeb1d664693a9bced57e59eb7b1257f346cf"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
