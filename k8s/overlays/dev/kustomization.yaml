@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-4346-Refactor-error-handling-in-eac319be6198497acaafd3639f60cb3b08d15bb1"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3518-Fixed-Child-template-mark-e4f31ca6f41b2371b1bfafa36e86d65c8ba18693"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
