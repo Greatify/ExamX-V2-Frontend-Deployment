@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-Old-formula-convertion-to-new-latex-82c022baf360af216965a067ba14097ba079d61a"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-EXM-4263size-switcher-prod-4018-e8d920e450442bbc1efba540e8f5142092f5561f"
                 imagePullPolicy: Always
                 resources:
                   requests:
