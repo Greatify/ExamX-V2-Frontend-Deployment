@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3553-Fixed-Template-Validation-73ff9af61f13f4768720bc52b77cfae614dca5b8"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-4308-Vels-styling-fix-4052-8e26b18a34edeafac5790ecc1724f3db572133ee"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
