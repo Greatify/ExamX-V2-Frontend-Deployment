@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-4282-Fixed-vels-issues-4056-dbaf9d311bbb8cdb421a2d07688b9456c7f85cbc"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3622-Add-functionality-to-repla-ea21e12bdd862f211b815de15cdeb085c2362465"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
