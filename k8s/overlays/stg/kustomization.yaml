@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-Commented-out-code-related-to-Answe-d0cde1874d275dc2c0a8dd8a4f69f68d5536a7ee"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-3684hide-retry-failed-live-stre-542388fd2c467df180d55cbd0fc7ea01084b470f"
                 imagePullPolicy: Always
                 resources:
                   requests:
