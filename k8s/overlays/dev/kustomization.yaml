@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3664rescheduled-time-incorrect-41b9148b0afdcd09dbfd32120c4a23757c2273e1"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3684hide-retry-failed-live-stre-5b2e0c940b918f98021605fbf79882cb56093d9c"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
