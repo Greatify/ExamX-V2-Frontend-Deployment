@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-EXM-4263size-switcher-prod-4018-e8d920e450442bbc1efba540e8f5142092f5561f"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:prod-EXM-2820-Enhance-Question-Import-Ro-ea73f794e10c59518604f517a349bfec4580d550"
                 imagePullPolicy: Always
                 resources:
                   requests:
