@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3684hide-retry-failed-live-stre-5b2e0c940b918f98021605fbf79882cb56093d9c"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-4390-View-Result-Incorrect-Ques-441c9cee8b28e4689580ceb5056a941603d1eff6"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
