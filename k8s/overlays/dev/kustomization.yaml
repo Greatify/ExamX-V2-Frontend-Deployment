@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-4325-Fixed-vels-and-mbbs-issues-de6d01afbec9ee86f37ad85436d2ef1512b5a85e"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3507-Improved-marks-validation-1094cbf9fe3b0fbb7ae4b2275289bc5110e4957f"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
