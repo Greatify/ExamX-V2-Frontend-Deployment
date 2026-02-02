@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-4413-Implemented-warnings-for-s-2bef19be2a4c060075aab50e2bd6c363ef55cf08"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3541-In-the-Add-from-Question-B-b7d47d6ae79e65af66738ee464d63f5b08efd16e"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
