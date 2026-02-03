@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3759-Fixed-race-issue-and-defau-db7e402390c9121bf0e2460e49ca97866b02a1cb"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-4343-Updated-TemplateV2Feature-2f6951eabe1ba55de130e92e7e646fabc5ebd3b1"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
