@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-3399Custom-AI-integrated-Math-C-c498a97ccd9fbd764ccf9d272475f6a49ffdb5d9"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-uncommented-language-selection-on-e-2b8646c49a3e8a26f006b155fe3826ad55bd765a"
                 imagePullPolicy: Always
                 resources:
                   requests:
