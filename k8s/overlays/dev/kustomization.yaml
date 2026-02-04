@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3759-Handled-race-condition-for-6b68e4cf4f85b54dbc28248ed516f3dbf334c495"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Exm-4406-Vels-Styling-UI-Bugs-View-a8bbf3cd7d0d3e8ca21298e1d936dafe9b5bca2b"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
