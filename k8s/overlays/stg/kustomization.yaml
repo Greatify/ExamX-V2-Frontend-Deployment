@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-uncommented-language-selection-on-e-2b8646c49a3e8a26f006b155fe3826ad55bd765a"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-bugbi-language-4081-c0fd31672fc9b42997d7fd6a1a8720af1c5e789c"
                 imagePullPolicy: Always
                 resources:
                   requests:
