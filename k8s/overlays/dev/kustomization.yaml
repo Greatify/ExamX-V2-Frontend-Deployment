@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-4416-Questions-created-using-th-c5d7a0cbd06e21b9e22ee11d196b770b0cf3392f"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-4467-Update-package-lockjson-to-cd906deec1e8db2f1c9664617d39f4c9fc6dc712"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
