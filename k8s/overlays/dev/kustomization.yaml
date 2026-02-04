@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-4442-Replace-batch-channel-join-a665cc1d2383557d836949b19421641d6f9730e2"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-4416-Questions-created-using-th-c5d7a0cbd06e21b9e22ee11d196b770b0cf3392f"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
