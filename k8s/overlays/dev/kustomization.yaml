@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-4343-Hidden-template-level-extr-fb126ad195cd7056d5140f545c87a35ab3878904"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3639added-query-params-for-atte-39ce4d37aa71706972f6dae26097ee30175fec98"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
