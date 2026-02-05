@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-4443-Fixed-passage-questions-40-379bfe885c85f18279aaba34df5d029dba77125c"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-4322-Enhance-question-type-hand-03ccb1a550d0d727a2449012e3044ae464b353d3"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
