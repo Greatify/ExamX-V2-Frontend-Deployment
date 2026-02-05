@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-4422-Added-fix-for-listing-elem-392eb11cebf1c21da4a10c71b38c20d64c512ad2"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-Exm-4406-Vels-UI-Bugs-4103-0d331326fa29bb8dce5d86d16d31391543b94a40"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
