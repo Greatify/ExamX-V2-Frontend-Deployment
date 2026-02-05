@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-4468-Refactor-question-paper-ge-e89fa3458b3ae151a9724226cd23c7bc390acfaf"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-4358Evaluation-screen-match-the-3373fa75778edd4d4d1c7fc0d8beef84e27fef10"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
