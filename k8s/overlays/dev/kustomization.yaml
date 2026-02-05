@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-4486-Export-Paper-Issues-4098-25b83d674ddc3b13651f1762b3c62589ab2e1185"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-3755-Template-Preview-CO-BL-iss-6e610d9507f373b4827c7f0774311fff0e18f9df"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
