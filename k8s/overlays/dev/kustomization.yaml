@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-4487-Implemented-special-access-beba81a2ed32910ab59b12705ef3ceb68e8f681e"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-4500-Fixed-CO-Blooms-fetch-issu-c1c5fe02264e87f692aa0b5bec6938d06f175050"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
