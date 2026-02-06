@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-4518-Updated-error-handling-in-7721f6e34b4d74fb14a64bc26d56fcb55739d724"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-4422-Added-subdomain-to-fix-and-4d1fa8965cfac1d42485f7e9e2cfa2a2e26a50f3"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
