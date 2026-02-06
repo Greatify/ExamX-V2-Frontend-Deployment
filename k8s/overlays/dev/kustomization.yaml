@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-4406-vels-UI-styling-issue-4114-accb2ca37b2257c2e5e53739aafbd3778de07186"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-4530-Bugfixed-for-reset-styling-0888d17a369a7e8e2f4cd22599aaf26df0bb9a28"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
