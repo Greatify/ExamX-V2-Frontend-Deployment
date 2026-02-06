@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-4496changed-text-translation-fl-4d281394b29870fd400519c28b6033ea6a1a3912"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-4506-Show-attendance-tracking-f-60f00eeec784b92986eaa30305aff27b12fc6e40"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
