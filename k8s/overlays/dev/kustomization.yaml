@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-4517-Child-template-marks-break-6cccc357e4f92315ca5e04d0bed913f30189cf84"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-4537-Enable-and-hide-the-rule-p-2a1369289ef770ace1e742dc6d6672c1771bcc33"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
