@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-4468-Fixed-default-edit-issue-i-138f2336a094fe788071c4bc78122958a8f137dd"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-4545Pooling-condition-issue-in-1b3209e83e4d737163ad35ef45bf565eeb98d574"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
