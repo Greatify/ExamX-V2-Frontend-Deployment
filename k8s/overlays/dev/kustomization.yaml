@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-4498-Fixed-json-fix-style-json-bbab47a2246c2b847b38caabd8f714d76f2ee900"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-4487-Implemented-special-access-beba81a2ed32910ab59b12705ef3ceb68e8f681e"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
