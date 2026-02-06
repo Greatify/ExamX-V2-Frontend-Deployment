@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-4422-Added-subdomain-to-fix-and-4d1fa8965cfac1d42485f7e9e2cfa2a2e26a50f3"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-4406-vels-UI-styling-issue-4114-accb2ca37b2257c2e5e53739aafbd3778de07186"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
