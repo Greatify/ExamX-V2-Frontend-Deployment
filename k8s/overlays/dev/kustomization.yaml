@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-4532fixed-the-answered-count-41-b8dd7246b026b72cec4fe6ad5788a8ca8f30ae56"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-4422-Added-logo-field-fix-for-k-1f33304c9496aac366b66d81c294bd632a851809"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
