@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-4544fixed-data-loss-issue-4127-8c9bf7f516195630d3f826c34f430168dbbe5a92"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-4550-Added-hotfix-issue-fix-for-e57e2b5c7b35dfb8b57a0a845dcb0a2e3b4b3a74"
                 imagePullPolicy: Always
                 resources:
                   requests:
