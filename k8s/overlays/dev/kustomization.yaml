@@ -25,7 +25,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-4550-Added-hotfix-issue-fix-for-e57e2b5c7b35dfb8b57a0a845dcb0a2e3b4b3a74"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:dev-EXM-4550-Add-hierarchical-typograph-afb7b13b858dd4dbab2b4376edb802b31768f832"
                 imagePullPolicy: Always
                 resources: null  # Commented out for dev environment
                 # resources:
