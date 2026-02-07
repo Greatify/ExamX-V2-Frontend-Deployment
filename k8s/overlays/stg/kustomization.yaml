@@ -27,7 +27,7 @@ patches:
           spec:
             containers:
               - name: examxv2-frontend
-                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-4545Pooling-condition-issue-in-1b3209e83e4d737163ad35ef45bf565eeb98d574"
+                image: "399600302704.dkr.ecr.ap-south-1.amazonaws.com/examxv2-frontend:stg-EXM-4544fixed-data-loss-issue-4127-8c9bf7f516195630d3f826c34f430168dbbe5a92"
                 imagePullPolicy: Always
                 resources:
                   requests:
